@@ -1,0 +1,2847 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://github.com/AndrasKomaromi/philosophy-models/blob/main/Plato-Models-GUFO.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://github.com/AndrasKomaromi/philosophy-models/blob/main/Plato-Models-GUFO.owl"
+     versionIRI="urn:absolute:1.1">
+    <Prefix name="" IRI="http://philosophy-models.blog"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="gufo" IRI="http://purl.org/nemo/gufo#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/nemo/gufo#</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Sources:
+(1) Silverman, Allan, “Plato’s Middle Period Metaphysics and Epistemology“, The Stanford Encyclopedia of Philosophy (Fall 2014 Edition), Edward N. Zalta (ed.)
+(2) Lorenz, Hendrik, “Ancient Theories of Soul“, The Stanford Encyclopedia of Philosophy (Summer 2009 Edition), Edward N. Zalta (ed.)
+(3) Sedley, David, “Plato’s Cratylus“, The Stanford Encyclopedia of Philosophy (Fall 2018 Edition), Edward N. Zalta (ed.)
+(4) Zeyl, Donald and Sattler, Barbara, “Plato’s Timaeus“, The Stanford Encyclopedia of Philosophy (Summer 2019 Edition), Edward N. Zalta (ed.)
+(5) Brown, Eric, “Plato’s Ethics and Politics in The Republic“, The Stanford Encyclopedia of Philosophy (Fall 2017 Edition), Edward N. Zalta (ed.)</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">author: András L. Komáromi
+This work is distributed under Creative Commons Attribution License CC BY 4.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Category"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Kind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Phase"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:Role"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="gufo:VariableCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Air"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Appetite"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Aristocratic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Auxiliaries"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AuxiliaryPerson"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Being"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Belief"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CardinalVirtue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Citizen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Citiznship"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Class"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Constitution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Convention"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Courage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Demiurge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Democratic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Difference"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Earth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Education"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Essence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Family"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Form"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#God"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Good"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GuardianPerson"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Guardians"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HeavenlyBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanBeing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#HumanSoul"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#IdealCity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Imagination"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Intellect"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Isosceles"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Justice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LesserGod"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LivingThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NameBearerObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NobleLie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Oligarchic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OriginalName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Particular"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PhilosopherKing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PresentName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PrivateProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProducerPerson"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Producers"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PsychologicalConstitution"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reason"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Receptacle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Recollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sameness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scalene"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensePerception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpecificFormOfTheName"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Spirit"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StateProperty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Temperance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Thinking"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timocratic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Triangle"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tyrannical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Universe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Wisdom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorldsBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#WorldsSoul"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_140aeabe_0f96_4f2f_b44c_7d3676a8f65d"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_195150d1_98a5_4762_bfbd_cb003608fb2f"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_7373aee0_e2bf_496e_8ea4_fabb82230ba0"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_b2c332fa_115d_44a5_a8b7_6a6b5d49677f"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#becomingTakesPlace"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ifReasonAndSpiritInHarmony"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ifReasonSpiritAppetiteInHarmony"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isBeing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#looksTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#providedTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#represents"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#attribute"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#attribute_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#attribute_2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#composite"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#composite_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#motivation"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#motivation_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#motivation_2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#motivation_3"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#motivation_4"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#name_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sensible"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sensible_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sex"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sex_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#sex_2"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#spatial"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#spatial_1"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temporal"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#temporal_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Air"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Appetite"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aristocratic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Auxiliaries"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#AuxiliaryPerson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Being"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Belief"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CardinalVirtue"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Citizen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Citiznship"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Class"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Constitution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Convention"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Courage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Demiurge"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Democratic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Difference"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Earth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Education"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Element"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Essence"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Family"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Fire"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Form"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#God"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Good"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#GuardianPerson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Guardians"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HeavenlyBody"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HumanBeing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HumanBody"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#HumanSoul"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#IdealCity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Imagination"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Intellect"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Isosceles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Justice"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LesserGod"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LivingThing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Name"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NameBearerObject"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NobleLie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OWLNamedIndividual_931b3c27_3b58_48b5_ade3_572a8118e78c"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oligarchic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#OriginalName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Particular"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PhilosopherKing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PresentName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PrivateProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProducerPerson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Producers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Property"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PsychologicalConstitution"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Reason"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Receptacle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Recollection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sameness"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scalene"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SensePerception"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpecificFormOfTheName"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Spirit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#StateProperty"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Temperance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Thinking"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Timocratic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Triangle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tyrannical"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Universe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wisdom"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WorldsBody"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#WorldsSoul"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#isBeing"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#nameHasNameBearerObject"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Air"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appetite"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appetite"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c"/>
+            <Class IRI="#Democratic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appetite"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c"/>
+            <Class IRI="#Oligarchic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appetite"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c"/>
+            <Class IRI="#Tyrannical"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Appetite"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#HumanSoul"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Aristocratic"/>
+        <Class IRI="#PsychologicalConstitution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Auxiliaries"/>
+        <Class IRI="#Class"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AuxiliaryPerson"/>
+        <Class IRI="#Citizen"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AuxiliaryPerson"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_195150d1_98a5_4762_bfbd_cb003608fb2f"/>
+            <Class IRI="#Auxiliaries"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Being"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Being"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#WorldsSoul"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Being"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Essence"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Being"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Form"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Belief"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Belief"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Reason"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CardinalVirtue"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CardinalVirtue"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#HumanSoul"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citizen"/>
+        <Class IRI="#HumanBeing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citizen"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Citiznship"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citiznship"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citiznship"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#IdealCity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Citiznship"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Citizen"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Class"/>
+        <Class abbreviatedIRI="gufo:VariableCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Constitution"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Constitution"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#IdealCity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Convention"/>
+        <Class abbreviatedIRI="gufo:Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Convention"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Name"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Courage"/>
+        <Class IRI="#CardinalVirtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Demiurge"/>
+        <Class IRI="#God"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Demiurge"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_b2c332fa_115d_44a5_a8b7_6a6b5d49677f"/>
+            <Class IRI="#HumanBody"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Demiurge"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_b2c332fa_115d_44a5_a8b7_6a6b5d49677f"/>
+            <Class IRI="#HumanSoul"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Demiurge"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_b2c332fa_115d_44a5_a8b7_6a6b5d49677f"/>
+            <Class IRI="#Universe"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Democratic"/>
+        <Class IRI="#PsychologicalConstitution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Difference"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Difference"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#WorldsSoul"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Earth"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Education"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Element"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Element"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#HumanBody"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Element"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#WorldsBody"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Essence"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Essence"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Being"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Family"/>
+        <Class abbreviatedIRI="gufo:VariableCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fire"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#NameBearerObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Particular"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Being"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Form"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Good"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#God"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Good"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Good"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#Form"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GuardianPerson"/>
+        <Class IRI="#Citizen"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GuardianPerson"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_195150d1_98a5_4762_bfbd_cb003608fb2f"/>
+            <Class IRI="#Guardians"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Guardians"/>
+        <Class IRI="#Class"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeavenlyBody"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HeavenlyBody"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Universe"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanBeing"/>
+        <Class IRI="#LivingThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanBody"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanBody"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#HumanBeing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanSoul"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#HumanSoul"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#HumanBeing"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdealCity"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdealCity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_140aeabe_0f96_4f2f_b44c_7d3676a8f65d"/>
+            <Class IRI="#StateProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdealCity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Constitution"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#IdealCity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            </ObjectInverseOf>
+            <Class IRI="#Citiznship"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Imagination"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Imagination"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Reason"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Intellect"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isosceles"/>
+        <Class IRI="#Triangle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Isosceles"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Earth"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Justice"/>
+        <Class IRI="#CardinalVirtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LesserGod"/>
+        <Class IRI="#God"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LesserGod"/>
+        <Class IRI="#LivingThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LivingThing"/>
+        <Class IRI="#Particular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Name"/>
+        <Class IRI="#Particular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Name"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty abbreviatedIRI="gufo:mediates"/>
+            <Class IRI="#Convention"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NameBearerObject"/>
+        <Class IRI="#Particular"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NameBearerObject"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_140aeabe_0f96_4f2f_b44c_7d3676a8f65d"/>
+            <Class IRI="#Name"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NobleLie"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Oligarchic"/>
+        <Class IRI="#PsychologicalConstitution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OriginalName"/>
+        <Class IRI="#Name"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Particular"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhilosopherKing"/>
+        <Class IRI="#GuardianPerson"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PhilosopherKing"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c"/>
+            <Class IRI="#IdealCity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PresentName"/>
+        <Class IRI="#Name"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PrivateProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProducerPerson"/>
+        <Class IRI="#Citizen"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProducerPerson"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_140aeabe_0f96_4f2f_b44c_7d3676a8f65d"/>
+            <Class IRI="#PrivateProperty"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProducerPerson"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_195150d1_98a5_4762_bfbd_cb003608fb2f"/>
+            <Class IRI="#Family"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProducerPerson"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_195150d1_98a5_4762_bfbd_cb003608fb2f"/>
+            <Class IRI="#Producers"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Producers"/>
+        <Class IRI="#Class"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Property"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PsychologicalConstitution"/>
+        <Class abbreviatedIRI="gufo:IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PsychologicalConstitution"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+            <Class IRI="#HumanSoul"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reason"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reason"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_140aeabe_0f96_4f2f_b44c_7d3676a8f65d"/>
+            <Class IRI="#Wisdom"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reason"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_7373aee0_e2bf_496e_8ea4_fabb82230ba0"/>
+            <Class IRI="#Appetite"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reason"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_7373aee0_e2bf_496e_8ea4_fabb82230ba0"/>
+            <Class IRI="#Spirit"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reason"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c"/>
+            <Class IRI="#Aristocratic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reason"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#HumanSoul"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Receptacle"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recollection"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Recollection"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Reason"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sameness"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sameness"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#WorldsSoul"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scalene"/>
+        <Class IRI="#Triangle"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scalene"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Air"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scalene"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Fire"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scalene"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Water"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensePerception"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensePerception"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Appetite"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpecificFormOfTheName"/>
+        <Class IRI="#Form"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpecificFormOfTheName"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Name"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spirit"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spirit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_7373aee0_e2bf_496e_8ea4_fabb82230ba0"/>
+            <Class IRI="#Appetite"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spirit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c"/>
+            <Class IRI="#Timocratic"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Spirit"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#HumanSoul"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StateProperty"/>
+        <Class IRI="#Property"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Temperance"/>
+        <Class IRI="#CardinalVirtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thinking"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Thinking"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Reason"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timocratic"/>
+        <Class IRI="#PsychologicalConstitution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Triangle"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tyrannical"/>
+        <Class IRI="#PsychologicalConstitution"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Universe"/>
+        <Class IRI="#LivingThing"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Wisdom"/>
+        <Class IRI="#CardinalVirtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorldsBody"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorldsBody"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Universe"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorldsSoul"/>
+        <Class abbreviatedIRI="gufo:FunctionalComplex"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#WorldsSoul"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b"/>
+            <Class IRI="#Universe"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Air"/>
+        <Class IRI="#Earth"/>
+        <Class IRI="#Fire"/>
+        <Class IRI="#Water"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Aristocratic"/>
+        <Class IRI="#Democratic"/>
+        <Class IRI="#Oligarchic"/>
+        <Class IRI="#Timocratic"/>
+        <Class IRI="#Tyrannical"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Demiurge"/>
+        <Class IRI="#LesserGod"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Air"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Appetite"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Aristocratic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Auxiliaries"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="#AuxiliaryPerson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Being"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Belief"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#CardinalVirtue"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="#Citizen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Citiznship"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Category"/>
+        <NamedIndividual IRI="#Class"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Constitution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Convention"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Courage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Demiurge"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Democratic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Difference"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Earth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Education"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Element"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Essence"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Family"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Fire"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Form"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Category"/>
+        <NamedIndividual IRI="#God"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Good"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="#GuardianPerson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Guardians"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#HeavenlyBody"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#HumanBeing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#HumanBody"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#HumanSoul"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#IdealCity"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Imagination"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Intellect"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Isosceles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Justice"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#LesserGod"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#LivingThing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Name"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#NameBearerObject"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#NobleLie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#HumanBeing"/>
+        <NamedIndividual IRI="#OWLNamedIndividual_931b3c27_3b58_48b5_ade3_572a8118e78c"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Oligarchic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Phase"/>
+        <NamedIndividual IRI="#OriginalName"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Particular"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="#PhilosopherKing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Phase"/>
+        <NamedIndividual IRI="#PresentName"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#PrivateProperty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Role"/>
+        <NamedIndividual IRI="#ProducerPerson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Producers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Property"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#PsychologicalConstitution"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Reason"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Receptacle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Recollection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Sameness"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Scalene"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#SensePerception"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#SpecificFormOfTheName"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Spirit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#StateProperty"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Temperance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Thinking"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Timocratic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#Triangle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Tyrannical"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Universe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Water"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:SubKind"/>
+        <NamedIndividual IRI="#Wisdom"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#WorldsBody"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:Kind"/>
+        <NamedIndividual IRI="#WorldsSoul"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#isBeing"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
+        <NamedIndividual IRI="#nameHasNameBearerObject"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#becomingTakesPlace"/>
+        <Class IRI="#Particular"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ifReasonAndSpiritInHarmony"/>
+        <Class IRI="#Spirit"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#ifReasonSpiritAppetiteInHarmony"/>
+        <Class IRI="#Appetite"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isBeing"/>
+        <Class IRI="#Form"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#looksTo"/>
+        <Class IRI="#Demiurge"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#providedTo"/>
+        <Class IRI="#Citizen"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#Demiurge"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#becomingTakesPlace"/>
+        <Class IRI="#Receptacle"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ifReasonAndSpiritInHarmony"/>
+        <Class IRI="#Courage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#ifReasonSpiritAppetiteInHarmony"/>
+        <Class IRI="#Temperance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isBeing"/>
+        <Class IRI="#Essence"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#looksTo"/>
+        <Class IRI="#Form"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#providedTo"/>
+        <Class IRI="#Education"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#represents"/>
+        <Class IRI="#Intellect"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#attribute"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#attribute_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#attribute_2"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#composite"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#composite_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#language"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#motivation"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#motivation_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#motivation_2"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#motivation_3"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#motivation_4"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#name"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#name_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sensible"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sensible_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sex"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sex_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#sex_2"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#spatial"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#spatial_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#temporal"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#temporal_1"/>
+        <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#attribute"/>
+        <Class IRI="#Democratic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#attribute_1"/>
+        <Class IRI="#Tyrannical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#attribute_2"/>
+        <Class IRI="#Oligarchic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#composite"/>
+        <Class IRI="#Form"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#composite_1"/>
+        <Class IRI="#Particular"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#language"/>
+        <Class IRI="#Name"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#motivation"/>
+        <Class IRI="#Oligarchic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#motivation_1"/>
+        <Class IRI="#Aristocratic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#motivation_2"/>
+        <Class IRI="#Tyrannical"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#motivation_3"/>
+        <Class IRI="#Democratic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#motivation_4"/>
+        <Class IRI="#Timocratic"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name"/>
+        <Class IRI="#Form"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#name_1"/>
+        <Class IRI="#Particular"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sensible"/>
+        <Class IRI="#Form"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sensible_1"/>
+        <Class IRI="#Particular"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sex"/>
+        <Class IRI="#GuardianPerson"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sex_1"/>
+        <Class IRI="#ProducerPerson"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#sex_2"/>
+        <Class IRI="#AuxiliaryPerson"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#spatial"/>
+        <Class IRI="#Form"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#spatial_1"/>
+        <Class IRI="#Particular"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#temporal"/>
+        <Class IRI="#Particular"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#temporal_1"/>
+        <Class IRI="#Form"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#composite"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#composite_1"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#language"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#name_1"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sensible"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#sensible_1"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#spatial"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#spatial_1"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#temporal"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#temporal_1"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Air</IRI>
+        <Literal xml:lang="en">&quot;Air is made of particles in form of regular octohedron (8-sided geometrical solid), with 6 scalene triangles making up each equilateral face of the octohedron.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Air</IRI>
+        <Literal xml:lang="en">Air</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Appetite</IRI>
+        <Literal xml:lang="en">&quot;Appetite is primarily concerned with food, drink and sex (439d, 580e). It gives rise to desires for these and other such things which in each case are based, simply and immediately, on the thought that obtaining the relevant object of desire is, or would be, pleasant. Socrates also calls appetite the money-loving part, because, in the case of mature human beings at least, appetite also tends to be strongly attached to money, given that it is most of all by means of money that its primary desires are fulfilled.&quot; (Lorenz)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Appetite</IRI>
+        <Literal xml:lang="en">Appetite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Aristocratic</IRI>
+        <Literal xml:lang="en">Aristocratically constituted persons are ruled by their reason, and are motivated by the attendance of wisdom.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Aristocratic</IRI>
+        <Literal xml:lang="en">Aristocratic </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Auxiliaries</IRI>
+        <Literal xml:lang="en">The Auxiliaries are a military class, with the main task to conduct the Ideal City&apos;s wars and to enforce the Constitution. They are trained to be aggressive, and ruthless with foreigners, but gentle with the Citizens.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Auxiliaries</IRI>
+        <Literal xml:lang="en">Auxiliaries</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#AuxiliaryPerson</IRI>
+        <Literal xml:lang="en">An auxiliary person is a citizen and soldier, a member of the class of Auxiliaries.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#AuxiliaryPerson</IRI>
+        <Literal xml:lang="en">AuxiliaryPerson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Being</IRI>
+        <Literal xml:lang="en">&quot;Being, then, is a primitive ontological relation designed exclusively to capture the special tie between that which possesses an essence and the essence possessed.&quot; (Silverman)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Being</IRI>
+        <Literal xml:lang="en">Being</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Belief</IRI>
+        <Literal xml:lang="en">&quot;Belief (pistis) grasps properties of ordinary objects (UC6): &quot;there is the intelligible realm and the visible realm... The ordinary physical objects of which the images are images occupy the upper portion. Set over the physical world is the faculty of pistis, literally faith or conviction, but generally regarded as belief.&quot; (Lorenz)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Belief</IRI>
+        <Literal xml:lang="en">Belief</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CardinalVirtue</IRI>
+        <Literal xml:lang="en">[Cardinal] Virtue is a state of the Soul, and is a fundamental constituent of what is good for a human being.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CardinalVirtue</IRI>
+        <Literal xml:lang="en">CardinalVirtue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Citizen</IRI>
+        <Literal xml:lang="en">Citizen is a human being.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Citizen</IRI>
+        <Literal xml:lang="en">Citizen</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Citiznship</IRI>
+        <Literal xml:lang="en">Citizenship is a legal status of a human being that relates it to the state (in this case the ideal city).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Citiznship</IRI>
+        <Literal xml:lang="en">Citizenship</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Class</IRI>
+        <Literal xml:lang="en">Class is a collection of Citizens with common tasks and properties.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Class</IRI>
+        <Literal xml:lang="en">Class</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Constitution</IRI>
+        <Literal xml:lang="en">The constitution is the collection of laws, rules governing the city.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Constitution</IRI>
+        <Literal xml:lang="en">Constitution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Convention</IRI>
+        <Literal xml:lang="en">&quot;An extreme linguistic conventionalist like Hermogenes holds that nothing but local or national convention determines which words are used to designate which objects.&quot; (Sedley)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Convention</IRI>
+        <Literal>used in CONVENTIONALISM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Convention</IRI>
+        <Literal xml:lang="en">Convention</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Courage</IRI>
+        <Literal xml:lang="en">&quot;A person is courageous just in case her spirited attitudes do not change in the face of pains and pleasures but stay in agreement with what is rationally recognized as fearsome and not&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Courage</IRI>
+        <Literal xml:lang="en">Courage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Demiurge</IRI>
+        <Literal xml:lang="en">&quot;The universe exists and manifests goodness because it is the handiwork of a supremely good, ungrudging Craftsman [Demiurge], who brought order to an initially disorderly state of affairs - the Craftsman seems to be an anthropomorphic representation of Intellect.&quot; (Zeyl,Sattler) The Demiurge looks to the Form when creates the Universe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Demiurge</IRI>
+        <Literal xml:lang="en">Demiurge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Democratic</IRI>
+        <Literal xml:lang="en">&quot;the democratic... souls treat desire-satisfaction itself and the pleasure associated with it as their end. The democrat treats all desires and pleasures as equally valuable and restricts herself to lawful desires&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Democratic</IRI>
+        <Literal xml:lang="en">Democratic </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Difference</IRI>
+        <Literal xml:lang="en">Differencr is component of the World&apos;sSoul</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Difference</IRI>
+        <Literal xml:lang="en">Difference</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Earth</IRI>
+        <Literal xml:lang="en">Earth is made up of particles in form of cube (six-sided geometrical solid), with 4 isosceles triangles making up each square face of the cube.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Earth</IRI>
+        <Literal xml:lang="en">Earth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Education</IRI>
+        <Literal xml:lang="en">All the citizens receive a class-specific education. For guardians &quot;this education is most often noted for its carefully censored &apos;reading list;&apos; the young guardians-to-be will not be exposed to inappropriate images of gods and human beings... A well-trained guardian will &apos;praise fine things, be pleased by them, receive them into his soul, and, being nurtured by them, become fine and good,&apos; and each will &apos;rightly object to what is shameful, hating it while he�s still young and unable to grasp the reason&apos;... Socrates has the young guardians not only responding to good things as honorable (with spirited attitudes), but also becoming fine and good.&apos; For auxiliaries military education is available. For producers there is primary education &apos;to make good on the commitment to promote especially talented children born among the producers and to enable the producers to recognize the virtue in the philosophers.&apos;&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Education</IRI>
+        <Literal xml:lang="en">Education</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Element</IRI>
+        <Literal xml:lang="en">&quot;The world&apos;s body is composed of fire (for visibility) and earth (for tangibility), but these so-called elements require the mediation of air and water in a progression of proportion to bind them together into a unified, concordant whole.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Element</IRI>
+        <Literal xml:lang="en">Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Essence</IRI>
+        <Literal xml:lang="en">&quot;Each Form is its essence (ousia), which is to say that the relation of Being links the essence of beauty to the subject, Beauty itself. Being, then, is a primitive ontological relation designed exclusively to capture the special tie between that which possesses an essence and the essence possessed.&quot;  (Silverman)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Essence</IRI>
+        <Literal xml:lang="en">Essence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Family</IRI>
+        <Literal xml:lang="en">Producers can have private families.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Family</IRI>
+        <Literal xml:lang="en">Family</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Fire</IRI>
+        <Literal xml:lang="en">&quot;Fire is made up of particles in form of a regular tetrahedron (four-sided geometrical solid), with 6 scalene triangles making up each equilateral face of the tetrahedron.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fire</IRI>
+        <Literal xml:lang="en">Fire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Form</IRI>
+        <Literal xml:lang="en">&quot;What many things have in common, or a feature they share, is a universal or, in Plato�s terms, a Form. Of course there seems to be a huge number of properties. Many different things are white. Many different things are animals. Each (shared) property is a universal a  -one over many instances,-  whiteness over the many white things, roundness over the many round things, and so on. Thus, for Plato, Roundness and Whiteness are Forms. [...] Forms are immaterial, non-spatial and atemporal [...] Forms are [...] perfect and what particulars strive to be like but fall short of . [...] Forms are simple or incomposite, of one form (monoeidetic). Forms are the objects of knowledge, grasped by the intellect through definitions. [...] Forms are pure, simple or uniform (monoeidetic , hen). (Silverman)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Form</IRI>
+        <Literal xml:lang="en">Form</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#God</IRI>
+        <Literal xml:lang="en">God</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#God</IRI>
+        <Literal xml:lang="en">God</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Good</IRI>
+        <Literal xml:lang="en">&quot;[...] all Forms are related to the Good. [...] each Form is good, that is, that each Form is a good thing or is characterized by goodness.&quot;  (Silverman)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Good</IRI>
+        <Literal xml:lang="en">Good</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GuardianPerson</IRI>
+        <Literal xml:lang="en">A guardian person is a citizen, trained in philosophy, member of the class of Guardians. For Guardian Persons, the nuclear family is abolished, man, woman, and children live in community, children are removed from their mother after birth and raised and educated collectively.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GuardianPerson</IRI>
+        <Literal xml:lang="en">GuardianPerson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Guardians</IRI>
+        <Literal xml:lang="en">The Guardians are the ruling class of the Ideal City. Propaganda, eugenics, falsehood, and censorship are among the tools used by guardians to rule.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Guardians</IRI>
+        <Literal xml:lang="en">Guardians</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HeavenlyBody</IRI>
+        <Literal xml:lang="en">&quot;The heavenly bodies are divine and move in their various orbits to serve as markers of time: the fixed stars to mark a day/night, the moon to mark the (lunar) month and the sun to mark the year. Time itself came into being with these celestial movements as an - image of eternity.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HeavenlyBody</IRI>
+        <Literal xml:lang="en">HeavenlyBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HumanBeing</IRI>
+        <Literal xml:lang="en">HumanBeing is a combination of on immortal human soul and a mortal human body.
+ </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HumanBeing</IRI>
+        <Literal xml:lang="en">HumanBeing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HumanBody</IRI>
+        <Literal xml:lang="en">&quot;As individual immortal (and rational) souls are embodied in mortal [human] bodies, the embodiment requires the further creation of the -mortal- parts of the soul - the spirited and appetitive parts, familiar from the Republic and the Phaedrus. These parts are assigned their respective locations in the body: the immortal and rational soul in the head, and the two parts of the mortal soul in the trunk: the spirited part in the chest (nearer to the head) and the appetitive part in the belly. The various organs in the trunk -the lungs and heart in the chest and the liver in the belly- support the functions of their resident soul parts.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HumanBody</IRI>
+        <Literal xml:lang="en">HumanBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#HumanSoul</IRI>
+        <Literal xml:lang="en">&quot;Individual [human] soul is are made up of the residue (and an inferior grade) of the soul stuff of the universe, and are eventually embodied in physical bodies. This embodiment throws the previously regular motions of the soul into confusion as the soul is subjected to the forceful disturbances of internal bodily processes as well as the impact of external bodies upon it, particularly in sense experience. These disturbances gravely impair the soul&apos;s cognitive functioning; only with appropriate nurture and education can its original motions be reestablished and proper cognitive functioning be restored. The body and its parts were designed to support that functioning, and Timaeus takes the design of the eyes and the mechanics of vision as an important case in point.&quot; (Zeyl,Sattler)
+&quot;But the arguments from conflict treat reason, spirit, and appetite as distinct subjects of psychological states and events, and it seems best to take Socrates&apos; descriptions at face value unless there is compelling reason not to. At face value, Socrates offers a more robust conception of parts, wherein each part is like an independent agent. Indeed, this notion of parts is robust enough to make one wonder why reason, spirit, and appetite are parts at all, as opposed to three independent subjects. But the Republic proceeds as though every embodied human being has just one soul that comprises three parts. No embodied soul is perfectly unified: even the virtuous person, who makes her soul into a unity as much as she can, has three parts in her soul. (She must, as we shall see, in order to be just.) But every embodied soul enjoys an unearned unity: every human&apos;s reason, spirit, and appetite constitute a single [human] soul that is the unified source of that human&apos;s life and is a unified locus of responsibility for that human&apos;s thoughts and actions.&quot; (Brown)
+&quot;every embodied human being has just one soul that comprises three parts. No embodied soul is perfectly unified: even the virtuous person, who makes her soul into a unity as much as she can, has three parts in her soul. (She must, as we shall see, in order to be just.) But every embodied soul enjoys an unearned unity: every human&apos;s reason, spirit, and appetite constitute a single [human] soul that is the unified source of that human&apos;s life and is a unified locus of responsibility for that human&apos;s thoughts and actions.&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#HumanSoul</IRI>
+        <Literal xml:lang="en">HumanSoul</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#IdealCity</IRI>
+        <Literal xml:lang="en">&quot;The Ideal City, (Kallipolis, beautiful city) includes three classes, two that guard the city and its constitution (ruling and auxiliary guardians) and one that produces what the city needs.&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#IdealCity</IRI>
+        <Literal xml:lang="en">IdealCity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Imagination</IRI>
+        <Literal xml:lang="en">Imagination (eikasia) grasps images: &quot;there is the intelligible realm and the visible realm... At the bottom of the visible one finds images, shadows and such. Set over the images is the faculty of eikasia, imagination.&quot; (Lorenz)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Imagination</IRI>
+        <Literal xml:lang="en">Imagination</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Intellect</IRI>
+        <Literal xml:lang="en">&quot;It is reasonable to conclude that Intellect is a sui generis substance that transcends the metaphysical dichotomy of being and becoming�possibly not unlike the Judaeo-Christian conception of God.&quot; (Zeyl, Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Intellect</IRI>
+        <Literal xml:lang="en">Intellect</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Isosceles</IRI>
+        <Literal xml:lang="en">A triangle with 45-45-90 degree angles.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Isosceles</IRI>
+        <Literal xml:lang="en">Isosceles</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Justice</IRI>
+        <Literal xml:lang="en">&quot;a person is just just in case all three parts of her soul are functioning as they should. Justice, then, requires the other virtues. So the unjust person fails to be moderate, or fails to be wise, or fails to be courageous. Actually, the relation among the virtues seems tighter than that, for it seems that the unjust person necessarily fails to be wise, courageous, and temperate... You might try to deny this. You might say that a person could be courageous�with spirited attitudes that track perfectly what the rational attitudes say is fearsome and not, in the face of any pleasures and pains�but still be unjust insofar has her rational attitudes are inadequately developed, failing to know what really is fearsome. But Socrates seems to balk at this possibility by contrasting the civically courageous whose spirit preserves law-inculcated beliefs about what is fearsome and not and the genuinely courageous in whom, presumably, spirit preserves knowledge about what is fearsome and not. So you might say instead that a person could be moderate�utterly without appetitive attitudes at odds with what his rational attitudes say is good for him�but still be unjust insofar as his rational attitudes are inadequately developed and fail to know what really is good. But this picture of a meek, but moderate soul seems to sell short the requirements of moderation, which are not merely that there be no insurrections in the soul but also that there be agreement that the rational attitudes should rule. This would seem to require that there actually be appetitive attitudes that are in agreement with the rational attitudes� conception of what is good, which would in turn require that the rational attitudes be sufficiently strong to have a developed conception of what is good. Moreover, it would seem to require that the rational attitudes which endorse ruling be ruling, which would in turn require that the rational attitudes are at least on the path toward determining what really is good for the person. If these considerations are correct, then the unjust are lacking in virtue tout court, whereas the just possess all of the virtues.&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Justice</IRI>
+        <Literal xml:lang="en">Justice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LesserGod</IRI>
+        <Literal xml:lang="en">&quot;While the Craftsman has created the individual souls, he delegates the creation of the human bodies to the lesser, created gods. Gods are Chronos, Zeus, Hera etc&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LesserGod</IRI>
+        <Literal xml:lang="en">LesserGod</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LivingThing</IRI>
+        <Literal xml:lang="en">The universe is a living thing. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LivingThing</IRI>
+        <Literal xml:lang="en">LivingThing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Name</IRI>
+        <Literal xml:lang="en">&quot;The plural onomata -names-, in fact varies between being (a) a general term for &apos;words&apos;, (b) more narrowly, nouns, or perhaps nouns and adjectives, and (c) in certain contexts, proper names alone. In (a), the most generic use, it comes to designate language as such. Ultimately, for this reason, the Cratylus is Plato&apos;s dialogue about language, even if the elements of language on which it concentrates are in fact mainly nouns. Proper names are included among these nouns, and at times are treated as paradigmatic examples of them.&quot; (Sedley)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Name</IRI>
+        <Literal xml:lang="en">Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NameBearerObject</IRI>
+        <Literal xml:lang="en">A name-bearer object, an object, a particular with a name.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NameBearerObject</IRI>
+        <Literal xml:lang="en">NameBearerObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NobleLie</IRI>
+        <Literal xml:lang="en">The noble lie is part of education and promotes the universal acceptance of the individual&apos;s class status. It states, that Guardians have gold, Auxiliaries have silver, and Producers bronze in their blood, thus the members of these classes can not mate.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NobleLie</IRI>
+        <Literal xml:lang="en">NobleLie</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLNamedIndividual_931b3c27_3b58_48b5_ade3_572a8118e78c</IRI>
+        <Literal xml:lang="en">Plato</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_140aeabe_0f96_4f2f_b44c_7d3676a8f65d</IRI>
+        <Literal xml:lang="en">has</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_195150d1_98a5_4762_bfbd_cb003608fb2f</IRI>
+        <Literal xml:lang="en">isCollectionMemberOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_7373aee0_e2bf_496e_8ea4_fabb82230ba0</IRI>
+        <Literal xml:lang="en">inHarmonyWith</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_b2c332fa_115d_44a5_a8b7_6a6b5d49677f</IRI>
+        <Literal xml:lang="en">creates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_df9e6e06_b80e_404e_bfb6_39155174214c</IRI>
+        <Literal xml:lang="en">rules</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OWLObjectProperty_fe3a6d8d_1667_4a59_832c_27deae4cbc9b</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Oligarchic</IRI>
+        <Literal xml:lang="en">Oligharically constituted persons are ruled by their apetite in a necessary way, and motivated mainly by honor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Oligarchic</IRI>
+        <Literal xml:lang="en">Oligarchic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OriginalName</IRI>
+        <Literal xml:lang="en">&quot;Those original names have survived into today&apos;s language, but corrupted by sound-shifts over the centuries, so that to discern their originally intended message requires special expertise. [...] the name-maker [...] must turn his mind&apos;s eye to the appropriate Form, which he then embodies in the materials at his disposal, just as a carpenter making a shuttle or drill, having turned his mind&apos;s eye to the appropriate Form, then embodies it in the particular wood or metal at his disposal. In the case of name-making, the appropriate material is not wood or metal, but vocal sound. Implicitly, just as the same shuttle Form can be embodied in various woods and metals, so too the same name Form can be embodied with equal success in the various sound systems that different languages employ.&quot; (Sedley)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OriginalName</IRI>
+        <Literal>used in NATURALISM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OriginalName</IRI>
+        <Literal xml:lang="en">OriginalName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Particular</IRI>
+        <Literal xml:lang="en">&quot;Particulars are dependent on Forms whereas Forms are not dependent on them. Particulars strive to be such as the Forms are and thus in comparison to Forms are imperfect or deficient treat Partaking as a relation between material particulars and Forms, the result of which is that the particular is characterized by the Form of which it partakes [...].&quot;  (Silverman)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Particular</IRI>
+        <Literal xml:lang="en">Particular</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PhilosopherKing</IRI>
+        <Literal xml:lang="en">The Philosopher-king is a Guardian Person in his fifties, carefully educated in military, mathematics, government, and philosophical topics and chosen to be a leader. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PhilosopherKing</IRI>
+        <Literal xml:lang="en">Philosopher-king</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PresentName</IRI>
+        <Literal xml:lang="en">Present names are corrupted names in today�s language.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PresentName</IRI>
+        <Literal>used in NATURALISM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PresentName</IRI>
+        <Literal xml:lang="en">PresentName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PrivateProperty</IRI>
+        <Literal xml:lang="en">Private property is allowed for the producer persons. Guardians and Auxiliaries can not have private property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PrivateProperty</IRI>
+        <Literal xml:lang="en">PrivateProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProducerPerson</IRI>
+        <Literal xml:lang="en">A producer person is a citizen and worker, a member of the class of Producers. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProducerPerson</IRI>
+        <Literal xml:lang="en">ProducerPerson</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Producers</IRI>
+        <Literal xml:lang="en">The Producers are the class of workers, responsible for delivering the goods necessary for the city&apos;s population. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Producers</IRI>
+        <Literal xml:lang="en">Producers</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Property</IRI>
+        <Literal xml:lang="en">Property can be land, houses, materials, different assets etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Property</IRI>
+        <Literal xml:lang="en">Property</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PsychologicalConstitution</IRI>
+        <Literal xml:lang="en">&quot;there are in fact five kinds of pure psychological constitutions: aristocratically [...], timocratically [...], oligarchically [...], democratically [...], and tyrannically constituted persons... The first three of these constitutions are characteristically ordered toward simple aims (wisdom, honor, and money, respectively), but the last two are not so ordered, because there is no simple aim of the unnecessary appetites, be they lawful or lawless.&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PsychologicalConstitution</IRI>
+        <Literal xml:lang="en">PsychologicalConstitution</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Reason</IRI>
+        <Literal xml:lang="en">&quot;Reason is the part of the soul that is, of its own nature, attached to knowledge and truth. It is also, however, concerned to guide and regulate the life that it is, or anyhow should be, in charge of, ideally in a way that is informed by wisdom and that takes into consideration the concerns both of each of the three parts separately and of the soul as a whole.&quot; (Lorenz)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reason</IRI>
+        <Literal xml:lang="en">Reason</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Receptacle</IRI>
+        <Literal xml:lang="en">Receptacle is &quot;an enduring substratum, neutral in itself but temporarily taking on the various characterizations. The observed particulars just are parts of that receptacle so characterized. The receptacle has been seen as serving either as material substratum or as some form of space or as combining both roles. Timaeus&apos; account of the receptacle presents several interpretive difficulties, some of which will be discussed below. In the &apos;pre-cosmic&apos; state (the state prior to the intervention of the Craftsman) the receptacle is subject to erratic and disorderly motions, and moves its contents in turn. Receptacle is a third kind (triton genos) besides Form and Particular.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Receptacle</IRI>
+        <Literal xml:lang="en">Receptacle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Recollection</IRI>
+        <Literal xml:lang="en"> &quot;recollection... our disembodied, immortal souls have seen the Forms prior to their incarceration in the body. If Forms are the (basic) objects of knowledge, and Forms are not in the physical world, then we must have acquired that knowledge at some point prior to our commerce with that world.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Recollection</IRI>
+        <Literal xml:lang="en">Recollection</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sameness</IRI>
+        <Literal xml:lang="en">Sameness is a component of the World&apos;sSoul.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sameness</IRI>
+        <Literal xml:lang="en">Sameness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Scalene</IRI>
+        <Literal xml:lang="en">A triangle with 30-60-90 degree angles.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Scalene</IRI>
+        <Literal xml:lang="en">Scalene</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SensePerception</IRI>
+        <Literal xml:lang="en">Sense perception gets information about ordinary objects (particulars): &quot;Perception, unlike discursive thought or belief, is aligned not with the so-called rational part of the soul, but with the desiderative part [...], the senses are disparaged as a source of confusion and falsehood. The senses mislead us.&quot; The cause of this misleading is the fact that we perceive particulars, ordinary material objects, not Forms.&quot; (Lorenz)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SensePerception</IRI>
+        <Literal xml:lang="en">SensePerception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpecificFormOfTheName</IRI>
+        <Literal xml:lang="en">&quot;The relevant name Forms for a name-maker to look to, Socrates makes clear, will not be simply the generic Form of name, but also one of its species, the specific Form of the name currently being sought.&quot; (Sedley)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpecificFormOfTheName</IRI>
+        <Literal>used in NATURALISM</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpecificFormOfTheName</IRI>
+        <Literal xml:lang="en">SpecificFormOfTheName</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Spirit</IRI>
+        <Literal xml:lang="en">&quot;The natural attachment of spirit [thumoeides] is to honor and, more generally, to recognition and esteem by others. As a motivating force it generally accounts for self-assertion and ambition.&quot; (Lorenz)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Spirit</IRI>
+        <Literal xml:lang="en">Spirit</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StateProperty</IRI>
+        <Literal xml:lang="en">State property is assets held by the state, controlled by the Guardians.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StateProperty</IRI>
+        <Literal xml:lang="en">StateProperty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Temperance</IRI>
+        <Literal xml:lang="en">&quot;A person is temperate or moderate just in case the different parts of her soul are in agreement.&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Temperance</IRI>
+        <Literal xml:lang="en">Temperance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Thinking</IRI>
+        <Literal xml:lang="en">Thinking (dianoia) produces knowlege: &quot;A critical question then is how one obtains the appropriate kind of justification to tie down or convert a belief into knowledge. Plato offers little in the way of detail on this score, but twice he alludes to a method of hypothesis, suggesting both in the Phaedo and Republic that hypotheses and their ultimately being rendered non-hypothetical is part of the process by which one comes to know a Form.&quot; (Lorenz)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Thinking</IRI>
+        <Literal xml:lang="en">Thinking</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Timocratic</IRI>
+        <Literal xml:lang="en">Timocratically constituted persons are ruled by their spirited attitudes, and motivated mainly by honor.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Timocratic</IRI>
+        <Literal xml:lang="en">Timocratic </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Triangle</IRI>
+        <Literal xml:lang="en">Triangle is the simplest and the most perfect polygon.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Triangle</IRI>
+        <Literal xml:lang="en">Triangle</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tyrannical</IRI>
+        <Literal xml:lang="en">&quot;tyrannical souls treat desire-satisfaction itself and the pleasure associated with it as their end...the tyrant embraces disordered, lawless desires and has a special passion for the apparently most intense, bodily pleasures&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tyrannical</IRI>
+        <Literal xml:lang="en">Tyrannical</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Universe</IRI>
+        <Literal xml:lang="en">&quot;Universe &apos;is a living thing (zo[i]on, also translatable as &apos;animal&apos;), because it is better for it to possess intelligence than to lack it, and the acquisition of intelligence by anything requires the acquisition of soul. It is complete, and thus it includes within itself all the species of living things as its parts. It is unique, because its model is unique; the uniqueness of the model follows from its completeness.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Universe</IRI>
+        <Literal xml:lang="en">Universe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Water</IRI>
+        <Literal xml:lang="en">&quot;Water is made up of particles in form of regular icosahedron (20-sided geometrical solid), with 6 scalene triangles making up each equilateral face of the icosahedron.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Water</IRI>
+        <Literal xml:lang="en">Water</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Wisdom</IRI>
+        <Literal xml:lang="en">&quot;A person is wise just in case her rational attitudes are functioning well, so that her rational part &apos;has in it the knowledge of what is advantageous for each part [of the soul] and for the whole in common of the three parts&quot; (Brown)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Wisdom</IRI>
+        <Literal xml:lang="en">Wisdom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WorldsBody</IRI>
+        <Literal xml:lang="en">&quot;The shape of the universe&apos;s body -a sphere. and the characteristics it possesses or lacks are all explained in terms of their various purposes.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorldsBody</IRI>
+        <Literal xml:lang="en">World&apos;sBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#WorldsSoul</IRI>
+        <Literal xml:lang="en">&quot;The composition of the world&apos;s soul out of a harmonically proportionate series of portions of a mixture of both divisible and indivisible Sameness, Difference and Being, and the division of these portions into two intersecting circles (of the Same and of the Different) explain the cognitive powers of the soul in relation to the different types of objects of cognition: those that are and those that become.&quot; (Zeyl,Sattler)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#WorldsSoul</IRI>
+        <Literal xml:lang="en">World&apos;sSoul</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attribute</IRI>
+        <Literal xml:lang="en">attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attribute_1</IRI>
+        <Literal xml:lang="en">attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#attribute_2</IRI>
+        <Literal xml:lang="en">attribute</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#becomingTakesPlace</IRI>
+        <Literal xml:lang="en">becomingTakesPlace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#composite</IRI>
+        <Literal xml:lang="en">composite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#composite_1</IRI>
+        <Literal xml:lang="en">composite</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ifReasonAndSpiritInHarmony</IRI>
+        <Literal xml:lang="en">hasIfReasonAndSpiritInHarmony</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ifReasonSpiritAppetiteInHarmony</IRI>
+        <Literal xml:lang="en">hasIfReasonSpiritAppetiteInHarmony</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#isBeing</IRI>
+        <Literal xml:lang="en">isBeing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#language</IRI>
+        <Literal xml:lang="en">language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#looksTo</IRI>
+        <Literal xml:lang="en">looksTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#motivation</IRI>
+        <Literal xml:lang="en">motivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#motivation_1</IRI>
+        <Literal xml:lang="en">motivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#motivation_2</IRI>
+        <Literal xml:lang="en">motivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#motivation_3</IRI>
+        <Literal xml:lang="en">motivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#motivation_4</IRI>
+        <Literal xml:lang="en">motivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#name</IRI>
+        <Literal xml:lang="en">name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#name_1</IRI>
+        <Literal xml:lang="en">name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#providedTo</IRI>
+        <Literal xml:lang="en">providedWith</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#represents</IRI>
+        <Literal xml:lang="en">represents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sensible</IRI>
+        <Literal xml:lang="en">sensible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sensible_1</IRI>
+        <Literal xml:lang="en">sensible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sex</IRI>
+        <Literal xml:lang="en">sex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sex_1</IRI>
+        <Literal xml:lang="en">sex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#sex_2</IRI>
+        <Literal xml:lang="en">sex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spatial</IRI>
+        <Literal xml:lang="en">spatial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spatial_1</IRI>
+        <Literal xml:lang="en">spatial</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temporal</IRI>
+        <Literal xml:lang="en">temporal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#temporal_1</IRI>
+        <Literal xml:lang="en">temporal</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
