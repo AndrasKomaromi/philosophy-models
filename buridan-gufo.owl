@@ -224,10 +224,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#categorematicConceptUltimatelySignifiesObject"/>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#categorematicTermImmediatelySiginifiesCategorematicConcept"/>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#categorematicTermSignifiesUltimatelyObject"/>
@@ -561,7 +561,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubClassOf>
         <Class IRI="#CategorematicConcept"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#categorematicConceptUltimatelySignifiesObject"/>
+            <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
             <Class IRI="#Object"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
@@ -581,7 +581,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubClassOf>
         <Class IRI="#CategorematicTerm"/>
         <ObjectAllValuesFrom>
-            <ObjectProperty IRI="#categorematicTermImmediatelySiginifiesCategorematicConcept"/>
+            <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
             <Class IRI="#CategorematicConcept"/>
         </ObjectAllValuesFrom>
     </SubClassOf>
@@ -1714,11 +1714,11 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty IRI="#termRefersToSuppositum"/>
     </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#categorematicConceptUltimatelySignifiesObject"/>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
         <Class IRI="#CategorematicConcept"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
-        <ObjectProperty IRI="#categorematicTermImmediatelySiginifiesCategorematicConcept"/>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
         <Class IRI="#CategorematicTerm"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
@@ -1898,11 +1898,11 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <Class IRI="#TokenType"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#categorematicConceptUltimatelySignifiesObject"/>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
         <Class IRI="#Object"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
-        <ObjectProperty IRI="#categorematicTermImmediatelySiginifiesCategorematicConcept"/>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
         <Class IRI="#CategorematicConcept"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
@@ -2460,7 +2460,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#SemanticallySimpleExpression</IRI>
-        <Literal xml:lang="en">SemanticallySimple Expression</Literal>
+        <Literal xml:lang="en">SemanticallySimpleExpression</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
@@ -2629,23 +2629,63 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#categorematicConceptUltimatelySignifiesObject</IRI>
-        <Literal xml:lang="en">signifies</Literal>
+        <IRI>#categorematicConceptSignifiesUltimatelyObject</IRI>
+        <Literal xml:lang="en">signifiesUltimately</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>#categorematicTermImmediatelySiginifiesCategorematicConcept</IRI>
-        <Literal xml:lang="en">signifies</Literal>
+        <IRI>#categorematicTermSiginifiesImmediatelyCategorematicConcept</IRI>
+        <Literal xml:lang="en">siginifiesImmediately</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categorematicTermSignifiesUltimatelyObject</IRI>
+        <Literal xml:lang="en">signifiesUltimately</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptIsComponentOfComplexConcept</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptIsComponentOfMentalProposition</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptIsComponentOfMind</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#conceptRefersToMentalSuppositum</IRI>
-        <Literal xml:lang="en">refers to</Literal>
+        <Literal xml:lang="en">refersTo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#conceptSignifiesNaturallyObject</IRI>
-        <Literal xml:lang="en">signifies naturally</Literal>
+        <Literal xml:lang="en">signifiesNaturally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conventionInheresInProperSense</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretationMediatesConcept</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretationMediatesContext</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretationMediatesTokenType</IRI>
+        <Literal xml:lang="en">mediates</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2659,13 +2699,53 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lawOfReasoningIsComponentOflogicalDoctrine</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lawOfReasoningSpellsOutLogicalRule</IRI>
+        <Literal xml:lang="en">spellsOut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#materialSuppositionForSyncatogramaticTermMediatesSyncategorematicTerm</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#materialSuppositionMediatesCategorematicTerm</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mentalPersonalSuppositionMediatesConcept</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mentalPersonalSuppositionMediatesMentalSuppositum</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#mentalPropositionSignifiesObject</IRI>
-        <Literal xml:lang="en">signifies (coarse grained)</Literal>
+        <Literal xml:lang="en">signifiesCoarseGrained</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#personalSuppositionMediatesCategorematicTerm</IRI>
+        <Literal xml:lang="en">mediates</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#semanticallyComplexExpressionSignifiesComplexConcept</IRI>
         <Literal xml:lang="en">signifies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#semanticallyComplexInheresInComplexConcept</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2675,32 +2755,117 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#semanticallySimpleExpressionSignifiesConcept</IRI>
-        <Literal xml:lang="en">?signifies</Literal>
+        <Literal xml:lang="en">signifies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#semanticallySimpleInheresInConcept</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#significationMediatesCategorematicConcept</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#significationMediatesObject</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#similarityMediatesToken</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#similarityMediatesTokenType</IRI>
+        <Literal xml:lang="en">mediates</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#spokenWrittenPropositionSignifiesMentalProposition</IRI>
-        <Literal xml:lang="en">signifies (fine grained)</Literal>
+        <Literal xml:lang="en">signifiesFineGrained</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spokenWrittenTermIsComponentOfExpression</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spokenWrittenTermIsComponentOfSpokenWrittenProposition</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#spokenWrittenTermRefersToSpokenWrittenSuppositum</IRI>
-        <Literal xml:lang="en">refers to</Literal>
+        <Literal xml:lang="en">refersTo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#spokenWrittenTermSignifiesConventionallyConcept</IRI>
-        <Literal xml:lang="en">signifies</Literal>
+        <Literal xml:lang="en">signifiesConventionally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionInConventionalLanguageMediatesSpokenWrittenSuppositum</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionInConventionalLanguageMediatesSpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionMediatesProposition</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionMediatesSuppositum</IRI>
+        <Literal xml:lang="en">mediates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionMediatesTerm</IRI>
+        <Literal xml:lang="en">mediates</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#syncategorematicTermSignifiesImmediatelySyncategorematicConcept</IRI>
-        <Literal xml:lang="en">signifies</Literal>
+        <Literal xml:lang="en">signifiesImmediately</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#syntacticallyComplexInheresInExpression</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#syntacticallySimpleInheresInSpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#termIsComponentOfProposition</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#termRefersToSuppositum</IRI>
-        <Literal xml:lang="en">refers to</Literal>
+        <Literal xml:lang="en">refersTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tokenBelongsToTokenType</IRI>
+        <Literal xml:lang="en">belongsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tokenTypeSubordinatedToConcept</IRI>
+        <Literal xml:lang="en">subordinatedTo</Literal>
     </AnnotationAssertion>
 </Ontology>
 
