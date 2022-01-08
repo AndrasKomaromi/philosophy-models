@@ -6,13 +6,14 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://raw.githubusercontent.com/AndrasKomaromi/philosophy-models/main/plato-gufo">
-    <Prefix name="" IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo"/>
+    <Prefix name="" IRI="https://raw.githubusercontent.com/AndrasKomaromi/philosophy-models/main/plato-gufo"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="gufo" IRI="http://purl.org/nemo/gufo#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/nemo/gufo#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en">Sources:
@@ -482,6 +483,18 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#worldsSoulIsComponentOfUniverse"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#creates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inHarmonyWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#rules"/>
     </Declaration>
     <Declaration>
         <DataProperty abbreviatedIRI="gufo:hasQualityValue"/>
@@ -1995,8 +2008,24 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <NamedIndividual IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#nameRefersToNameBearerObject"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#appetiteHasTemperance"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#appetiteIsComponentOfHumanSoul"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#appetiteRulesDemocratic"/>
+        <ObjectProperty IRI="#rules"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#appetiteRulesOligarchic"/>
+        <ObjectProperty IRI="#rules"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#appetiteRulesTyrannical"/>
+        <ObjectProperty IRI="#rules"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#auxiliariesIsCollectionMemberOfIdealCity"/>
@@ -2051,6 +2080,14 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#demiurgeCreatesHumanSoul"/>
+        <ObjectProperty IRI="#creates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#demiurgeCreatesUniverse"/>
+        <ObjectProperty IRI="#creates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#differenceIsComponentOfWorldsSoul"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
@@ -2087,6 +2124,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#idealCityHasStateProperty"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#imaginationIsComponentOfReason"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
@@ -2095,8 +2136,16 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#lesserGodCreatesHumanBody"/>
+        <ObjectProperty IRI="#creates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#nobleLieIsComponentOfEducation"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#producerPersonHasPrivateProperty"/>
+        <ObjectProperty IRI="#has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#producerPersonIsCollectionMemberOfFamily"/>
@@ -2115,8 +2164,24 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#reasonHasWisdom"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#reasonInHarmonyWithAppetite"/>
+        <ObjectProperty IRI="#inHarmonyWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#reasonInHarmonyWithSpirit"/>
+        <ObjectProperty IRI="#inHarmonyWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#reasonIsComponentOfhumanSoul"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#reasonRulesAristocratic"/>
+        <ObjectProperty IRI="#rules"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#recollectionIsComponentOfReason"/>
@@ -2147,8 +2212,20 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#spiritHasCourage"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#spiritInHarmonyWithAppetite"/>
+        <ObjectProperty IRI="#inHarmonyWith"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#spiritIsComponentOfHumanSoul"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#spiritRulesTimocratic"/>
+        <ObjectProperty IRI="#rules"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#temperanceIsComponentOfJustice"/>
@@ -2446,6 +2523,18 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#worldsSoulIsComponentOfUniverse"/>
         <Class IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#WorldsSoul"/>
     </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#creates"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#rules"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
     <ObjectPropertyRange>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#appetiteHasTemperance"/>
         <Class IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#Temperance"/>
@@ -2709,6 +2798,18 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyRange>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#worldsSoulIsComponentOfUniverse"/>
         <Class IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#Universe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#creates"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#rules"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <SubDataPropertyOf>
         <DataProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#attribute"/>

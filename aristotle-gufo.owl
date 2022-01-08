@@ -6,7 +6,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://github.com/AndrasKomaromi/philosophy-models/aristotle-gufo">
-    <Prefix name="" IRI="http://example.com#"/>
+    <Prefix name="" IRI="https://github.com/AndrasKomaromi/philosophy-models/aristotle-gufo"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
@@ -24,6 +24,7 @@
     <Prefix name="aristotleOnConstitutions" IRI="http://example.com/aristotle-on-constitutions#"/>
     <Prefix name="aristotlesCategorizationOfSciences" IRI="http://example.com/aristotles-categorization-of-sciences#"/>
     <Prefix name="aristotleOnPassiveAndActiveIntellect" IRI="http://example.com/aristotle-on-passive-and-active-intellect#"/>
+    <Import>http://purl.org/nemo/gufo#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal xml:lang="en">Sources: 
@@ -658,6 +659,9 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#PrimeMatterIsSubQuantityOfWater"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#activeIntellectHasIntelligibleForm"/>
     </Declaration>
     <Declaration>
@@ -805,6 +809,9 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty IRI="#happinessIsVirtuousActivity"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#healthInheresInPerson"/>
     </Declaration>
     <Declaration>
@@ -815,6 +822,9 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hotInheresInFire"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#knowledgeOfObjectRefersToObject"/>
@@ -853,10 +863,16 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty IRI="#moverActiveObjectHasActivePotentiality"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#moves"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#natureInitiatesNaturalMotion"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#natureIsComponentOfObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#necessaryFor"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#nutritionIsComponentOfCommonSense"/>
@@ -1058,6 +1074,9 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#wetInheresInWater"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wordRefersToMentalState"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="/human-soul#beforeAfterInTimeInheresInTime"/>
@@ -1804,7 +1823,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <NamedIndividual IRI="#is_mortal"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#refersTo"/>
+        <NamedIndividual IRI="#wordRefersToMentalState"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#C:_Socrates_is_mortal"/>
@@ -1883,9 +1902,6 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="#topic"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#PrimeMatterIsSubQuantityOfWater"/>
     </Declaration>
     <EquivalentClasses>
         <Class IRI="#MentalState"/>
@@ -2446,7 +2462,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <Class IRI="#EssentialParticularPrimarySubstance"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#essentialParticularPrimarySubstanceHasAccidentalParticularNonSubstantialParticular"/>
-            <Class IRI="#AccidentalUniversal"/>
+            <Class IRI="#AccidentalParticularNonSubstantialParticular"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
@@ -3810,7 +3826,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubClassOf>
         <Class IRI="#Word"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#refersTo"/>
+            <ObjectProperty IRI="#wordRefersToMentalState"/>
             <Class IRI="#MentalState"/>
         </ObjectSomeValuesFrom>
     </SubClassOf>
@@ -4766,7 +4782,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </ClassAssertion>
     <ClassAssertion>
         <Class abbreviatedIRI="gufo:MaterialRelationshipType"/>
-        <NamedIndividual IRI="#refersTo"/>
+        <NamedIndividual IRI="#wordRefersToMentalState"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Conclusion"/>
@@ -4857,6 +4873,14 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isSubQuantityOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#activeIntellectHasIntelligibleForm"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#activePotentialityNecessaryForForcedMotion"/>
+        <ObjectProperty IRI="#necessaryFor"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#actualityMediatesForm"/>
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
@@ -4909,6 +4933,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#citizenHasRightToHoldPoliticalOffice"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#citizenIsComponentOfCityState"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
@@ -4923,6 +4951,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#constitutionIsComponentOfCityState"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#constitutionIsFormalCause"/>
+        <ObjectProperty IRI="#is"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#constitutionalFormInheresInConstitution"/>
@@ -4969,8 +5001,16 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isSubQuantityOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#essentialParticularPrimarySubstanceHasAccidentalParticularNonSubstantialParticular"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#essentialUniversalSecondarySubstanceIsComponentOfEssentialParticularPrimarySubstance"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#figureHasMood"/>
+        <ObjectProperty IRI="#has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#figureMediatesExtreme"/>
@@ -4981,16 +5021,36 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#formIsFormalCause"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#formedMatterIsSubQuantityOfObject"/>
         <ObjectProperty abbreviatedIRI="gufo:isSubQuantityOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#goalIsFinalCause"/>
+        <ObjectProperty IRI="#is"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#goldenMeanInheresInVirtue"/>
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#goodLifeIsFinalCause"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#happinessIsVirtuousActivity"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#healthInheresInPerson"/>
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#highestGoalIsHappiness"/>
+        <ObjectProperty IRI="#is"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#hotInheresInAir"/>
@@ -5001,6 +5061,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#knowledgeOfObjectRefersToObject"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#lawgiverCreatesConstitution"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -5009,16 +5073,40 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#matterIsMaterialCause"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#matterIsSubQuantityOfObject"/>
         <ObjectProperty abbreviatedIRI="gufo:isSubQuantityOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#meanIsEfficientCause"/>
+        <ObjectProperty IRI="#is"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#meaningIsComponentOfMentalState"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mentalStateRefersToNameBearerObject"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#moodHasProof"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#moodInheresInSyllogism"/>
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#movedPassiveObjectHasPassivePotentiality"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#moverActiveObjectHasActivePotentiality"/>
+        <ObjectProperty IRI="#has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#natureIsComponentOfObject"/>
@@ -5033,8 +5121,16 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#objectMovesObject"/>
+        <ObjectProperty IRI="#moves"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#objectParticipatedInMotionChange"/>
         <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#passivePotentialityNecessaryForForcedMotion"/>
+        <ObjectProperty IRI="#necessaryFor"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#perceptionMediatesObjectOfPerception"/>
@@ -5047,6 +5143,14 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#perceptiveFacultyIsComponentOfCommonSense"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#personHasGoal"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#personHasWealth"/>
+        <ObjectProperty IRI="#has"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#personParticipatedInVirtuousActivity"/>
@@ -5105,6 +5209,14 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#premiseHasExtreme"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#premiseHasMiddleTerm"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#primeMatterIsSubQuantityOfAir"/>
         <ObjectProperty abbreviatedIRI="gufo:isSubQuantityOf"/>
     </SubObjectPropertyOf>
@@ -5141,6 +5253,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#rulerIsEfficientcause"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#sometimesDoes"/>
         <ObjectProperty abbreviatedIRI="gufo:participatedIn"/>
     </SubObjectPropertyOf>
@@ -5161,8 +5277,20 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:isSubQuantityOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#subordinateGoalIsHealth"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#subordinateGoalIsPleasure"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#subordinateGoalIsWealth"/>
+        <ObjectProperty IRI="#is"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#superiorGenusgenusIsSuperiorGenus"/>
+        <ObjectProperty IRI="#is"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#syllogismMediatesConclusion"/>
@@ -5193,6 +5321,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#unmovedMoverMovesAether"/>
+        <ObjectProperty IRI="#moves"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#virtueInheresInVirtuousActivity"/>
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
     </SubObjectPropertyOf>
@@ -5211,6 +5343,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#wetInheresInWater"/>
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#wordRefersToMentalState"/>
+        <ObjectProperty IRI="#refersTo"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="/human-soul#beforeAfterInTimeInheresInTime"/>
@@ -5303,9 +5439,6 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#premiseDeductsConclusion"/>
-    </FunctionalObjectProperty>
-    <FunctionalObjectProperty>
-        <ObjectProperty IRI="#premiseHasMiddleTerm"/>
     </FunctionalObjectProperty>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#rulerRulesCity-State"/>
@@ -5929,6 +6062,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <Class IRI="#Happiness"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#highestGoalIsHappiness"/>
         <Class IRI="#HighestGoal"/>
     </ObjectPropertyDomain>
@@ -5939,6 +6076,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hotInheresInFire"/>
         <Class IRI="#Hot"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#knowledgeOfObjectRefersToObject"/>
@@ -5987,6 +6128,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#moverActiveObjectHasActivePotentiality"/>
         <Class IRI="#MoverActiveObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#moves"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#natureInitiatesNaturalMotion"/>
@@ -6130,7 +6275,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#refersTo"/>
-        <Class IRI="#Word"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#reproductionIsComponentOfCommonSense"/>
@@ -6243,6 +6388,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#wetInheresInWater"/>
         <Class IRI="#Wet"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#wordRefersToMentalState"/>
+        <Class IRI="#Word"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="/human-soul#beforeAfterInTimeInheresInTime"/>
@@ -6465,6 +6614,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <Class IRI="#VirtuousActivity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#highestGoalIsHappiness"/>
         <Class IRI="#Happiness"/>
     </ObjectPropertyRange>
@@ -6475,6 +6628,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyRange>
         <ObjectProperty IRI="#hotInheresInFire"/>
         <Class IRI="#Fire"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#knowledgeOfObjectRefersToObject"/>
@@ -6523,6 +6680,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyRange>
         <ObjectProperty IRI="#moverActiveObjectHasActivePotentiality"/>
         <Class IRI="#ActivePotentiality"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#moves"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#natureInitiatesNaturalMotion"/>
@@ -6662,7 +6823,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#refersTo"/>
-        <Class IRI="#MentalState"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#reproductionIsComponentOfCommonSense"/>
@@ -6775,6 +6936,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyRange>
         <ObjectProperty IRI="#wetInheresInWater"/>
         <Class IRI="#Water"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#wordRefersToMentalState"/>
+        <Class IRI="#MentalState"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="/human-soul#beforeAfterInTimeInheresInTime"/>
@@ -7684,7 +7849,7 @@ Actuality is change what realizes fulfillment of a possibility.</Literal>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <IRI>#Being</IRI>
-        <Literal xml:lang="en">Being (?? ????) can be: particulars: EssentialParticular-PrimarySubstance; AccidentalParticular-NonSubstantialParticular and universals: EssentialUniversal-SecondarySubstance; AccidentalUniversal
+        <Literal xml:lang="en">Being can be: particulars: EssentialParticular-PrimarySubstance; AccidentalParticular-NonSubstantialParticular and universals: EssentialUniversal-SecondarySubstance; AccidentalUniversal
 (Studtmann)</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
@@ -9722,11 +9887,6 @@ Thinking: &apos;the active intellect makes things thinkable by making them actua
         <Literal xml:lang="en">promotes</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-        <IRI>#refersTo</IRI>
-        <Literal xml:lang="en">refersTo</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#reproductionIsComponentOfCommonSense</IRI>
         <Literal xml:lang="en">isComponentOf</Literal>
@@ -9880,6 +10040,11 @@ Thinking: &apos;the active intellect makes things thinkable by making them actua
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>#wetInheresInWater</IRI>
         <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#wordRefersToMentalState</IRI>
+        <Literal xml:lang="en">refersTo</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>

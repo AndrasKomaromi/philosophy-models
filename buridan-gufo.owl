@@ -6,13 +6,14 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      ontologyIRI="https://github.com/AndrasKomaromi/philosophy-models/buridan-gufo">
-    <Prefix name="" IRI="http://example.com#"/>
+    <Prefix name="" IRI="https://github.com/AndrasKomaromi/philosophy-models/buridan-gufo"/>
     <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
     <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
     <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="gufo" IRI="http://purl.org/nemo/gufo#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.org/nemo/gufo#</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
         <Literal>Sources: 
@@ -284,6 +285,9 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty IRI="#personalSuppositionMediatesCategorematicTerm"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#refersTo"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
     </Declaration>
     <Declaration>
@@ -303,6 +307,9 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#significationMediatesObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#signifies"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#similarityMediatesToken"/>
@@ -1589,6 +1596,18 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <NamedIndividual IRI="#tokenTypeSubordinatedToConcept"/>
     </ClassAssertion>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#categorematicTermSignifiesUltimatelyObject"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#conceptIsComponentOfComplexConcept"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
@@ -1599,6 +1618,14 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#conceptIsComponentOfMind"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptRefersToMentalSuppositum"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptSignifiesNaturallyObject"/>
+        <ObjectProperty IRI="#signifies"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#conventionInheresInProperSense"/>
@@ -1637,12 +1664,28 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mentalPropositionSignifiesObject"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#personalSuppositionMediatesCategorematicTerm"/>
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#semanticallyComplexInheresInComplexConcept"/>
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallyComplexSpokenWrittenTermSignifiesComplexConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallySimpleExpressionSignifiesConcept"/>
+        <ObjectProperty IRI="#signifies"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#semanticallySimpleInheresInConcept"/>
@@ -1665,12 +1708,24 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenPropositionSignifiesMentalProposition"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#spokenWrittenTermIsComponentOfExpression"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#spokenWrittenTermIsComponentOfSpokenWrittenProposition"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenTermRefersToSpokenWrittenSuppositum"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenTermSignifiesConventionallyConcept"/>
+        <ObjectProperty IRI="#signifies"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#suppositionInConventionalLanguageMediatesSpokenWrittenSuppositum"/>
@@ -1693,6 +1748,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <ObjectProperty abbreviatedIRI="gufo:mediates"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#syncategorematicTermSignifiesImmediatelySyncategorematicConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#syntacticallyComplexInheresInExpression"/>
         <ObjectProperty abbreviatedIRI="gufo:inheresIn"/>
     </SubObjectPropertyOf>
@@ -1703,6 +1762,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#termIsComponentOfProposition"/>
         <ObjectProperty abbreviatedIRI="gufo:isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#termRefersToSuppositum"/>
+        <ObjectProperty IRI="#refersTo"/>
     </SubObjectPropertyOf>
     <FunctionalObjectProperty>
         <ObjectProperty IRI="#tokenTypeSubordinatedToConcept"/>
@@ -1794,6 +1857,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <Class IRI="#PersonalSupposition"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
         <Class IRI="#SemanticallyComplexExpression"/>
     </ObjectPropertyDomain>
@@ -1820,6 +1887,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#significationMediatesObject"/>
         <Class IRI="#Signification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#signifies"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#similarityMediatesToken"/>
@@ -1978,6 +2049,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
         <Class IRI="#CategorematicTerm"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
         <Class IRI="#ComplexConcept"/>
     </ObjectPropertyRange>
@@ -2004,6 +2079,10 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     <ObjectPropertyRange>
         <ObjectProperty IRI="#significationMediatesObject"/>
         <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#signifies"/>
+        <Class abbreviatedIRI="owl:Thing"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="#similarityMediatesToken"/>
