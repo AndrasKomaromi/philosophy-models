@@ -2345,7 +2345,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#demiurgeRepresentsIntellect"/>
-        <Class IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#Intellect"/>
+        <Class IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#Demiurge"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#differenceIsComponentOfWorldsSoul"/>
@@ -2621,7 +2621,7 @@ This work is distributed under Creative Commons Attribution License CC BY 4.0</L
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#demiurgeRepresentsIntellect"/>
-        <Class IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#Demiurge"/>
+        <Class IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#Intellect"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
         <ObjectProperty IRI="https://github.com/AndrasKomaromi/philosophy-models/plato-gufo#differenceIsComponentOfWorldsSoul"/>
