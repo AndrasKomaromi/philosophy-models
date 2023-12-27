@@ -1,0 +1,247 @@
+@prefix : <http://marsillius-padua#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://marsillius-padua/gufo.ttl> .
+
+<http://marsillius-padua/gufo.ttl> rdf:type owl:Ontology ;
+                                    owl:imports <http://purl.org/nemo/gufo#/1.0.0> ;
+                                    rdfs:comment """SOURCES
+[1] Kilcullen, John and Jonathan Robinson, “Medieval Political Philosophy“, The Stanford Encyclopedia of Philosophy (Winter 2019 Edition), Edward N. Zalta (ed.)"""@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://marsillius-padua/gufo.ttl#generalCouncilMemberHasDoctrinalAuthority
+:generalCouncilMemberHasDoctrinalAuthority rdf:type owl:ObjectProperty ;
+                                           rdfs:domain :GeneralCouncilMember ;
+                                           rdfs:range :DoctrinalAuthority .
+
+
+###  http://marsillius-padua/gufo.ttl#has
+:has rdf:type owl:ObjectProperty ,
+              owl:FunctionalProperty ;
+     rdfs:domain :Person ;
+     rdfs:range :Power ;
+     rdfs:comment ""@en ;
+     rdfs:label "has"@en .
+
+
+###  http://marsillius-padua/gufo.ttl#personHasProperty
+:personHasProperty rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Person ;
+                   rdfs:range :Property .
+
+
+###  http://marsillius-padua/gufo.ttl#supremeRulerHasCoercivePower
+:supremeRulerHasCoercivePower rdf:type owl:ObjectProperty ;
+                              rdfs:domain :SupremeRuler ;
+                              rdfs:range :CoercivePower .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://marsillius-padua/gufo.ttl#Church
+:Church rdf:type owl:Class ;
+        rdfs:subClassOf gufo:VariableCollection .
+
+
+###  http://marsillius-padua/gufo.ttl#Cleric
+:Cleric rdf:type owl:Class ;
+        rdfs:subClassOf :Person .
+
+
+###  http://marsillius-padua/gufo.ttl#CoercivePower
+:CoercivePower rdf:type owl:Class ;
+               rdfs:subClassOf :Power .
+
+
+###  http://marsillius-padua/gufo.ttl#DoctrinalAuthority
+:DoctrinalAuthority rdf:type owl:Class ;
+                    rdfs:subClassOf :Power .
+
+
+###  http://marsillius-padua/gufo.ttl#GeneralCouncilMember
+:GeneralCouncilMember rdf:type owl:Class ;
+                      rdfs:subClassOf :Cleric ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty :generalCouncilMemberHasDoctrinalAuthority ;
+                                        owl:someValuesFrom :DoctrinalAuthority
+                                      ] .
+
+
+###  http://marsillius-padua/gufo.ttl#Person
+:Person rdf:type owl:Class ;
+        rdfs:subClassOf gufo:FunctionalComplex ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :has ;
+                          owl:someValuesFrom :Power
+                        ] .
+
+
+###  http://marsillius-padua/gufo.ttl#Pope
+:Pope rdf:type owl:Class ;
+      rdfs:subClassOf :GeneralCouncilMember .
+
+
+###  http://marsillius-padua/gufo.ttl#Power
+:Power rdf:type owl:Class ;
+       rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://marsillius-padua/gufo.ttl#Property
+:Property rdf:type owl:Class ;
+          rdfs:subClassOf :Power .
+
+
+###  http://marsillius-padua/gufo.ttl#SupremeRuler
+:SupremeRuler rdf:type owl:Class ;
+              rdfs:subClassOf :Person ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty :supremeRulerHasCoercivePower ;
+                                owl:someValuesFrom :CoercivePower
+                              ] .
+
+
+###  http://purl.org/nemo/gufo#FunctionalComplex
+gufo:FunctionalComplex rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Kind
+gufo:Kind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Role
+gufo:Role rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SubKind
+gufo:SubKind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#VariableCollection
+gufo:VariableCollection rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://marsillius-padua/gufo.ttl#Catholic_Church
+:Catholic_Church rdf:type owl:NamedIndividual ,
+                          :Church .
+
+
+###  http://marsillius-padua/gufo.ttl#Church
+:Church rdf:type owl:NamedIndividual ,
+                 gufo:Kind .
+
+
+###  http://marsillius-padua/gufo.ttl#Cleric
+:Cleric rdf:type owl:NamedIndividual ,
+                 gufo:Role .
+
+
+###  http://marsillius-padua/gufo.ttl#CoercivePower
+:CoercivePower rdf:type owl:NamedIndividual ,
+                        gufo:SubKind .
+
+
+###  http://marsillius-padua/gufo.ttl#DoctrinalAuthority
+:DoctrinalAuthority rdf:type owl:NamedIndividual ,
+                             gufo:SubKind .
+
+
+###  http://marsillius-padua/gufo.ttl#GeneralCouncilMember
+:GeneralCouncilMember rdf:type owl:NamedIndividual ,
+                               gufo:Role .
+
+
+###  http://marsillius-padua/gufo.ttl#Ludwig_of_Bavaria
+:Ludwig_of_Bavaria rdf:type owl:NamedIndividual ,
+                            :SupremeRuler .
+
+
+###  http://marsillius-padua/gufo.ttl#Orthodox_Church
+:Orthodox_Church rdf:type owl:NamedIndividual ,
+                          :Church .
+
+
+###  http://marsillius-padua/gufo.ttl#Person
+:Person rdf:type owl:NamedIndividual ,
+                 gufo:Kind .
+
+
+###  http://marsillius-padua/gufo.ttl#Pope
+:Pope rdf:type owl:NamedIndividual ,
+               gufo:Role .
+
+
+###  http://marsillius-padua/gufo.ttl#Pope_John_XXII
+:Pope_John_XXII rdf:type owl:NamedIndividual ,
+                         :Pope .
+
+
+###  http://marsillius-padua/gufo.ttl#Power
+:Power rdf:type owl:NamedIndividual ,
+                gufo:Kind .
+
+
+###  http://marsillius-padua/gufo.ttl#Property
+:Property rdf:type owl:NamedIndividual ,
+                   gufo:SubKind .
+
+
+###  http://marsillius-padua/gufo.ttl#SupremeRuler
+:SupremeRuler rdf:type owl:NamedIndividual ,
+                       gufo:Role .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Church rdfs:label "Church"@en ;
+        rdfs:comment "The CHURCH has members"@en .
+
+
+:Cleric rdfs:comment "\"the pope has from Christ no more authority than any other CLERIC\""@en ;
+        rdfs:label "Cleric"@en .
+
+
+:CoercivePower rdfs:label "CoercivePower"@en .
+
+
+:DoctrinalAuthority rdfs:label "DoctrinalAuthority"@en .
+
+
+:GeneralCouncilMember rdfs:label "GeneralCouncilMember"@en ;
+                      rdfs:comment "“Marsilius did believe that the Church exercised some authority over its members, but, so far as this was a doctrinal authority, it was exercised not by the pope but by a GENERAL  COUNCIL MEMBER member (Marsilius held that the Bible and general councils are infallible, but not the pope (274–9/360–66)).”"@en .
+
+
+:Person rdfs:label "Person"@en ;
+        rdfs:comment "A human PERSON"@en .
+
+
+:Pope rdfs:label "Pope"@en ;
+      rdfs:comment "“Within the Church, the POPE has from Christ no more authority than any other cleric. Christ did not appoint Peter as head of the Church, Peter never went to Rome, the bishop of Rome is not Peter’s successor as head of the Church (pp. 44–9/61–3)”"@en .
+
+
+:Power rdfs:label "Power"@en .
+
+
+:Property rdfs:comment """All people have the right to ownership and PROPERTY except Clerics.
+“As for religious poverty, Marsilius sides with the Franciscans and takes their doctrine further: not only is it legitimate for religious to live entirely without ownership of property (they can use what they need with the owner’s permission), but this is what Christ intended for all the clergy (183–4, 196–215/244–6, 262–86). Thus on his view the pope and clergy should have no lordship at all, either in the sense of coercive jurisdiction or in the sense of ownership of property. His position is diametrically opposite that of Giles of Rome."""@en ;
+          rdfs:label "Property"@en .
+
+
+:SupremeRuler rdfs:comment "'He argues that all coercive power comes from the people (44–9, 61–3/65–72, 88–90), and that no people can have more than one supreme ruler, who is the source of all coercive power in that community (80–6/114–22). The SUPREME RULER cannot be a cleric, since Christ has forbidden the clergy to become involved in temporal affairs (113–40/159–92). And the supreme ruler does not enforce divine law as such, since God wills that divine law should be enforced by sanctions only in the next world, to give every opportunity for repentance before death (164, 175–9/221, 235–9). The supreme ruler is therefore not an enforcer of religion and his rule is not subject to direction by the clergy.”"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

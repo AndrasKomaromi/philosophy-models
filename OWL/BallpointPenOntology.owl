@@ -1,0 +1,812 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://example.com/BallpointPenOntology#"
+     xml:base="http://example.com/BallpointPenOntology"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:BallpointPenOntology="http://example.com/BallpointPenOntology/">
+    <owl:Ontology rdf:about="http://example.com/BallpointPenOntology">
+        <owl:versionIRI rdf:resource="http://example.com/BallpointPenOntology/1.0.0"/>
+        <rdfs:comment>A knowledge model for describing several types of ballpoint pens based on their components, characteristics and make.</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BallpointPenOntology/hasCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/BallpointPenOntology/hasFeature"/>
+        <owl:inverseOf rdf:resource="http://example.com/BallpointPenOntology/isCharacteristicOf"/>
+        <rdfs:domain rdf:resource="http://example.com/BallpointPenOntology/Pen"/>
+        <rdfs:range rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BallpointPenOntology/hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/BallpointPenOntology/hasFeature"/>
+        <owl:inverseOf rdf:resource="http://example.com/BallpointPenOntology/isComponentOf"/>
+        <rdfs:domain rdf:resource="http://example.com/BallpointPenOntology/Pen"/>
+        <rdfs:range rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BallpointPenOntology/hasFeature">
+        <owl:inverseOf rdf:resource="http://example.com/BallpointPenOntology/isFeatureOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/hasMake -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BallpointPenOntology/hasMake">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/isCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BallpointPenOntology/isCharacteristicOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/BallpointPenOntology/isFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BallpointPenOntology/isComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://example.com/BallpointPenOntology/isFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://example.com/BallpointPenOntology/isFeatureOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/hasWidestDiameterInMillimetres -->
+
+    <owl:DatatypeProperty rdf:about="http://example.com/BallpointPenOntology/hasWidestDiameterInMillimetres">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/BallPoint -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/BallPoint">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/BallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/BallpointPen">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/Pen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/BallpointPenOntology/BallPoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/BallpointPenOntology/InkReservoir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/BallpointPenOntology/Socket"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A ballpoint pen, also known as &apos;biro&apos; and &apos;ball pen&apos; is a pen that dispenses ink over a metal ball at its point, i.e. over a &apos;ball point&apos; (Wikipedia).</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/BicCristal -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/BicCristal">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/BallpointPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasComponent"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallPoint"/>
+                            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BlindCap"/>
+                            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/Cap"/>
+                            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/InkReservoir"/>
+                            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/SinglePenBody"/>
+                            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/Socket"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Disposable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasMake"/>
+                <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Bic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/BlindCap -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/BlindCap">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Cap -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/Cap">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/ChunkyBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/ChunkyBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasWidestDiameterInMillimetres"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.5</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/CustomBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/CustomBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Customized"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/DesignerBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/DesignerBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Expensive"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Refillable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/DisposableBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/DisposableBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Disposable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/ErasableInkBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/ErasableInkBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/ErasableInk"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/UpsideDownUsage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/FisherSpacePen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/FisherSpacePen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/UnderWaterUsage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/UpsideDownUsage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/ZeroGravityUsage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasMake"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Fisher"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/FountainPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/FountainPen">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/Pen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/InkReservoir -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/InkReservoir">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/LowerPenBody -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/LowerPenBody">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/MultiColourBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/MultiColourBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Multicolour"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasComponent"/>
+                        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                        <owl:onClass rdf:resource="http://example.com/BallpointPenOntology/BallPoint"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/MyInnovativeBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/MyInnovativeBallpointPen">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/BallpointPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://example.com/BallpointPenOntology/RetractableMechanism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Refillable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasWidestDiameterInMillimetres"/>
+                <owl:hasValue rdf:datatype="http://www.w3.org/2001/XMLSchema#float">10.0</owl:hasValue>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Pen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/Pen">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/WritingImplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/PenCharacteristic -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/PenComponent -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/PenComponent"/>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/PenMake -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/PenMake"/>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/QuillPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/QuillPen">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/Pen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/RefillableBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/RefillableBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/Refillable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/RetractableBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/RetractableBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasComponent"/>
+                        <owl:someValuesFrom rdf:resource="http://example.com/BallpointPenOntology/RetractableMechanism"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/RetractableMechanism -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/RetractableMechanism">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/RollerballPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/RollerballPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/WaterBasedInk"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/SinglePenBody -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/SinglePenBody">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/SlimBallpointPen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/SlimBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Class>
+                        <owl:complementOf rdf:resource="http://example.com/BallpointPenOntology/ChunkyBallpointPen"/>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Socket -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/Socket">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/SpacePen -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/SpacePen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/UnderWaterUsage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/UpsideDownUsage"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://example.com/BallpointPenOntology/hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://example.com/BallpointPenOntology/ZeroGravityUsage"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/UpperPenBody -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/UpperPenBody">
+        <rdfs:subClassOf rdf:resource="http://example.com/BallpointPenOntology/PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/WritingImplement -->
+
+    <owl:Class rdf:about="http://example.com/BallpointPenOntology/WritingImplement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Bic -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Bic">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Cheap -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Cheap">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Customized -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Customized">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Disposable -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Disposable">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/ErasableInk -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/ErasableInk">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/ExampleBallpointPen1 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/ExampleBallpointPen1">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/BallpointPen"/>
+        <BallpointPenOntology:hasWidestDiameterInMillimetres rdf:datatype="http://www.w3.org/2001/XMLSchema#float">13.8</BallpointPenOntology:hasWidestDiameterInMillimetres>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/ExampleBallpointPen2 -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/ExampleBallpointPen2">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/BallpointPen"/>
+        <BallpointPenOntology:hasWidestDiameterInMillimetres rdf:datatype="http://www.w3.org/2001/XMLSchema#float">12.0</BallpointPenOntology:hasWidestDiameterInMillimetres>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Expensive -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Expensive">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Fisher -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Fisher">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Multicolour -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Multicolour">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/PaperMate -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/PaperMate">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Parker -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Parker">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Pentel -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Pentel">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Pilot -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Pilot">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Refillable -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Refillable">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/UnderWaterUsage -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/UnderWaterUsage">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Uniball -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Uniball">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/UpsideDownUsage -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/UpsideDownUsage">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/WaterBasedInk -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/WaterBasedInk">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/Zebra -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/Zebra">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://example.com/BallpointPenOntology/ZeroGravityUsage -->
+
+    <owl:NamedIndividual rdf:about="http://example.com/BallpointPenOntology/ZeroGravityUsage">
+        <rdf:type rdf:resource="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallPoint"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BlindCap"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/Cap"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/InkReservoir"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/LowerPenBody"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/RetractableMechanism"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/SinglePenBody"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/Socket"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/UpperPenBody"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/BallpointPen"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/FountainPen"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/QuillPen"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/PenCharacteristic"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/PenComponent"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/PenMake"/>
+            <rdf:Description rdf:about="http://example.com/BallpointPenOntology/WritingImplement"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

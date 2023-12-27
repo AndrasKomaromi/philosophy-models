@@ -1,0 +1,104 @@
+@prefix : <http://example.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://example.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:Thing rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Thing"@en.
+:Power rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Power"@en.
+:Property rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Property"@en.
+:Sovereign rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Sovereign"@en.
+:Mankind rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:VariableCollection;
+    rdfs:label "Mankind"@en.
+:Jurisdiction rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Jurisdiction"@en.
+:Person rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Person"@en.
+:Church rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:VariableCollection;
+    rdfs:label "Church"@en.
+:Pope rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Pope"@en.
+:Property rdfs:subClassOf :Power.
+:Jurisdiction rdfs:subClassOf :Power.
+:Sovereign rdfs:subClassOf :Person.
+:Pope rdfs:subClassOf :Sovereign.
+:owns rdf:type owl:ObjectProperty;
+    rdfs:domain :Person;
+    rdfs:range :Thing;
+    rdfs:label "owns"@en;
+    rdf:type gufo:MaterialRelationshipType.
+:rules rdf:type owl:ObjectProperty;
+    rdfs:domain :Sovereign;
+    rdfs:range :Person;
+    rdfs:label "rules"@en;
+    rdf:type gufo:MaterialRelationshipType.
+:delegates rdf:type owl:ObjectProperty;
+    rdfs:domain :Pope;
+    rdfs:range :Jurisdiction;
+    rdfs:label "delegates"@en.
+:legitimates rdf:type owl:ObjectProperty;
+    rdfs:domain :Pope;
+    rdfs:range :Property;
+    rdfs:label "legitimates"@en.
+:holds rdf:type owl:ObjectProperty;
+    rdfs:domain :Pope;
+    rdfs:range :Power;
+    rdfs:label "holds"@en.
+:Property rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Thing
+].
+:Thing rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Property
+].
+:Power rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:someValuesFrom :Jurisdiction
+].
+:Jurisdiction rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Power
+].
+:Person rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:someValuesFrom :Property
+].
+:Property rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Person
+].
+:Person rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Jurisdiction
+].
+:Jurisdiction rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Person
+].

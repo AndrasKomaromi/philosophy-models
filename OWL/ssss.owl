@@ -1,0 +1,620 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.examaple.com/bppo#"
+     xml:base="http://www.examaple.com/bppo"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.examaple.com/bppo">
+        <owl:versionIRI rdf:resource="http://www.examaple.com/bppo"/>
+        <rdfs:comment xml:lang="en">ballpoint pen ontology</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.examaple.com/bppo#hasCharacteristic -->
+
+    <owl:ObjectProperty rdf:about="http://www.examaple.com/bppo#hasCharacteristic">
+        <rdfs:subPropertyOf rdf:resource="http://www.examaple.com/bppo#hasFeature"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.examaple.com/bppo#Pen"/>
+        <rdfs:range rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.examaple.com/bppo#hasComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.examaple.com/bppo#hasComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.examaple.com/bppo#hasFeature"/>
+        <owl:inverseOf rdf:resource="http://www.examaple.com/bppo#hasComponent"/>
+        <rdfs:domain rdf:resource="http://www.examaple.com/bppo#Pen"/>
+        <rdfs:range rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.examaple.com/bppo#hasFeature -->
+
+    <owl:ObjectProperty rdf:about="http://www.examaple.com/bppo#hasFeature">
+        <owl:inverseOf rdf:resource="http://www.examaple.com/bppo#isCharacteristicOf"/>
+        <owl:inverseOf rdf:resource="http://www.examaple.com/bppo#isFeatureOf"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.examaple.com/bppo#Pen"/>
+        <rdfs:range rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.examaple.com/bppo#hasMake -->
+
+    <owl:ObjectProperty rdf:about="http://www.examaple.com/bppo#hasMake">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.examaple.com/bppo#isCharacteristicOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.examaple.com/bppo#isCharacteristicOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.examaple.com/bppo#Pen"/>
+        <rdfs:range rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.examaple.com/bppo#isComponentOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.examaple.com/bppo#isComponentOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.examaple.com/bppo#isFeatureOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.examaple.com/bppo#isFeatureOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.examaple.com/bppo#isFeatureOf">
+        <rdfs:subPropertyOf rdf:resource="http://www.examaple.com/bppo#isComponentOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.examaple.com/bppo#hasWidestDiameter -->
+
+    <owl:DatatypeProperty rdf:about="http://www.examaple.com/bppo#hasWidestDiameter">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.examaple.com/bppo#Ballpoint -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#Ballpoint">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#BallpointPenPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#BallpointPenPen">
+        <owl:equivalentClass rdf:resource="http://www.examaple.com/bppo#DisposableBallpointPenBallpointPen"/>
+        <owl:equivalentClass rdf:resource="http://www.examaple.com/bppo#RetractableBallpointPenBallpointPen"/>
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#Pen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.examaple.com/bppo#Ballpoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.examaple.com/bppo#InkReservorir"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.examaple.com/bppo#Socket"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#BicCristal -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#BicCristal">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasCharacteristic"/>
+                <owl:someValuesFrom rdf:resource="http://www.examaple.com/bppo#DisposableBallpointPenBallpointPen"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasComponent"/>
+                <owl:allValuesFrom>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.examaple.com/bppo#Ballpoint"/>
+                            <rdf:Description rdf:about="http://www.examaple.com/bppo#BlindCap"/>
+                            <rdf:Description rdf:about="http://www.examaple.com/bppo#Cap"/>
+                            <rdf:Description rdf:about="http://www.examaple.com/bppo#InkReservorir"/>
+                            <rdf:Description rdf:about="http://www.examaple.com/bppo#SinglePenBody"/>
+                            <rdf:Description rdf:about="http://www.examaple.com/bppo#Socket"/>
+                            <rdf:Description rdf:about="http://www.examaple.com/bppo#UpperPenBody"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:allValuesFrom>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasMake"/>
+                <owl:hasValue rdf:resource="http://www.examaple.com/bppo#Bic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#BlindCap -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#BlindCap">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Cap -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#Cap">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#ChukyBallpointPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#ChukyBallpointPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#CustomBallpointPenBallpointPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#CustomBallpointPenBallpointPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://www.examaple.com/bppo#RetractableMechanism"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#DesignerBallpointPenBallpointPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#DesignerBallpointPenBallpointPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasCharacteristic"/>
+                <owl:hasValue rdf:resource="http://www.examaple.com/bppo#Expensive"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasCharacteristic"/>
+                <owl:hasValue rdf:resource="http://www.examaple.com/bppo#Refillable"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#DisposableBallpointPenBallpointPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#DisposableBallpointPenBallpointPen"/>
+    
+
+
+    <!-- http://www.examaple.com/bppo#ErasableInkBallpointPenBallpointPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#ErasableInkBallpointPenBallpointPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#RefillableBallpointPenBallpointPen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#FisherSpacePen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#FisherSpacePen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#FountainPenPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#FountainPenPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#Pen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#InkReservorir -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#InkReservorir">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#LowerPenBody -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#LowerPenBody">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+        <owl:disjointWith rdf:resource="http://www.examaple.com/bppo#WritingImplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#MultiCololourBallpoinPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#MultiCololourBallpoinPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasComponent"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.examaple.com/bppo#Ballpoint"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Pen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#Pen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#WritingImplement"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#PenCharacteristic -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#PenCharacteristic"/>
+    
+
+
+    <!-- http://www.examaple.com/bppo#PenComponent -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#PenComponent"/>
+    
+
+
+    <!-- http://www.examaple.com/bppo#PenMake -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#PenMake"/>
+    
+
+
+    <!-- http://www.examaple.com/bppo#QuillPenPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#QuillPenPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#Pen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#RefillableBallpointPenBallpointPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#RefillableBallpointPenBallpointPen">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.examaple.com/bppo#BallpointPenPen"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.examaple.com/bppo#hasCharacteristic"/>
+                        <owl:hasValue rdf:resource="http://www.examaple.com/bppo#Refillable"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#RetractableBallpointPenBallpointPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#RetractableBallpointPenBallpointPen"/>
+    
+
+
+    <!-- http://www.examaple.com/bppo#RetractableMechanism -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#RetractableMechanism">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#RollerballPen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#RollerballPen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+        <owl:disjointWith rdf:resource="http://www.examaple.com/bppo#SpacePen"/>
+        <rdfs:comment xml:lang="en"></rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#SinglePenBody -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#SinglePenBody">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Socket -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#Socket">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#SpacePen -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#SpacePen">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#BallpointPenPen"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#UpperPenBody -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#UpperPenBody">
+        <rdfs:subClassOf rdf:resource="http://www.examaple.com/bppo#PenComponent"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.examaple.com/bppo#WritingImplement -->
+
+    <owl:Class rdf:about="http://www.examaple.com/bppo#WritingImplement"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.examaple.com/bppo#Bic -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Bic">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Cheap -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Cheap">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Customized -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Customized">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Disposable -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Disposable">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#ErasableInk -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#ErasableInk">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Expensive -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Expensive">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Fisher -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Fisher">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#PaperMate -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#PaperMate">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Parker -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Parker">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Pentel -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Pentel">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Pilot -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Pilot">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Refillable -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Refillable">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#UnderWaterUsage -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#UnderWaterUsage">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Uniball -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Uniball">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#UpsideDownUsage -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#UpsideDownUsage">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#WaterBasedInk -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#WaterBasedInk">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#Zebra -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#Zebra">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenMake"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.examaple.com/bppo#ZeroGravityUsage -->
+
+    <owl:NamedIndividual rdf:about="http://www.examaple.com/bppo#ZeroGravityUsage">
+        <rdf:type rdf:resource="http://www.examaple.com/bppo#PenCharacteristic"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.examaple.com/bppo#BallpointPenPen"/>
+            <rdf:Description rdf:about="http://www.examaple.com/bppo#FountainPenPen"/>
+            <rdf:Description rdf:about="http://www.examaple.com/bppo#QuillPenPen"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.examaple.com/bppo#PenCharacteristic"/>
+            <rdf:Description rdf:about="http://www.examaple.com/bppo#PenComponent"/>
+            <rdf:Description rdf:about="http://www.examaple.com/bppo#PenMake"/>
+            <rdf:Description rdf:about="http://www.examaple.com/bppo#WritingImplement"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

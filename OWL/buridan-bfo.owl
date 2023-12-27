@@ -1,0 +1,2716 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/philosophy-models/bfo/main/buridan-bfo.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://raw.githubusercontent.com/philosophy-models/bfo/main/buridan-bfo.owl">
+    <Prefix name="" IRI="https://github.com/AndrasKomaromi/philosophy-models/buridan-bfo"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2.0/bfo.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>Sources: 
+(1) Klima, Gyula, “John Buridan”, Oxford University Press, 2009
+(2) Zupko, Jack, “John Buridan“, The Stanford Encyclopedia of Philosophy (Fall 2018 Edition), Edward N. Zalta (ed.)
+(3) Spade, Vincent, “Thoughts, Words and Things: An Introduction to Late Mediaeval Logic and Semantic Theory”, Version 1.2: December 27, 2007</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal>author: András L. Komáromi
+This work is distributed under Creative Commons Attribution License CC BY 4.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#CategorematicConcept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CategorematicTerm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ComplexConcept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Concept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Convention"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImproperSense"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ImproperSupposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Inscription"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Interpretation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LawOfReasoning"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Logic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LogicInUse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LogicalDoctrine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#LogicalRule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaterialSupposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MaterialSuppositionForSyncategoramaticTerm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalPersonalSupposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalProposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MentalSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Mind"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MixedTerm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PersonalSupposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PracticalScience"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProperSense"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ProperSuppositon"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Proposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Science"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScienceInStrictSense"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticallyComplex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticallyComplexExpression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticallyComplexSpokenWrittenTerm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticallySimple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SemanticallySimpleExpression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Signification"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Similarity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SimpleSupposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpokenWrittenProposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpokenWrittenSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Supposition"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Suppositum"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SyncategorematicConcept"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SyncategorematicTerm"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SyntacticallyComplex"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SyntacticallySimple"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Term"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Token"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TokenType"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Utterance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#categorematicTermSignifiesUltimatelyObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conceptIsComponentOfComplexConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conceptIsComponentOfMentalProposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conceptIsComponentOfMind"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conceptRefersToMentalSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conceptSignifiesNaturallyObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#conventionInheresInProperSense"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#inheresIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interpretationRelatesConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interpretationRelatesContext"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#interpretationRelatesTokenType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lawOfReasoningIsComponentOflogicalDoctrine"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#lawOfReasoningSpellsOutLogicalRule"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#materialSuppositionForSyncatogramaticTermRelatesSyncategorematicTerm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#materialSuppositionRelatesCategorematicTerm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesMentalSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mentalPropositionSignifiesObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#personalSuppositionRelatesCategorematicTerm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#refersTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#relates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semanticallyComplexInheresInComplexConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semanticallyComplexSpokenWrittenTermSignifiesComplexConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semanticallySimpleExpressionSignifiesConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#semanticallySimpleInheresInConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#significationRelatesCategorematicConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#significationRelatesObject"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#signifies"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#similarityRelatesToken"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#similarityRelatesTokenType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spokenWrittenPropositionSignifiesMentalProposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfExpression"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfSpokenWrittenProposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spokenWrittenTermRefersToSpokenWrittenSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#spokenWrittenTermSignifiesConventionallyConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenTerm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suppositionRelatesProposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suppositionRelatesSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#suppositionRelatesTerm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#syncategorematicTermSignifiesImmediatelySyncategorematicConcept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#syntacticallyComplexInheresInExpression"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#syntacticallySimpleInheresInSpokenWrittenTerm"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#termIsComponentOfProposition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#termRefersToSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tokenBelongsToTokenType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#tokenTypeSubordinatedToConcept"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#hasQualityValue"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#language_1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#All"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CategorematicConcept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CategorematicTerm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ComplexConcept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Concept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Context"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Convention"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Expression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ImproperSense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ImproperSupposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Inscription"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Interpretation"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LawOfReasoning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Logic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LogicInUse"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LogicalDoctrine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#LogicalRule"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MaterialSupposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MaterialSuppositionForSyncategoramaticTerm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MentalPersonalSupposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MentalProposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MentalSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mind"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MixedTerm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Non"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Object"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PersonalSupposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#PracticalScience"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProperSense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ProperSuppositon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Proposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Science"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ScienceInStrictSense"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SemanticallyComplex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SemanticallyComplexExpression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SemanticallyComplexSpokenWrittenTerm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SemanticallySimple"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SemanticallySimpleExpression"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Signification"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Similarity"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SimpleSupposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpokenWrittenProposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpokenWrittenSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SpokenWrittenTerm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Supposition"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SuppositionInConventionalLanguage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Suppositum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SyncategorematicConcept"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SyncategorematicTerm"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SyntacticallyComplex"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#SyntacticallySimple"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Term"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Token"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#TokenType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utterance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#conceptRefersToMentalSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#spokenWrittenTermRefersToSpokenWrittenSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#termRefersToSuppositum"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tokenBelongsToTokenType"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tokenTypeSubordinatedToConcept"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#CategorematicConcept"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CategorematicConcept"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
+            <Class IRI="#Object"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CategorematicConcept"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#significationRelatesCategorematicConcept"/>
+            </ObjectInverseOf>
+            <Class IRI="#Signification"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CategorematicTerm"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CategorematicTerm"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
+            <Class IRI="#CategorematicConcept"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CategorematicTerm"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#categorematicTermSignifiesUltimatelyObject"/>
+            <Class IRI="#Object"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CategorematicTerm"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#materialSuppositionRelatesCategorematicTerm"/>
+            </ObjectInverseOf>
+            <Class IRI="#MaterialSupposition"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CategorematicTerm"/>
+        <ObjectMaxCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#personalSuppositionRelatesCategorematicTerm"/>
+            </ObjectInverseOf>
+            <Class IRI="#PersonalSupposition"/>
+        </ObjectMaxCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComplexConcept"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ComplexConcept"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#semanticallyComplexInheresInComplexConcept"/>
+            </ObjectInverseOf>
+            <Class IRI="#SemanticallyComplex"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <Class IRI="#Term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#conceptIsComponentOfComplexConcept"/>
+            <Class IRI="#ComplexConcept"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#conceptIsComponentOfMentalProposition"/>
+            <Class IRI="#MentalProposition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#conceptIsComponentOfMind"/>
+            <Class IRI="#Mind"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#conceptRefersToMentalSuppositum"/>
+            <Class IRI="#MentalSuppositum"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#conceptSignifiesNaturallyObject"/>
+            <Class IRI="#Object"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#interpretationRelatesConcept"/>
+            </ObjectInverseOf>
+            <Class IRI="#Interpretation"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#mentalPersonalSuppositionRelatesConcept"/>
+            </ObjectInverseOf>
+            <Class IRI="#MentalPersonalSupposition"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Concept"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#semanticallySimpleInheresInConcept"/>
+            </ObjectInverseOf>
+            <Class IRI="#SemanticallySimple"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Context"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Convention"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Convention"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#conventionInheresInProperSense"/>
+            <Class IRI="#ProperSense"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Expression"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Expression"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#syntacticallyComplexInheresInExpression"/>
+            </ObjectInverseOf>
+            <Class IRI="#SyntacticallyComplex"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImproperSense"/>
+        <Class IRI="#Interpretation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ImproperSupposition"/>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Inscription"/>
+        <Class IRI="#Token"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interpretation"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interpretation"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#interpretationRelatesContext"/>
+            <Class IRI="#Context"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interpretation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#interpretationRelatesConcept"/>
+            <Class IRI="#Concept"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Interpretation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#interpretationRelatesTokenType"/>
+            <Class IRI="#TokenType"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LawOfReasoning"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LawOfReasoning"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#lawOfReasoningSpellsOutLogicalRule"/>
+            <Class IRI="#LogicalRule"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LawOfReasoning"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#lawOfReasoningIsComponentOflogicalDoctrine"/>
+            <Class IRI="#LogicalDoctrine"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Logic"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LogicInUse"/>
+        <Class IRI="#Logic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LogicalDoctrine"/>
+        <Class IRI="#Logic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LogicalDoctrine"/>
+        <Class IRI="#PracticalScience"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#LogicalRule"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialSupposition"/>
+        <Class IRI="#ProperSuppositon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialSupposition"/>
+        <Class IRI="#Supposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialSupposition"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#materialSuppositionRelatesCategorematicTerm"/>
+            <Class IRI="#CategorematicTerm"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialSuppositionForSyncategoramaticTerm"/>
+        <Class IRI="#MaterialSupposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MaterialSuppositionForSyncategoramaticTerm"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#materialSuppositionForSyncatogramaticTermRelatesSyncategorematicTerm"/>
+            <Class IRI="#SyncategorematicTerm"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalPersonalSupposition"/>
+        <Class IRI="#Supposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalPersonalSupposition"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#mentalPersonalSuppositionRelatesConcept"/>
+            <Class IRI="#Concept"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalPersonalSupposition"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#mentalPersonalSuppositionRelatesMentalSuppositum"/>
+            <Class IRI="#MentalSuppositum"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalProposition"/>
+        <Class IRI="#Proposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalProposition"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#mentalPropositionSignifiesObject"/>
+            <Class IRI="#Object"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalSuppositum"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MentalSuppositum"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#mentalPersonalSuppositionRelatesMentalSuppositum"/>
+            </ObjectInverseOf>
+            <Class IRI="#MentalPersonalSupposition"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Mind"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MixedTerm"/>
+        <Class IRI="#Term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Object"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#significationRelatesObject"/>
+            </ObjectInverseOf>
+            <Class IRI="#Signification"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalSupposition"/>
+        <Class IRI="#ProperSuppositon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalSupposition"/>
+        <Class IRI="#Supposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PersonalSupposition"/>
+        <ObjectExactCardinality cardinality="2">
+            <ObjectProperty IRI="#personalSuppositionRelatesCategorematicTerm"/>
+            <Class IRI="#CategorematicTerm"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PracticalScience"/>
+        <Class IRI="#Science"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProperSense"/>
+        <Class IRI="#Interpretation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProperSense"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#conventionInheresInProperSense"/>
+            </ObjectInverseOf>
+            <Class IRI="#Convention"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ProperSuppositon"/>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proposition"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Proposition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#suppositionRelatesProposition"/>
+            </ObjectInverseOf>
+            <Class IRI="#Supposition"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Science"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScienceInStrictSense"/>
+        <Class IRI="#Science"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallyComplex"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallyComplex"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#semanticallyComplexInheresInComplexConcept"/>
+            <Class IRI="#ComplexConcept"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallyComplexExpression"/>
+        <Class IRI="#Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallyComplexExpression"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
+            <Class IRI="#ComplexConcept"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallyComplexSpokenWrittenTerm"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallyComplexSpokenWrittenTerm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#semanticallyComplexSpokenWrittenTermSignifiesComplexConcept"/>
+            <Class IRI="#ComplexConcept"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallySimple"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallySimple"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#semanticallySimpleInheresInConcept"/>
+            <Class IRI="#Concept"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallySimpleExpression"/>
+        <Class IRI="#Expression"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SemanticallySimpleExpression"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#semanticallySimpleExpressionSignifiesConcept"/>
+            <Class IRI="#Concept"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Signification"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Signification"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#significationRelatesCategorematicConcept"/>
+            <Class IRI="#CategorematicConcept"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Signification"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#significationRelatesObject"/>
+            <Class IRI="#Object"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Similarity"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Similarity"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#similarityRelatesToken"/>
+            <Class IRI="#Token"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Similarity"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#similarityRelatesTokenType"/>
+            <Class IRI="#TokenType"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SimpleSupposition"/>
+        <Class IRI="#ProperSuppositon"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenProposition"/>
+        <Class IRI="#Proposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenProposition"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#spokenWrittenPropositionSignifiesMentalProposition"/>
+            <Class IRI="#MentalProposition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenSuppositum"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenSuppositum"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenSuppositum"/>
+            </ObjectInverseOf>
+            <Class IRI="#SuppositionInConventionalLanguage"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenTerm"/>
+        <Class IRI="#Term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenTerm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#spokenWrittenTermIsComponentOfExpression"/>
+            <Class IRI="#Expression"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenTerm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#spokenWrittenTermIsComponentOfSpokenWrittenProposition"/>
+            <Class IRI="#SpokenWrittenProposition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenTerm"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#spokenWrittenTermSignifiesConventionallyConcept"/>
+            <Class IRI="#Concept"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenTerm"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#spokenWrittenTermRefersToSpokenWrittenSuppositum"/>
+            <Class IRI="#SpokenWrittenSuppositum"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenTerm"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenTerm"/>
+            </ObjectInverseOf>
+            <Class IRI="#SuppositionInConventionalLanguage"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SpokenWrittenTerm"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#syntacticallySimpleInheresInSpokenWrittenTerm"/>
+            </ObjectInverseOf>
+            <Class IRI="#SyntacticallySimple"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Supposition"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Supposition"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#suppositionRelatesProposition"/>
+            <Class IRI="#Proposition"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Supposition"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#suppositionRelatesTerm"/>
+            <Class IRI="#Term"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Supposition"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#suppositionRelatesSuppositum"/>
+            <Class IRI="#Suppositum"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+        <Class IRI="#Supposition"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenSuppositum"/>
+            <Class IRI="#SpokenWrittenSuppositum"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenTerm"/>
+            <Class IRI="#SpokenWrittenTerm"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Suppositum"/>
+        <Class IRI="#Term"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Suppositum"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#suppositionRelatesSuppositum"/>
+            <Class IRI="#Supposition"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyncategorematicConcept"/>
+        <Class IRI="#Concept"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyncategorematicTerm"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyncategorematicTerm"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#syncategorematicTermSignifiesImmediatelySyncategorematicConcept"/>
+            <Class IRI="#SyncategorematicConcept"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyncategorematicTerm"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#materialSuppositionForSyncatogramaticTermRelatesSyncategorematicTerm"/>
+            </ObjectInverseOf>
+            <Class IRI="#MaterialSuppositionForSyncategoramaticTerm"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyntacticallyComplex"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyntacticallyComplex"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#syntacticallyComplexInheresInExpression"/>
+            <Class IRI="#Expression"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyntacticallySimple"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SyntacticallySimple"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectProperty IRI="#syntacticallySimpleInheresInSpokenWrittenTerm"/>
+            <Class IRI="#SpokenWrittenTerm"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Term"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Term"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#termIsComponentOfProposition"/>
+            <Class IRI="#Proposition"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Term"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#termRefersToSuppositum"/>
+            <Class IRI="#Suppositum"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Term"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#suppositionRelatesTerm"/>
+            </ObjectInverseOf>
+            <Class IRI="#Supposition"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Token"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Token"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tokenBelongsToTokenType"/>
+            <Class IRI="#TokenType"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Token"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#similarityRelatesToken"/>
+            </ObjectInverseOf>
+            <Class IRI="#Similarity"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TokenType"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TokenType"/>
+        <ObjectSomeValuesFrom>
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#interpretationRelatesTokenType"/>
+            </ObjectInverseOf>
+            <Class IRI="#Interpretation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TokenType"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#tokenTypeSubordinatedToConcept"/>
+            <Class IRI="#Concept"/>
+        </ObjectAllValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TokenType"/>
+        <ObjectMinCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="#similarityRelatesTokenType"/>
+            </ObjectInverseOf>
+            <Class IRI="#Similarity"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Utterance"/>
+        <Class IRI="#Token"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#CategorematicConcept"/>
+        <Class IRI="#SyncategorematicConcept"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CategorematicTerm"/>
+        <Class IRI="#SyncategorematicTerm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Concept"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ImproperSense"/>
+        <Class IRI="#ProperSense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#ImproperSupposition"/>
+        <Class IRI="#ProperSuppositon"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Inscription"/>
+        <Class IRI="#Utterance"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#LogicInUse"/>
+        <Class IRI="#LogicalDoctrine"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MaterialSupposition"/>
+        <Class IRI="#PersonalSupposition"/>
+        <Class IRI="#SimpleSupposition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MentalPersonalSupposition"/>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#MentalProposition"/>
+        <Class IRI="#SpokenWrittenProposition"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PracticalScience"/>
+        <Class IRI="#ScienceInStrictSense"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SemanticallyComplex"/>
+        <Class IRI="#SemanticallySimple"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SemanticallyComplexExpression"/>
+        <Class IRI="#SemanticallySimpleExpression"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#SyntacticallyComplex"/>
+        <Class IRI="#SyntacticallySimple"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#SyncategorematicTerm"/>
+        <NamedIndividual IRI="#All"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <NamedIndividual IRI="#MentalSuppositum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#SyncategorematicTerm"/>
+        <NamedIndividual IRI="#Non"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <NamedIndividual IRI="#SemanticallyComplexExpression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <NamedIndividual IRI="#SemanticallySimpleExpression"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <NamedIndividual IRI="#SpokenWrittenSuppositum"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000023"/>
+        <NamedIndividual IRI="#Suppositum"/>
+    </ClassAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#categorematicTermSignifiesUltimatelyObject"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptIsComponentOfComplexConcept"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptIsComponentOfMentalProposition"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptIsComponentOfMind"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptRefersToMentalSuppositum"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conceptSignifiesNaturallyObject"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#conventionInheresInProperSense"/>
+        <ObjectProperty IRI="#inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interpretationRelatesConcept"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interpretationRelatesContext"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#interpretationRelatesTokenType"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#lawOfReasoningIsComponentOflogicalDoctrine"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#materialSuppositionForSyncatogramaticTermRelatesSyncategorematicTerm"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#materialSuppositionRelatesCategorematicTerm"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesConcept"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesMentalSuppositum"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#mentalPropositionSignifiesObject"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#personalSuppositionRelatesCategorematicTerm"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallyComplexInheresInComplexConcept"/>
+        <ObjectProperty IRI="#inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallyComplexSpokenWrittenTermSignifiesComplexConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallySimpleExpressionSignifiesConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#semanticallySimpleInheresInConcept"/>
+        <ObjectProperty IRI="#inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#significationRelatesCategorematicConcept"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#significationRelatesObject"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#similarityRelatesToken"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#similarityRelatesTokenType"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenPropositionSignifiesMentalProposition"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfExpression"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfSpokenWrittenProposition"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenTermRefersToSpokenWrittenSuppositum"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#spokenWrittenTermSignifiesConventionallyConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenSuppositum"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenTerm"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#suppositionRelatesProposition"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#suppositionRelatesSuppositum"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#suppositionRelatesTerm"/>
+        <ObjectProperty IRI="#relates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#syncategorematicTermSignifiesImmediatelySyncategorematicConcept"/>
+        <ObjectProperty IRI="#signifies"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#syntacticallyComplexInheresInExpression"/>
+        <ObjectProperty IRI="#inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#syntacticallySimpleInheresInSpokenWrittenTerm"/>
+        <ObjectProperty IRI="#inheresIn"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#termIsComponentOfProposition"/>
+        <ObjectProperty IRI="#isComponentOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#termRefersToSuppositum"/>
+        <ObjectProperty IRI="#refersTo"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#tokenTypeSubordinatedToConcept"/>
+    </FunctionalObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenTerm"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#termRefersToSuppositum"/>
+    </IrreflexiveObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
+        <Class IRI="#CategorematicConcept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
+        <Class IRI="#CategorematicTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#categorematicTermSignifiesUltimatelyObject"/>
+        <Class IRI="#CategorematicTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#conceptIsComponentOfComplexConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#conceptIsComponentOfMentalProposition"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#conceptIsComponentOfMind"/>
+        <Class IRI="#Mind"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#conceptRefersToMentalSuppositum"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#conceptSignifiesNaturallyObject"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#conventionInheresInProperSense"/>
+        <Class IRI="#Convention"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interpretationRelatesConcept"/>
+        <Class IRI="#Interpretation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interpretationRelatesContext"/>
+        <Class IRI="#Interpretation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#interpretationRelatesTokenType"/>
+        <Class IRI="#Interpretation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#lawOfReasoningIsComponentOflogicalDoctrine"/>
+        <Class IRI="#LawOfReasoning"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#lawOfReasoningSpellsOutLogicalRule"/>
+        <Class IRI="#LawOfReasoning"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#materialSuppositionForSyncatogramaticTermRelatesSyncategorematicTerm"/>
+        <Class IRI="#MaterialSuppositionForSyncategoramaticTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#materialSuppositionRelatesCategorematicTerm"/>
+        <Class IRI="#MaterialSupposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesConcept"/>
+        <Class IRI="#MentalPersonalSupposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesMentalSuppositum"/>
+        <Class IRI="#MentalPersonalSupposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mentalPropositionSignifiesObject"/>
+        <Class IRI="#MentalProposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#personalSuppositionRelatesCategorematicTerm"/>
+        <Class IRI="#PersonalSupposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#relates"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
+        <Class IRI="#SemanticallyComplexExpression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#semanticallyComplexInheresInComplexConcept"/>
+        <Class IRI="#SemanticallyComplex"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#semanticallyComplexSpokenWrittenTermSignifiesComplexConcept"/>
+        <Class IRI="#SemanticallyComplexSpokenWrittenTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#semanticallySimpleExpressionSignifiesConcept"/>
+        <Class IRI="#SemanticallySimpleExpression"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#semanticallySimpleInheresInConcept"/>
+        <Class IRI="#SemanticallySimple"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#significationRelatesCategorematicConcept"/>
+        <Class IRI="#Signification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#significationRelatesObject"/>
+        <Class IRI="#Signification"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#signifies"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#similarityRelatesToken"/>
+        <Class IRI="#Similarity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#similarityRelatesTokenType"/>
+        <Class IRI="#Similarity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spokenWrittenPropositionSignifiesMentalProposition"/>
+        <Class IRI="#SpokenWrittenProposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfExpression"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfSpokenWrittenProposition"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spokenWrittenTermRefersToSpokenWrittenSuppositum"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#spokenWrittenTermSignifiesConventionallyConcept"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenSuppositum"/>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenTerm"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suppositionRelatesProposition"/>
+        <Class IRI="#Supposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suppositionRelatesSuppositum"/>
+        <Class IRI="#Supposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#suppositionRelatesTerm"/>
+        <Class IRI="#Supposition"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#syncategorematicTermSignifiesImmediatelySyncategorematicConcept"/>
+        <Class IRI="#SyncategorematicTerm"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#syntacticallyComplexInheresInExpression"/>
+        <Class IRI="#SyntacticallyComplex"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#syntacticallySimpleInheresInSpokenWrittenTerm"/>
+        <Class IRI="#SyntacticallySimple"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#termIsComponentOfProposition"/>
+        <Class IRI="#Term"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#termRefersToSuppositum"/>
+        <Class IRI="#Term"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tokenBelongsToTokenType"/>
+        <Class IRI="#Token"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#tokenTypeSubordinatedToConcept"/>
+        <Class IRI="#TokenType"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#categorematicConceptSignifiesUltimatelyObject"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#categorematicTermSiginifiesImmediatelyCategorematicConcept"/>
+        <Class IRI="#CategorematicConcept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#categorematicTermSignifiesUltimatelyObject"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#conceptIsComponentOfComplexConcept"/>
+        <Class IRI="#ComplexConcept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#conceptIsComponentOfMentalProposition"/>
+        <Class IRI="#MentalProposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#conceptIsComponentOfMind"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#conceptRefersToMentalSuppositum"/>
+        <Class IRI="#MentalSuppositum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#conceptSignifiesNaturallyObject"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#conventionInheresInProperSense"/>
+        <Class IRI="#ProperSense"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretationRelatesConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretationRelatesContext"/>
+        <Class IRI="#Context"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#interpretationRelatesTokenType"/>
+        <Class IRI="#TokenType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#lawOfReasoningIsComponentOflogicalDoctrine"/>
+        <Class IRI="#LogicalDoctrine"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#lawOfReasoningSpellsOutLogicalRule"/>
+        <Class IRI="#LogicalRule"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#materialSuppositionForSyncatogramaticTermRelatesSyncategorematicTerm"/>
+        <Class IRI="#SyncategorematicTerm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#materialSuppositionRelatesCategorematicTerm"/>
+        <Class IRI="#CategorematicTerm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mentalPersonalSuppositionRelatesMentalSuppositum"/>
+        <Class IRI="#MentalSuppositum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mentalPropositionSignifiesObject"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#personalSuppositionRelatesCategorematicTerm"/>
+        <Class IRI="#CategorematicTerm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#refersTo"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#relates"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000001"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#semanticallyComplexExpressionSignifiesComplexConcept"/>
+        <Class IRI="#ComplexConcept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#semanticallyComplexInheresInComplexConcept"/>
+        <Class IRI="#ComplexConcept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#semanticallyComplexSpokenWrittenTermSignifiesComplexConcept"/>
+        <Class IRI="#ComplexConcept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#semanticallySimpleExpressionSignifiesConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#semanticallySimpleInheresInConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#significationRelatesCategorematicConcept"/>
+        <Class IRI="#CategorematicConcept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#significationRelatesObject"/>
+        <Class IRI="#Object"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#signifies"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#similarityRelatesToken"/>
+        <Class IRI="#Token"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#similarityRelatesTokenType"/>
+        <Class IRI="#TokenType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spokenWrittenPropositionSignifiesMentalProposition"/>
+        <Class IRI="#MentalProposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfExpression"/>
+        <Class IRI="#Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spokenWrittenTermIsComponentOfSpokenWrittenProposition"/>
+        <Class IRI="#SpokenWrittenProposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spokenWrittenTermRefersToSpokenWrittenSuppositum"/>
+        <Class IRI="#SpokenWrittenSuppositum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#spokenWrittenTermSignifiesConventionallyConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenSuppositum"/>
+        <Class IRI="#SpokenWrittenSuppositum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suppositionInConventionalLanguageRelatesSpokenWrittenTerm"/>
+        <Class IRI="#SuppositionInConventionalLanguage"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suppositionRelatesProposition"/>
+        <Class IRI="#Proposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suppositionRelatesSuppositum"/>
+        <Class IRI="#Suppositum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#suppositionRelatesTerm"/>
+        <Class IRI="#Term"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#syncategorematicTermSignifiesImmediatelySyncategorematicConcept"/>
+        <Class IRI="#SyncategorematicConcept"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#syntacticallyComplexInheresInExpression"/>
+        <Class IRI="#Expression"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#syntacticallySimpleInheresInSpokenWrittenTerm"/>
+        <Class IRI="#SpokenWrittenTerm"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#termIsComponentOfProposition"/>
+        <Class IRI="#Proposition"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#termRefersToSuppositum"/>
+        <Class IRI="#Suppositum"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tokenBelongsToTokenType"/>
+        <Class IRI="#TokenType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#tokenTypeSubordinatedToConcept"/>
+        <Class IRI="#Concept"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#language"/>
+        <DataProperty IRI="#hasQualityValue"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#language_1"/>
+        <DataProperty IRI="#hasQualityValue"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="#language"/>
+        <Class IRI="#Inscription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#language_1"/>
+        <Class IRI="#Utterance"/>
+    </DataPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CategorematicConcept</IRI>
+        <Literal xml:lang="en">&quot;Concepts, being representative acts of the mind, are naturally classified in terms of their representative function, which in turn is specifi ed in terms of what and how these concepts represent or naturally signify. However, some concepts represent something only in connection with other concepts, whereas others represent something in themselves. The former are called syncategorematic, whereas the latter are called categorematic concepts.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CategorematicConcept</IRI>
+        <Literal xml:lang="en">CategorematicConcept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CategorematicTerm</IRI>
+        <Literal xml:lang="en">&quot;A categorematic term, therefore, is said to signify the concept to which it is subordinated immediately, but it is imposed to signify ultimately the object (or objects) conceived by this concept, in the manner that it is (or they are) conceived by means of this concept [...]&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CategorematicTerm</IRI>
+        <Literal xml:lang="en">CategorematicTerm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ComplexConcept</IRI>
+        <Literal xml:lang="en">&quot;Syncategorematic concepts modify the representative function of categorematic concepts by forming with them new concepts that have a representative function different from that of the original categorematic concept. Therefore, it is natural to think of these new concepts as resulting from the combination of categorematic and syncategorematic concepts, and thus, as having some intrinsic structure, that is to say, a certain complexity. Indeed, when Buridan is talking about complex concepts as being the result of combination [complexio], he definitely gives us the impression that the conceptual combination in question strictly parallels the syntactical combination of the corresponding written or spoken phrases. [...] The combination [complexio] of simple concepts is called a &apos;mental expression&apos;, [and results from] compounding or dividing [componendo vel dividendo] by means of the second operation of the intellect, and the terms of such an expression are the simple concepts that the intellect puts together or separates. Now, just as simple concepts are designated for us by means of simple utterances, which we call &apos;words&apos;, so also do we designate a combination of simple concepts by a combination of words. It is for this reason that a spoken expression is an utterance made up of several words, which signifies for us the combination of concepts in the mind.&quot; (Klima, Buridan)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ComplexConcept</IRI>
+        <Literal xml:lang="en">ComplexConcept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Concept</IRI>
+        <Literal xml:lang="en">A concept is a term in mental language an act of understanding.  &quot;Buridan makes it quite clear that in his view a concept cannot vary its semantic features, which means that there is no ambiguity in mental language. The same concept always represents the same things in the same way, so there is not even a variation of supposition in mental language in the way there is in spoken or written languages&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Concept</IRI>
+        <Literal xml:lang="en">A concept is a term in mental language an act of understanding. &quot;concepts, the acts of understanding which render utterances and inscriptions meaningful, are just as singular as as are the utterances and inscriptions themselves. In addition, the acts of imposition whereby we subordinate utterances and inscriptions to concepts are singular, voluntary acts. This renders the relation of subordination conventional and changeable from one occasion of use to the next. So, the correlation of these singular items, inscriptions, utterances, and concepts is to be established in a piecemeal way, by carefully evaluating which utterance or inscription is subordinated to which concept in whose mind, on which occasion of its use, in what context. [...] Buridan makes it quite clear that in his view a concept cannot vary its semantic features, which means that there is no ambiguity in mental language. The same concept always represents the same things in the same way, so there is not even a variation of supposition in mental language in the way there is in spoken or written languages&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Concept</IRI>
+        <Literal xml:lang="en">Concept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Context</IRI>
+        <Literal xml:lang="en">Context is the &quot;variable conditions of interpretation, such as when, where, by whom, to whom, according to what intention, and so on a token is to be interpreted [...] So, in the specification of acts of imposition we might use variables indistinctly referring to any number of individual users, various times, places, or any other relevant contextual factors [...]&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Context</IRI>
+        <Literal xml:lang="en">Context</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Convention</IRI>
+        <Literal xml:lang="en">&quot;So, although we can use any utterance and inscription in the way we wish, once it is conventionally instituted to signify somehow, that established signification is to be regarded as its proper, primary sense, and any other only as a secondary, improper sense.&quot; (Klima) Convention might vary in time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Convention</IRI>
+        <Literal xml:lang="en">Convention</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Expression</IRI>
+        <Literal xml:lang="en">&quot;a spoken expression is an utterance made up of several words&quot; (Buridan)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Expression</IRI>
+        <Literal xml:lang="en">Expression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImproperSense</IRI>
+        <Literal xml:lang="en">&quot;So, although we can use any utterance and inscription in the way we wish, once it is conventionally instituted to signify somehow, that established signifcation is to be regarded as its proper, primary sense, and any other only as a secondary, improper sense.&quot; (Klima) Improper sense interpretation can be ironic, figurative, metaphoric, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ImproperSense</IRI>
+        <Literal xml:lang="en">ImproperSense</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ImproperSupposition</IRI>
+        <Literal xml:lang="en">&quot;Improper supposition [...] is the kind of supposition or reference a term has when it is used figuratively and not literally. Now a detailed semantics of metaphor was just as much beyond the reach of mediaeval authors as it is beyond our reach today. So we should not be surprised to find that the theory of improper supposition is not worked out very fully.&quot; (Spade)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ImproperSupposition</IRI>
+        <Literal xml:lang="en">ImproperSupposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Inscription</IRI>
+        <Literal xml:lang="en">&quot;[...] any spoken language is but a system of singular utterances [vox], while any written language is but a system of singular inscriptions. Moreover, it is obvious that any such utterance or inscription belongs to a language only insofar as it produces some understanding in the minds of competent users of the language, that is to say, insofar as it is meaningful at all. [...] Buridan does talk about the fact that any linguistic sign (whether spoken [utterance], written [incription], or even mental) is a singular occurrence (which we call a token)&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Inscription</IRI>
+        <Literal xml:lang="en">Inscription</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Interpretation</IRI>
+        <Literal xml:lang="en">&quot;That is to say, a rule that applies to a token in virtue of its interpretation as belonging to a given type under such and such conditions of its use applies to all tokens of the same type under the same conditions. [...] To be sure, the correct interpretation need not be the interpretation expressing the proper or primary sense, because occasionally the correct, intended interpretation is provided by some improper, secondary sense of the phrase in question. In fact, this is precisely why it is the intention expressed by the phrase on the given occasion of its use that determines its correct semantic evaluation. The reason for this is that the written or spoken phrase has any sense whatsoever only in virtue of the fact that it is subordinated to the concept or intention it is supposed to express according to the intended interpretation, for it signifies just what is conceived by the corresponding concept. So, the correct interpretation of an utterance or inscription is fixed by the mental concept to which the utterance or inscription is actually subordinated on a particular occasion of its use. Consequently, the reason why tokens of the same type have the same semantic features allowing us the primacy of mental language to evaluate them in the same way in the same type of context is that under these circumstances they are subordinated to the same concept. [...] So, although we can use any utterance and inscription in the way we wish, once it is conventionally instituted to signify somehow, that established signifcation is to be regarded as its proper, primary sense, and any other only as a secondary, improper sense. Nevertheless, there is no hard and fast rule that says that we should take the expressions of our spoken or written languages always in their primary sense, and that we should evaluate our propositions for their truth or falsity accordingly. On the contrary, sometimes we are obliged to take written or spoken expressions in their secondary, improper sense, if that is what is intended. [...] the occurrences of two token-terms of the same type (provided they are interpreted in the same way) are subordinated to numerically one and the same concept in the same mind, and so, given that whatever semantic features they have they have from the semantic features of the concept, no wonder they will have exactly the same semantic features. But then, if the semantic features of concepts are not variable, this certainly suffi ciently fixes the interpretation of token-terms according to a given subordination, for according to that subordination they will all be subordinated&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Interpretation</IRI>
+        <Literal xml:lang="en">Interpretation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LawOfReasoning</IRI>
+        <Literal xml:lang="en">&quot;Laws of reasoning are universal, necessary laws describing, spelling out the practical logical rules&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LawOfReasoning</IRI>
+        <Literal xml:lang="en">LawOfReasoning</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Logic</IRI>
+        <Literal xml:lang="en">Logic</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:incompatibleWith"/>
+        <IRI>#Logic</IRI>
+        <Literal xml:lang="en">&quot;Logic is in its entirety about arguments, their principles, parts, and attributes; therefore, we should consider in logic everything in its relation to argumentation. Thus, the division of logic is taken from argumentation. [..] In this broader sense, the art of logic also deserves to be called a science, namely, a practical science, the possession of which guides us in our rational practice of forming and evaluating arguments. In this connection, Buridan also draws the famous distinction between logica utens and logica docens, that is, logic-in-use and logical doctrine.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LogicInUse</IRI>
+        <Literal xml:lang="en">&quot;Buridan also draws the famous distinction between logica utens and logica docens, that is, logic-in-use and logical doctrine, only the latter of which can be called an art or practical science, whereas the former embodies those operative principles that are spelled out by the latter. For of course logical rules are operative in all our rational activities, yet those rules in operation, without being spelled out and reflected on, do not constitute logical knowledge. In fact, as Buridan remarks, sometimes, as in the case of sophistic arguments, they lead to something contrary to knowledge, namely, deception.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LogicInUse</IRI>
+        <Literal xml:lang="en">Logic-in-use</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LogicalDoctrine</IRI>
+        <Literal xml:lang="en">&quot;Buridan also draws the famous distinction between logica utens and logica docens, that is, logic-in-use and logical doctrine, only the latter of which can be called an art or practical science, whereas the former embodies those operative principles that are spelled out by the latter. [...] logical doctrine, the systematic body of knowledge concerning the universal, necessary laws of various forms of reasoning, is certainly a science, even if not a theoretical one, such as metaphysics, mathematics, or physics. It is, rather, a practical science, which teaches us how to construct and evaluate our argumentations to achieve our desired ends with them, whatever those ends may be.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LogicalDoctrine</IRI>
+        <Literal xml:lang="en">LogicalDoctrine</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#LogicalRule</IRI>
+        <Literal xml:lang="en">&quot;logical rules are operative in all our rational activities&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#LogicalRule</IRI>
+        <Literal xml:lang="en">LogicalRule</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaterialSupposition</IRI>
+        <Literal xml:lang="en">&quot;We have also seen that in various propositional contexts the same term may not stand for its ultimatesignificata at all, but either for its immediate significata (the token concepts it is subordinated to) or for itself and other token terms of the same kind. In all such cases, when a term does not stand for its ultimate significata, Buridan says that it is taken nonsignificatively, that is, materially, or in material supposition. By contrast, when a categorematic term stands for its ultimate significata, it is taken significatively, or in personal supposition.&quot; (Klima) Material supposition is a subkind of supposition. For conventional (written and spoken) languages Buridan accepts Ockham&apos;s view on supposition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MaterialSupposition</IRI>
+        <Literal xml:lang="en">MaterialSupposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MaterialSuppositionForSyncategoramaticTerm</IRI>
+        <Literal xml:lang="en">Syncategorematic terms can have just material supposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MaterialSuppositionForSyncategoramaticTerm</IRI>
+        <Literal xml:lang="en">MaterialSuppositionForSyncatogramaticTerm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MentalPersonalSupposition</IRI>
+        <Literal xml:lang="en">&quot;Buridan makes it quite clear that in his view a concept cannot vary its semantic features, which means that there is no ambiguity in mental language. The same concept always represents the same things in the same way, so there is not even a variation of supposition in mental language in the way there is in spoken or written languages: We should know, therefore, that (as it seems to me), material material supposition occurs only where signifi cative utterances are concerned. For no mental term in a mental proposition supposits materially, but rather always personally, for we do not use mental terms by convention [ad placitum] as we do with utterances and written marks. This is because the same mental expression never has diverse signifi cations, or acceptations; for the affections of the soul [ passiones animae] are the same for all, just like the things of which they are the likenesses, as is said in bk. 1 of On Interpretation. [...] A concept that represents some object does not signify it by virtue of anything else: to have such a concept active in one�s mind is just to conceive of the object in the way the concept represents it. This understanding of the representative function of a concept, however, immediately renders Ockham&apos;s account problematic. For to have a concept active in one�s mind on this understanding is to conceive of the object represented by the concept, whereas the same concept may represent different objects. Sometimes it may represent its ordinary objects, as the concept of human beings does in the mental counterpart of &apos;Man is an animal&apos;. At other times, it may represent itself or a similar concept, as it does in the mental counterpart of &apos;Man is a species&apos;. Consequently, it would appear that one might not be sure just what one conceives of, for one may not be sure whether the same concept is to be taken to stand for itself or for its ordinary objects, just as one may not be sure about the supposition of the subject termof the corresponding spoken proposition. But this seems absurd, namely, that having a concept active in one&apos;s mind, one is not sure what one conceives by that concept, given that having the concept active in one&apos;s mind is nothing but conceiving of its object in the way the concept represents it. In his detailed analysis of the problem, Paul Spade put the point in the following way. &apos;Since concepts signify just what is conceived by them&apos; that is, just what they are thoughts of and since in general it is only in personal supposition that terms supposit for what they signify, it follows that if mental terms may have simple or material supposition, we do not always know what we are asserting in a mental sentence.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MentalPersonalSupposition</IRI>
+        <Literal xml:lang="en">MentalPersonalSupposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MentalProposition</IRI>
+        <Literal xml:lang="en">Mental propositions are compounds of concepts. &quot;when the mental propositions concern things other than items in a language [extramental objects], they cannot further be mapped onto some sort of propositional entities, given the demands of Buridan&apos;s nominalist ontology. So, because syncategorematic concepts do not represent anything in extramental reality, but only modify the representative function of categorematic concepts, the second mapping definitely has to be &apos;coarser&apos;: a mental proposition concerning things in the world can only signify things [objects] that are signified by its categorematic terms (the terms flanking its copula), whence even nonsynonymous propositions that share the same terms will end up signifying the same things.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MentalProposition</IRI>
+        <Literal xml:lang="en">MentalProposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MentalSuppositum</IRI>
+        <Literal xml:lang="en">A concept in the context of a (mental) proposition refers to (supposits) a mental suppositum.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MentalSuppositum</IRI>
+        <Literal xml:lang="en">MentalSuppositum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Mind</IRI>
+        <Literal xml:lang="en">A human mind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Mind</IRI>
+        <Literal xml:lang="en">Mind</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#MixedTerm</IRI>
+        <Literal xml:lang="en">&quot;To be sure, there are also some mixed terms, which, for example primarily signify some syncategorematic act of the mind, but also connote, on account of the connotation of the concept they are subordinated to, something ad extra, such as the verbal copula, which primarily signifies the mental act of composition (the joining of subject and predicate in a proposition), but also connotes some time relative to the present time of the speaker.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#MixedTerm</IRI>
+        <Literal xml:lang="en">MixedTerm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Object</IRI>
+        <Literal xml:lang="en">An object, a thing or state of affairs in the external (or internal) world.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Object</IRI>
+        <Literal xml:lang="en">Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PersonalSupposition</IRI>
+        <Literal xml:lang="en">&quot;We have also seen that in various propositional contexts the same term may not stand for its ultimatesignificata at all, but either for its immediate significata (the token concepts it is subordinated to) or for itself and other token terms of the same kind. In all such cases, when a term does not stand for its ultimate significata, Buridan says that it is taken nonsignificatively, that is, materially, or in material supposition. By contrast, when a categorematic term stands for its ultimate significata, it is taken significatively, or in personal supposition.&quot; (Klima) Material supposition is a subkind of supposition. For conventional (written and spoken) languages Buridan accepts Ockham&apos;s view on supposition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PersonalSupposition</IRI>
+        <Literal xml:lang="en">PersonalSupposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PracticalScience</IRI>
+        <Literal xml:lang="en">&quot;In the latter sense, the term applies not only to strictly theoretical but also to practical subjects, namely, subjects concerning things that are within our power to make or do (or to refrain from making or doing), and the knowledge of which is useful for achieving our ends in these activities. In this broader sense, the art of logic also deserves to be called a science, namely, a practical science, the possession of which guides us in our rational practice of forming and evaluating arguments.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PracticalScience</IRI>
+        <Literal xml:lang="en">PracticalScience</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProperSense</IRI>
+        <Literal xml:lang="en">&quot;So, although we can use any utterance and inscription in the way we wish, once it is conventionally instituted to signify somehow, that established signifcation is to be regarded as its proper, primary sense, and any other only as a secondary, improper sense.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProperSense</IRI>
+        <Literal xml:lang="en">ProperSense</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ProperSuppositon</IRI>
+        <Literal xml:lang="en">&quot;proper supposition occurs when a term supposits for what it properly signifies&quot; (Spade)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ProperSuppositon</IRI>
+        <Literal xml:lang="en">ProperSuppositon</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Proposition</IRI>
+        <Literal xml:lang="en">A proposition or sentence is made up of terms. A propositions is a meaningful compound made  of syncategorematic and categorematic terms.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Proposition</IRI>
+        <Literal xml:lang="en">Proposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Science</IRI>
+        <Literal xml:lang="en">Science in a broader sense applies to theoretical and practical subjects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Science</IRI>
+        <Literal xml:lang="en">Science</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ScienceInStrictSense</IRI>
+        <Literal xml:lang="en">&quot;In his questions on Porphyry&apos;s Isagoge, Buridan [...] distinguishes between &apos;science&apos; in the strict sense, in which it applies only to a body of necessary, universal, theoretical knowledge, consisting of the conclusions of scientific demonstrations in the strict Aristotelian sense, from &apos;science&apos; in a broader sense.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ScienceInStrictSense</IRI>
+        <Literal xml:lang="en">ScienceInStrictSense</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticallyComplex</IRI>
+        <Literal xml:lang="en">Complex concepts, or mental expressions are semantically complex.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SemanticallyComplex</IRI>
+        <Literal xml:lang="en">SemanticallyComplex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticallyComplexExpression</IRI>
+        <Literal xml:lang="en">&quot;Further, a spoken expression should be called an [semantically complex] &apos;expression&apos; only insofar as it designates a combination of concepts in the mind.&quot; (Buridan)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SemanticallyComplexExpression</IRI>
+        <Literal xml:lang="en">SemanticallyComplexExpression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticallyComplexSpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">We have semantically complex spoken and written terms, when a &quot;a syntactically simple utterance may obviously be semantically complex by virtue of being subordinated to a complex concept.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SemanticallyComplexSpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">SemanticallyComplexSpoken-WrittenTerm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticallySimple</IRI>
+        <Literal xml:lang="en">A concept is semantically simple.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SemanticallySimple</IRI>
+        <Literal xml:lang="en">SemanticallySimple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SemanticallySimpleExpression</IRI>
+        <Literal xml:lang="en">&quot;despite possible appearances to the contrary, the combination of written and spoken words does not always have to run strictly parallel to the combination of concepts in the mind. As Buridan continues: For if the whole utterance &apos;A man runs&apos; were imposed to signify simply stones, as the utterance &apos;stone&apos; does, then &apos;A man runs&apos; would not be an expression, but a simple word, as is &apos;stone&apos;. Hence, something is called a spoken expression or proposition only because it designates a mental expression or proposition, and a spoken proposition is called true or false only because it designates a true or false mental proposition, just as a urine sample is said to be healthy or unhealthy only because it designates that the animal is healthy or ill. It is in the same way that every utterance that appropriately designates a simple concept by convention [ex institutione] is said to be incomplex, [precisely] because it is subordinated in order to designate a simple concept. That is to say, just because some spoken or written sign has some sort of recognizable complexity (as even single words consist of syllables, and those of sounds or letters), one must not assume that the corresponding concept has some corresponding complexity. Indeed, it happens even in ordinary usage that an originally complex phrase is transferred to designate a simple concept. This is the case, for example, with the phrase &apos;man&apos;s best friend&apos; in English, which, at least according to one of its uses, is transferred to designate the same concept that is designated by the simple word &apos;dog,&apos; which, as we can assume with Buridan, is a simple concept.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SemanticallySimpleExpression</IRI>
+        <Literal xml:lang="en">SemanticallySimpleExpression</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Signification</IRI>
+        <Literal xml:lang="en">Signification relates categorematic concept with object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Signification</IRI>
+        <Literal xml:lang="en">Signification</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Similarity</IRI>
+        <Literal xml:lang="en">&quot;Individual linguistic signs, symbol tokens, come in types [token types] based on their recognizable similarities. Indeed, even if some tokens are not inherently similar, such as the upper- and lowercase letters of the alphabet (A, a, B, b, etc.) or different fonts or typefaces (a, a, a, etc.), we are trained early on to recognize them as similar.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Similarity</IRI>
+        <Literal xml:lang="en">Similarity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SimpleSupposition</IRI>
+        <Literal xml:lang="en">SimpleSupposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpokenWrittenProposition</IRI>
+        <Literal xml:lang="en">&quot;Spoken and written propositions have a &apos;fine-grained&apos; semantics, insofar as they are mapped onto mental propositions.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpokenWrittenProposition</IRI>
+        <Literal xml:lang="en">Spoken-WrittenProposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpokenWrittenSuppositum</IRI>
+        <Literal xml:lang="en">A spoken or written term in the context of a proposition refers to (supposits) a spoken or written suppositum.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpokenWrittenSuppositum</IRI>
+        <Literal xml:lang="en">Spoken-WrittenSuppositum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">Spoken or written terms are utterances or inscriptions. &quot;What a [spoken or written] term immediately signifies is the mental act on account of which we recognize the term as a significative utterance or inscription, as opposed to some articulate sound or discernible scribble that makes no sense to us at all. Thus, those utterances that do have signifi cation are meaningful precisely because they are associated with some act of understanding, or, in late scholastic terminology, because they are subordinated to some concept of the human mind, whatever such a concept is, namely, whether it is some spiritual modification of an immaterial mind or just a firing pattern of neurons in the brain.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">Spoken-WrittenTerm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Supposition</IRI>
+        <Literal xml:lang="en">�What sort of relation is supposition? Well, the first thing we can say about it is that supposition is a semantic relation. To a first (but pretty good) approximation, supposition in this first part of the theory is what nowadays we call �reference.� It is the relation between the terms used in a proposition and the things those terms are used to talk about in that proposition. [�] supposition occurs only in a propositional context. And this is the first main difference between supposition and signification, which can occur outside a propositional context according to almost any author. The second main difference is this: We do not always in practice use terms in propositions to talk about what those terms signify. We use them in a variety of other ways too. Hence supposition also differs from signification insofar as a term may signify one thing, but supposit on a given occasion for something entirely different.� (Spade)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Supposition</IRI>
+        <Literal xml:lang="en">Supposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SuppositionInConventionalLanguage</IRI>
+        <Literal xml:lang="en">Supposition in conventional language is supposition occuring in spoken or written (conventional) languages.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SuppositionInConventionalLanguage</IRI>
+        <Literal xml:lang="en">SuppositionInConventionalLanguage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Suppositum</IRI>
+        <Literal xml:lang="en">Suppositum is &quot;whatever a term supposits for.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Suppositum</IRI>
+        <Literal xml:lang="en">Suppositum</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SyncategorematicConcept</IRI>
+        <Literal xml:lang="en">&quot;Concepts, being representative acts of the mind, are naturally classified in terms of their representative function, which in turn is specified in terms of what and how these concepts represent or naturally signify. However, some concepts represent something only in connection with other concepts, whereas others represent something in themselves. The former are called syncategorematic, whereas the latter are called categorematic concepts.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SyncategorematicConcept</IRI>
+        <Literal xml:lang="en">SyncategorematicConcept</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SyncategorematicTerm</IRI>
+        <Literal xml:lang="en">&quot;Syncategorematic terms may signify only the syncategorematic concept to which they are subordinated. Because the function of such a concept (for example, the concept of negation, conjunction, and similar logical connectives) is not to conceive of anything, but merely to modify the representative function of other concepts, the purely syncategorematic term subordinated to it will not signify anything else. [...] For example, the term-negation &apos;non&apos; in the term &apos;nonhuman&apos; does not signify anything in extramental reality, for there is no such a thing as a negation in re existing on a par with humans, beasts, plants, and rocks. However, this does not mean that this word does not signify at all. For even if it does not signify something, it does signify somehow: even if it does not signify a negation in re, it does signify negatively, namely, by negating the significata of the categorematic term with which it is construed, so that the resulting complex term supposits in a proposition for what is not signified by the negated categorematic term. [...] syncategorematic terms can have material supposition (thus the term &apos;non&apos; in &apos;Non est negatio&apos; can be taken to stand materiallyfor its immediate signifi cata, the token concepts of negation in individual human minds or itself and other tokens of the same type).&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SyncategorematicTerm</IRI>
+        <Literal xml:lang="en">SyncategorematicTerm</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SyntacticallyComplex</IRI>
+        <Literal xml:lang="en">Syntactically Complex: made up of several words.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SyntacticallyComplex</IRI>
+        <Literal xml:lang="en">SyntacticallyComplex</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SyntacticallySimple</IRI>
+        <Literal xml:lang="en">&quot;A syntactically simple utterance is one that is imposed to designate a concept as a whole, so that, although it does [or could] have distinguishable parts, none of its parts, as such, is imposed to designate some concept separately. Indeed, even if the utterance in question does have distinguishable parts that are imposed to designate some concepts separately when they do not occur as a part of this utterance, because they do not have the function of designating these concepts when they do occur as parts of this utterance, the utterance is still syntactically simple. For example, the obviously simple English word &apos;polecat&apos; is imposed as a whole to signify a concept whereby we conceive of a particular species of stinky animals. However, a polecat is neither a pole nor a cat. Even if the utterance &apos;polecat&apos; has the distinguishable parts &apos;pole&apos; and &apos;cat&apos; which separately are also imposed in English to signify concepts whereby we conceive of some sorts of things, these concepts have nothing to do with the concept to which &apos;polecat&apos; is subordinated. The representative function of this concept is in no way dependent on the representative function of those other concepts, and, so, the signification of this utterance is in no way dependent on the signification of its parts.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SyntacticallySimple</IRI>
+        <Literal xml:lang="en">SyntacticallySimple</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Term</IRI>
+        <Literal xml:lang="en">A term can be mental, spoken, or written. &quot;It should, therefore, be realized that three kinds of expressions and three kinds of terms can be distinguished, as is touched upon at the beginning of On Interpretation: namely, mental, spoken, and written&quot; (Buridan)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Term</IRI>
+        <Literal xml:lang="en">Term</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Token</IRI>
+        <Literal xml:lang="en">&quot;Buridan does talk about the fact that any linguistic sign (whether spoken [utterance], written [incription], or even mental) is a singular occurrence (which we call a token). He also talks about the fact that some of these are recognizably similar (thereby constituting what we would call a type), and about the fact that once we fix the variable conditions of interpretation, then talking about one token is equivalent to talking about all.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Token</IRI>
+        <Literal xml:lang="en">Token</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TokenType</IRI>
+        <Literal xml:lang="en">TokenType</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#TokenType</IRI>
+        <Literal xml:lang="en">&quot;Individual linguistic signs, symbol tokens, come in types [token types] based on their recognizable similarities. Indeed, even if some tokens are not inherently similar, such as the upper- and lowercase letters of the alphabet (A, a, B, b, etc.) or different fonts or typefaces (a, a, a, etc.), we are trained early on to recognize them as similar. Obviously, the same applies to utterances at an even earlier stage, in a less formally educational setting, leaving much to our natural abilities to recognize phonemic similarities. Therefore, what primarily allows any sort of uniformity of interpretation is the fact that even if in principle any token of any type can be interpreted ad placitum at any time, tokens are interpreted in types. Once we specify the relevant variable conditions of interpretation, such as when, where, by whom, to whom, according to what intention, and so on a token is to be interpreted, then any token of the same type under the same conditions is to be interpreted in the same way. That is to say, a rule that applies to a token in virtue of its interpretation as belonging to a given type under such and such conditions of its use applies to all tokens of the same type under the same conditions. To be sure, Buridan never talks about tokens or types. This is modern terminology, which I bring in to summarize the gist of Buridan&apos;s ideas.&quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Utterance</IRI>
+        <Literal xml:lang="en">&quot;[...] any spoken language is but a system of singular utterances [vox], while any written language is but a system of singular inscriptions. Moreover, it is obvious that any such utterance or inscription belongs to a language only insofar as it produces some understanding in the minds of competent users of the language, that is to say, insofar as it is meaningful at all. [...] Buridan does talk about the fact that any linguistic sign (whether spoken [utterance], written [incription], or even mental) is a singular occurrence (which we call a token) &quot; (Klima)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Utterance</IRI>
+        <Literal xml:lang="en">Utterance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categorematicConceptSignifiesUltimatelyObject</IRI>
+        <Literal xml:lang="en">signifiesUltimately</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categorematicTermSiginifiesImmediatelyCategorematicConcept</IRI>
+        <Literal xml:lang="en">siginifiesImmediately</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#categorematicTermSignifiesUltimatelyObject</IRI>
+        <Literal xml:lang="en">signifiesUltimately</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptIsComponentOfComplexConcept</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptIsComponentOfMentalProposition</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptIsComponentOfMind</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptRefersToMentalSuppositum</IRI>
+        <Literal xml:lang="en">refersTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conceptSignifiesNaturallyObject</IRI>
+        <Literal xml:lang="en">signifiesNaturally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#conventionInheresInProperSense</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretationRelatesConcept</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretationRelatesContext</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#interpretationRelatesTokenType</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#language</IRI>
+        <Literal xml:lang="en">language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#language_1</IRI>
+        <Literal xml:lang="en">language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lawOfReasoningIsComponentOflogicalDoctrine</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#lawOfReasoningSpellsOutLogicalRule</IRI>
+        <Literal xml:lang="en">spellsOut</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#materialSuppositionForSyncatogramaticTermRelatesSyncategorematicTerm</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#materialSuppositionRelatesCategorematicTerm</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mentalPersonalSuppositionRelatesConcept</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mentalPersonalSuppositionRelatesMentalSuppositum</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#mentalPropositionSignifiesObject</IRI>
+        <Literal xml:lang="en">signifiesCoarseGrained</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#personalSuppositionRelatesCategorematicTerm</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#relates</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#semanticallyComplexExpressionSignifiesComplexConcept</IRI>
+        <Literal xml:lang="en">signifies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#semanticallyComplexInheresInComplexConcept</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#semanticallyComplexSpokenWrittenTermSignifiesComplexConcept</IRI>
+        <Literal xml:lang="en">signifies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#semanticallySimpleExpressionSignifiesConcept</IRI>
+        <Literal xml:lang="en">signifies</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#semanticallySimpleInheresInConcept</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#significationRelatesCategorematicConcept</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#significationRelatesObject</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#similarityRelatesToken</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#similarityRelatesTokenType</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spokenWrittenPropositionSignifiesMentalProposition</IRI>
+        <Literal xml:lang="en">signifiesFineGrained</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spokenWrittenTermIsComponentOfExpression</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spokenWrittenTermIsComponentOfSpokenWrittenProposition</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spokenWrittenTermRefersToSpokenWrittenSuppositum</IRI>
+        <Literal xml:lang="en">refersTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#spokenWrittenTermSignifiesConventionallyConcept</IRI>
+        <Literal xml:lang="en">signifiesConventionally</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionInConventionalLanguageRelatesSpokenWrittenSuppositum</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionInConventionalLanguageRelatesSpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionRelatesProposition</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionRelatesSuppositum</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#suppositionRelatesTerm</IRI>
+        <Literal xml:lang="en">relates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#syncategorematicTermSignifiesImmediatelySyncategorematicConcept</IRI>
+        <Literal xml:lang="en">signifiesImmediately</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#syntacticallyComplexInheresInExpression</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#syntacticallySimpleInheresInSpokenWrittenTerm</IRI>
+        <Literal xml:lang="en">inheresIn</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#termIsComponentOfProposition</IRI>
+        <Literal xml:lang="en">isComponentOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#termRefersToSuppositum</IRI>
+        <Literal xml:lang="en">refersTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tokenBelongsToTokenType</IRI>
+        <Literal xml:lang="en">belongsTo</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#tokenTypeSubordinatedToConcept</IRI>
+        <Literal xml:lang="en">subordinatedTo</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

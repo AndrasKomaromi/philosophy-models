@@ -1,0 +1,688 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/philosophy-models/bfo/main/philoponus-bfo.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://raw.githubusercontent.com/philosophy-models/bfo/main/philoponus-bfo.owl">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/philosophy-models/bfo/main/philoponus-bfo.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Sources: 
+(1) Wildberg, Christian, “John Philoponus”, The Stanford Encyclopedia of Philosophy (Winter 2021 Edition, Edward N. Zalta (ed.)
+(2) SORABJI, RICHARD: “HILOPONUS AND THE REJECTION OF ARISTOTELIAN SCIENCE”, EDITED BY RICHARD SORABJI INSTITUTE OF CLASSICAL STUDIES SCHOOL OF ADVANCED STUDY UNIVERSITY OF LONDON 2010
+(3) HENRY CHADWICK: PHILOPONUS THE CHRISTIAN THEOLOGIAN IN SORABJI, RICHARD: “HILOPONUS AND THE REJECTION OF ARISTOTELIAN SCIENCE”, EDITED BY RICHARD SORABJI INSTITUTE OF CLASSICAL STUDIES SCHOOL OF ADVANCED STUDY UNIVERSITY OF LONDON 2010</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">author: András L. Komáromi
+This work is distributed under Creative Commons Attribution License CC BY 4.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="#air"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#breath"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#celestial_body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#celestial_sphere"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#colour"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#conubstantial"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#depth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#dimension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#directional"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#earth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#enérgeia"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fathers_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#fire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#form"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#god"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#holy_spirits_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#human_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#impetus"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#length"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#light"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sons_property"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#space"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#sublunary_body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#substance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#three_dimensional_extension"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#universe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#water"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#celestial_body_component_of_universe"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#celestial_body_has_celestial_sphere"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#component_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#consubstantial_with_human_property"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#elment_sub_quantity_of_substance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#fathers_property_component_of_god"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#holy_spirits_property_component_of_god"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#light_manifests_directional"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#object_contains_substance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#object_has_form"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#object_has_impetus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#sons_property_component_of_god"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#space_has_substance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#substance_has_impetus"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#three_dimensional_extension_has_dimenension"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#air"/>
+        <Class IRI="#element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#breath"/>
+        <Class IRI="#dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#celestial_body"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#celestial_sphere"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000028"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#colour"/>
+        <Class IRI="#enérgeia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#conubstantial"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000019"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#depth"/>
+        <Class IRI="#dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#dimension"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000026"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#directional"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#earth"/>
+        <Class IRI="#element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#element"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#enérgeia"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fathers_property"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#fire"/>
+        <Class IRI="#element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#form"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000016"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#god"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#holy_spirits_property"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#human_property"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#impetus"/>
+        <Class IRI="#enérgeia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#length"/>
+        <Class IRI="#dimension"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#light"/>
+        <Class IRI="#enérgeia"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#place"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000029"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sons_property"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000145"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#space"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000028"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#sublunary_body"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#substance"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#three_dimensional_extension"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000006"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#universe"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000027"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#water"/>
+        <Class IRI="#element"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#celestial_body_component_of_universe"/>
+        <ObjectProperty IRI="#component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#celestial_body_has_celestial_sphere"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#component_of"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#fathers_property_component_of_god"/>
+        <ObjectProperty IRI="#component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#holy_spirits_property_component_of_god"/>
+        <ObjectProperty IRI="#component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#object_contains_substance"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#object_has_form"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#object_has_impetus"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#sons_property_component_of_god"/>
+        <ObjectProperty IRI="#component_of"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#space_has_substance"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#substance_has_impetus"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#three_dimensional_extension_has_dimenension"/>
+        <ObjectProperty IRI="#has"/>
+    </SubObjectPropertyOf>
+    <FunctionalObjectProperty>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#celestial_body_component_of_universe"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#fathers_property_component_of_god"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#holy_spirits_property_component_of_god"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#object_has_form"/>
+    </FunctionalObjectProperty>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#sons_property_component_of_god"/>
+    </FunctionalObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#celestial_body_component_of_universe"/>
+        <Class IRI="#celestial_body"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#celestial_body_component_of_universe"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#celestial_body_component_of_universe"/>
+            <Class IRI="#universe"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#celestial_body_has_celestial_sphere"/>
+        <Class IRI="#celestial_body"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#celestial_body_has_celestial_sphere"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#celestial_body_has_celestial_sphere"/>
+            <Class IRI="#celestial_sphere"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#component_of"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#sons_property_component_of_god"/>
+            <Class IRI="#god"/>
+        </ObjectAllValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consubstantial_with_human_property"/>
+        <Class IRI="#human_property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#consubstantial_with_human_property"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#consubstantial_with_human_property"/>
+            <Class IRI="#conubstantial"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#elment_sub_quantity_of_substance"/>
+        <Class IRI="#element"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#elment_sub_quantity_of_substance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#elment_sub_quantity_of_substance"/>
+            <Class IRI="#substance"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fathers_property_component_of_god"/>
+        <Class IRI="#fathers_property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#fathers_property_component_of_god"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#fathers_property_component_of_god"/>
+            <Class IRI="#god"/>
+        </ObjectAllValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#holy_spirits_property_component_of_god"/>
+        <Class IRI="#holy_spirits_property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#holy_spirits_property_component_of_god"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#holy_spirits_property_component_of_god"/>
+            <Class IRI="#god"/>
+        </ObjectAllValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#light_manifests_directional"/>
+        <Class IRI="#light"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#light_manifests_directional"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#light_manifests_directional"/>
+            <Class IRI="#directional"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#object_contains_substance"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#object_contains_substance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#object_contains_substance"/>
+            <Class IRI="#substance"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#object_has_form"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#object_has_form"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#object_has_form"/>
+            <Class IRI="#form"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#object_has_impetus"/>
+        <Class IRI="http://purl.obolibrary.org/obo/BFO_0000030"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#object_has_impetus"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#object_has_impetus"/>
+            <Class IRI="#impetus"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sons_property_component_of_god"/>
+        <Class IRI="#sons_property"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#sons_property_component_of_god"/>
+        <ObjectAllValuesFrom>
+            <ObjectProperty IRI="#sons_property_component_of_god"/>
+            <Class IRI="#god"/>
+        </ObjectAllValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#space_has_substance"/>
+        <Class IRI="#space"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#space_has_substance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#space_has_substance"/>
+            <Class IRI="#substance"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#substance_has_impetus"/>
+        <Class IRI="#substance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#substance_has_impetus"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#substance_has_impetus"/>
+            <Class IRI="#impetus"/>
+        </ObjectSomeValuesFrom>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#three_dimensional_extension_has_dimenension"/>
+        <Class IRI="#three_dimensional_extension"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#three_dimensional_extension_has_dimenension"/>
+        <ObjectExactCardinality cardinality="3">
+            <ObjectProperty IRI="#three_dimensional_extension_has_dimenension"/>
+            <Class IRI="#dimension"/>
+        </ObjectExactCardinality>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#celestial_body_component_of_universe"/>
+        <Class IRI="#universe"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#celestial_body_has_celestial_sphere"/>
+        <Class IRI="#celestial_sphere"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#consubstantial_with_human_property"/>
+        <Class IRI="#conubstantial"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#elment_sub_quantity_of_substance"/>
+        <Class IRI="#substance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#fathers_property_component_of_god"/>
+        <Class IRI="#god"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#holy_spirits_property_component_of_god"/>
+        <Class IRI="#god"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#light_manifests_directional"/>
+        <Class IRI="#directional"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#object_contains_substance"/>
+        <Class IRI="#substance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#object_has_form"/>
+        <Class IRI="#form"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#object_has_impetus"/>
+        <Class IRI="#impetus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#sons_property_component_of_god"/>
+        <Class IRI="#god"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#space_has_substance"/>
+        <Class IRI="#substance"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#substance_has_impetus"/>
+        <Class IRI="#impetus"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#three_dimensional_extension_has_dimenension"/>
+        <Class IRI="#dimension"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#breath</IRI>
+        <Literal xml:lang="en">Length, BREATH, and depth are dimensions</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#celestial_sphere</IRI>
+        <Literal xml:lang="en">The Celestial Bodies, are located on the (perfect) celestial spheres. The stars are fixed on their own sphere; each planet, the Sun and the Moon circulates on its own sphere. This movement is circular, regular and continuous</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#colour</IRI>
+        <Literal xml:lang="en">“There is also an energeia of COLOUR. Philoponus uses the for something that goes on in the medium between the observer agrees that colour acts on the medium, but he prefers to rather than an energeia (activity).
+To his kinesis he applies De generatione animalium speaks of the kinesis as ‘arriving’, distant object, and as ‘taking a straight course’ or ‘being scattered’. “</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#conubstantial</IRI>
+        <Literal xml:lang="en">Human property is CONSUBSTANTIALconsubstantial (homooúsios) with us humans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#depth</IRI>
+        <Literal xml:lang="en">Length, breadth, and DEPTH depth are dimensions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#dimension</IRI>
+        <Literal xml:lang="en">Length, breath, and depth are DIMENSIONs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#directional</IRI>
+        <Literal xml:lang="en">&quot;What I conclude is that Philoponus does indeed change Aristotle’s theory of light to make it DIRECTIONAL in the way it needs to be. On the other hand, he does not introduce travel in the sense of a time-taking process. Nor does he overthrow Aristotle’s theory of the action of colour on the medium. Instead, he gives to light the same directionality as was already to be found in Aristotle’s account of the action of colour.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#element</IRI>
+        <Literal xml:lang="en">&quot;Aristotle believes that everything is made of earth, air, fire and water. These ELEMENTs are defined by their possession of one of each of the two fundamental pairs of opposites, hot/cold and wet/dry. Aristotle also thinks that these elements can change into one another&quot;  (Ainsworth, 2016)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#enérgeia</IRI>
+        <Literal xml:lang="en">&quot;Philoponus compares this impetus or ‘incorporeal motive enérgeia’, as he calls it, to the activity earlier attributed to light.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#fathers_property</IRI>
+        <Literal xml:lang="en">FATHER&apos;s PROPERTY  “Father […] are consubstantial in nature and substance, but not in their properties; there distinct. We do not say that the Father or the Spirit became incarnate”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#form</IRI>
+        <Literal xml:lang="en">The FORM is that which unifies the substance into a single object, and which provides actuality.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#god</IRI>
+        <Literal xml:lang="en">Christan GOD
+“Against Sabellian or modalist notions being advanced at Alexandria by a Monophysite named Themistius (a deacon who led a group called Agnoetae opposed the patriarch Theodosius), and at Constantinople by the Chalcedonian John Scholasticus, Philoponus wrote his book On the Trinity to argue his case. The nature shared in common has no reality apart from the existents or hypostases. We must anathematise three deities, three natures, but also deny that there is an actual Godhead distinguishable even in thought from Father, Son and Spirit. Father, Son and Spirit are consubstantial in nature and substance, but not in their properties; there distinct. We do not say that the Father or the Spirit became incarnate.
+Divine unity is an intellectual abstraction, and the Trinity consists substances, three natures, considered in an individual rather”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#holy_spirits_property</IRI>
+        <Literal xml:lang="en">HOLY SPIRIT PROPERTY &quot;Spirit Holy [...] consubstantial in nature and substance, but not in their properties; there distinct.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#human_property</IRI>
+        <Literal xml:lang="en">HUMAN PROPERTY is consubstantial (homooúsios)  with us humans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#impetus</IRI>
+        <Literal xml:lang="en">&quot;Philoponus compares this impetus or ‘incorporeal motive ENERGÉIA, as he calls it, to the activity earlier attributed to light.
+Once projectile motion was understood in terms of an impetus in this way, it became possible for Philoponus to reassess the rôle of the medium: far from being responsible for the continuation of a projectile’s motion it is in fact an impediment to it (In Phys. 681). On this basis Philoponus concludes, against Aristotle, that there is in fact nothing to prevent one from imagining motion taking place through a void.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#impetus</IRI>
+        <Literal xml:lang="en">“So far, Philoponus’ applications of IMPETUS theory are only dynamics into unconnected areas. Projectile motion was explained air. The heavens were thought to be alive and their motion, explained in psychological terms. The fall of rocks and rising by reference to an inner nature, while the rotation seen, was a special case. Philoponus’ next move has the effect context is the discussion of creation in the book of Genesis. opificio mundi, which has been dated to thirty or forty extends impetus theory, in one form or another, to all the to do so by the belief, for which he has argued in so many the universe. It is God who implants (&lt; entheinai ) a motive sun, moon and other heavenly bodies at the time of creation. downward inclination (rhopê) in earth and the upward inclination implants in animals the movements which come from the souls The impetus which God implants in heavenly bodies seems which a thrower implants in a javelin, but in the other cases, impetus implanted in the elements, earth, air, fire and water, in Philoponus’ view, elements lose their weight or lightness, move down or up, once they reach their proper places. when lifted away from its resting position. What God implants inclination to move down, but an inclination to move down, animals, what God implants when he implants their impetus in a javelin, and indeed at this point the analogy I have been insisting that, in so far as Philoponus unifies creator God which enables him to do so.” (Sorabji, 2020)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#length</IRI>
+        <Literal xml:lang="en">LENGHT, breadth, and depth are dimensions.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#place</IRI>
+        <Literal xml:lang="en">&quot;Aristotle defined the pace of a body as the inner surface of the body or all the bodies taken together that contain it (Phys. IV 4); Philoponus replies that PLACEe ought instead to be conceived as the three-dimensional extension identical to the determinate size of the given body, i.e. its volume.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#sons_property</IRI>
+        <Literal xml:lang="en">SONS&apos; PROPERTYproperty: &quot;Son [...] are consubstantial in nature and substance, but not in their properties; there distinct. We do not say that the Father or the Spirit became incarnate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#space</IRI>
+        <Literal xml:lang="en">&quot;SPACE as a whole is the indeterminate three-dimensional extension everywhere devoid of body, though it is not actually infinite – so much Philoponus concedes to Aristotle. Philoponus’ discussion of matter builds upon this conception of space.  [...] However, in Book XI of the polemical treatise against Proclus (see below, 3.1) he jettisons the Neoplatonic conception of prime matter and posits as the most fundamental level of his ontology ‘the three-dimensional’, as he calls it, i.e. indeterminately extended mass.                                                                                                                                                                                                                    
+[...] following the Stoics (Aet. 414), and it has been pointed out that this ontological level is reminiscent to us of the Cartesian res extensa, although Descartes would not allow Philoponus’ distinction between space and corporeal extension. In order to rebuff the likely objection that ’the three-dimensional’ cannot be the most fundamental level of being because extension, belonging to the Aristotelian category of quantity, is an accident and requires the assumption of a distinct underlying subject, Philoponus argues that extension is in fact not an accident, but an essential and inseparable differentia of ‘the three-dimensional’, just like heat in fire or whiteness in snow. Thus quantity (corporeal extension) is constitutive of the body as such. This amounts to a promotion of one sort of quantity to the category of substance.&quot;</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#substance</IRI>
+        <Literal xml:lang="en">&quot;Thus quantity (corporeal extension) is constitutive of the body as such. This amounts to a promotion of one sort of quantity to the category of SUBSTANCE&quot;.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#substance</IRI>
+        <Literal xml:lang="en">The SUBSTANCE is that which persists in the object, and which provides potentiality. Substance at the bottom level, is composed of a mix of the four elements, is generated and corruptible.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#universe</IRI>
+        <Literal xml:lang="en">“in the De caelo Aristotle treats of the universe as a single individual substance [object] with form and matter… ‘Since the UNIVERSE universe is perceptible, it is an individual thing [object]; for every perceptible thing exists in matter…
+Aristotle’s assertion, in De caelo 1. 9, that the universe is individual occurs in the context of his rejecting the atomist’s many-worlds thesis: ‘Such a plurality is impossible if this world is made from the entirety of matter, as it is’. In general, form admits of plural instantiations, he concedes. However, when a form is instantiated in all matter, it can be instantiated only once.” (Matthen, 2001)</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,51 @@
+@prefix : <http://example.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://example.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:God rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "God"@en.
+:TheInfinite rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "TheInfinite"@en.
+:Sefirot rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Sefirot"@en.
+:Myth rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Myth"@en.
+:Image rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Image"@en.
+:Letter rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Letter"@en.
+:Number rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Number"@en.
+:Sacred rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Sacred"@en.
+:VisibleGod rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "VisibleGod"@en;
+    rdfs:subClassOf :God.
+:TheInfinite rdfs:subClassOf :God.
+:Letter rdfs:subClassOf :Image.
+:Number rdfs:subClassOf :Image.
+:theInfiniteHasSefirot rdf:type owl:ObjectProperty;
+    rdfs:domain :TheInfinite;
+    rdfs:range :Sefirot.
+:Sacred rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Sefirot
+].
+:Sefirot rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Sacred
+].

@@ -1,0 +1,276 @@
+@prefix : <http://example.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <https://raw.githubusercontent.com/philosophy-models/gufo/main/john-italos-gufo.owl> .
+
+<https://raw.githubusercontent.com/philosophy-models/gufo/main/john-italos-gufo.owl> rdf:type owl:Ontology ;
+                                                                                      rdfs:comment """Sources:
+(1) KATERINA IERODIAKONOU John Italos on Universals, 2010 Documenti E Studi Sulla Tradizione Filosofica Medievale 18:231-247 (2007)"""@en ,
+                                                                                                   """author: András L. Komáromi
+This work is distributed under Creative Commons Attribution License CC BY 4.0"""@en .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.com#particularHasUniversalAfterTheParticulars
+:particularHasUniversalAfterTheParticulars rdf:type owl:ObjectProperty ;
+                                           rdfs:domain :Particular ;
+                                           rdfs:range :UniversalAfterTheParticulars .
+
+
+###  http://purl.org/nemo/gufo#inheresIn
+gufo:inheresIn rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.com#AcquiredByMindby
+:AcquiredByMindby rdf:type owl:Class ;
+                  rdfs:subClassOf gufo:Quality ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                   ] ;
+                                    owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                    owl:onClass :UniversalInTheParticulars
+                                  ] .
+
+
+###  http://example.com#BePredicated
+:BePredicated rdf:type owl:Class ;
+              rdfs:subClassOf gufo:Quality ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                               ] ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :UniversalInTheParticulars
+                              ] .
+
+
+###  http://example.com#Inseparable
+:Inseparable rdf:type owl:Class ;
+             rdfs:subClassOf gufo:Quality ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:inheresIn ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :UniversalInTheParticulars
+                             ] .
+
+
+###  http://example.com#Intelligible
+:Intelligible rdf:type owl:Class ;
+              rdfs:subClassOf gufo:Quality ,
+                              [ rdf:type owl:Restriction ;
+                                owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                               ] ;
+                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                owl:onClass :UniversalBeforeTheParticulars
+                              ] .
+
+
+###  http://example.com#LaterBorn
+:LaterBorn rdf:type owl:Class ;
+           rdfs:subClassOf gufo:Quality ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :UniversalInTheParticulars
+                           ] .
+
+
+###  http://example.com#Particular
+:Particular rdf:type owl:Class ;
+            rdfs:subClassOf gufo:FunctionalComplex ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                             ] ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Perceptible
+                            ] .
+
+
+###  http://example.com#Perceptible
+:Perceptible rdf:type owl:Class ;
+             rdfs:subClassOf gufo:Quality ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty gufo:inheresIn ;
+                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                               owl:onClass :Particular
+                             ] .
+
+
+###  http://example.com#Universal
+:Universal rdf:type owl:Class ;
+           rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://example.com#UniversalAfterTheParticulars
+:UniversalAfterTheParticulars rdf:type owl:Class ;
+                              rdfs:subClassOf :UniversalInTheParticulars .
+
+
+###  http://example.com#UniversalBeforeTheParticulars
+:UniversalBeforeTheParticulars rdf:type owl:Class ;
+                               rdfs:subClassOf :Universal ,
+                                               [ rdf:type owl:Restriction ;
+                                                 owl:onProperty gufo:inheresIn ;
+                                                 owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                 owl:onClass :Intelligible
+                                               ] .
+
+
+###  http://example.com#UniversalInTheParticulars
+:UniversalInTheParticulars rdf:type owl:Class ;
+                           rdfs:subClassOf :UniversalBeforeTheParticulars ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty gufo:inheresIn ;
+                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass :AcquiredByMindby
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty gufo:inheresIn ;
+                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass :BePredicated
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty gufo:inheresIn ;
+                                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass :LaterBorn
+                                           ] ,
+                                           [ rdf:type owl:Restriction ;
+                                             owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                                            ] ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass :Inseparable
+                                           ] .
+
+
+###  http://purl.org/nemo/gufo#FunctionalComplex
+gufo:FunctionalComplex rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Kind
+gufo:Kind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Quality
+gufo:Quality rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SubKind
+gufo:SubKind rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.com#AcquiredByMindby
+:AcquiredByMindby rdf:type owl:NamedIndividual ,
+                           gufo:Kind .
+
+
+###  http://example.com#BePredicated
+:BePredicated rdf:type owl:NamedIndividual ,
+                       gufo:Kind .
+
+
+###  http://example.com#Inseparable
+:Inseparable rdf:type owl:NamedIndividual ,
+                      gufo:Kind .
+
+
+###  http://example.com#Intelligible
+:Intelligible rdf:type owl:NamedIndividual ,
+                       gufo:Kind .
+
+
+###  http://example.com#LaterBorn
+:LaterBorn rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://example.com#Particular
+:Particular rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://example.com#Perceptible
+:Perceptible rdf:type owl:NamedIndividual ,
+                      gufo:Kind .
+
+
+###  http://example.com#Universal
+:Universal rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://example.com#UniversalAfterTheParticulars
+:UniversalAfterTheParticulars rdf:type owl:NamedIndividual ,
+                                       gufo:SubKind .
+
+
+###  http://example.com#UniversalBeforeTheParticulars
+:UniversalBeforeTheParticulars rdf:type owl:NamedIndividual ,
+                                        gufo:SubKind .
+
+
+###  http://example.com#UniversalInTheParticulars
+:UniversalInTheParticulars rdf:type owl:NamedIndividual ,
+                                    gufo:SubKind .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:AcquiredByMindby rdfs:label "Acquired-by-mindby"@en ;
+                  rdfs:comment "\"Italos claims (p . 8.1-14) that both the universals in the particulars and the universals after the particulars differ from the universals before the particulars, because they both are later-born than the perceptible individuals (husterogen), can be predicted of them (kat goroumena), are inseparable from them (achrista ), and are acquired by our mind by abstraction (k at ’ aph airesin ).\""@en .
+
+
+:BePredicated rdfs:comment "\"Italos claims (p . 8.1-14) that both the universals in the particulars and the universals after the particulars differ from the universals before the particulars, because they both are later-born than the perceptible individuals (husterogen), can be predicted of them (kat goroumena), are inseparable from them (achrista ), and are acquired by our mind by abstraction (k at ’ aph airesin ).\""@en .
+
+
+:Inseparable rdfs:comment "\"Italos claims (p . 8.1-14) that both the universals in the particulars and the universals after the particulars differ from the universals before the particulars, because they both are later-born than the perceptible individuals (husterogen), can be predicted of them (kat goroumena), are inseparable from them (achrista ), and are acquired by our mind by abstraction (k at ’ aph airesin ).\""@en ;
+             rdfs:label "Inseparable"@en .
+
+
+:Intelligible rdfs:label "Intelligible"@en ;
+              rdfs:comment "\"On the other hand, the universal after the particulars are INTELLIGIBLE intelligible in a certain way, most probably because they are acquired by our mind by abstraction and they also are perceptible in a certain way, most probably because they are acquired by abstraction of the common characteristics of perceptible individuals.\""@en .
+
+
+:LaterBorn rdfs:label "Later-born"@en ;
+           rdfs:comment "\"Italos claims (p . 8.1-14) that both the universals in the particulars and the universals after the particulars differ from the universals before the particulars, because they both are later-born than the perceptible individuals (husterogen), can be predicted of them (kat goroumena), are inseparable from them (achrista ), and are acquired by our mind by abstraction (k at ’ aph airesin ).\""@en .
+
+
+:Particular rdfs:label "Particular" ;
+            rdfs:comment "A PARTICULAR thing"@en .
+
+
+:Perceptible rdfs:label "Perceptible"@en .
+
+
+:Universal rdfs:comment "'UNIVERSALs  in the same order, but a certain detail of his account proves to be important. Italos, too, regards the universals before the many particulars the ca7uses (aitia/prtourga ) and paradigms (paradeigm ata) of perceptible individuals, which hence cannot be predicated of them, are separable from them (christa ), and in God’s mind (para/en t the), perfectly accommodating in this way the requirements of Christian Dogma (p p . 7.15-19 ; 29-32); but, then, he presents the distinction between the universals in the particulars and the universals after the particulars in a different manner.\""@en ;
+           rdfs:label "Universal"@en .
+
+
+:UniversalAfterTheParticulars rdfs:comment "\"the UNIVERSALS AFTER THE PARTICULARS (epi tois pollo is), which concepts or thoughts.\""@en ;
+                              rdfs:label "UniversalAfterThe Particulars"@en .
+
+
+:UniversalBeforeTheParticulars rdfs:label "UniversalBeforeTheParticulars"@en ;
+                               rdfs:comment "'the UNIVERSALs BEFORE THE many PARTICULARS (pro t n poll n ), which are generally identified with the Platonic Ideas\""@en .
+
+
+:UniversalInTheParticulars rdfs:comment "\"the  UNIVERSALS IN  ALL THE PARTICULARS (en tois pollo is), which represent Aristotle’s notion of immanent forms\""@en ;
+                           rdfs:label "UniversalInTheParticulars"@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

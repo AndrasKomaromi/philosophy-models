@@ -1,0 +1,1 @@
+{"Collections":[{"sheetName":"All Models","startColumn":"A","endColumn":"B","startRow":"1","endRow":"+","comment":"","rule":"Class: @A*\n    Annotations: \n        rdfs:label @A* (xml:lang\u003d\"en\"),\n        rdfs:comment @B* (xml:lang\u003d\"en\")","active":true}]}

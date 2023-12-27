@@ -1,0 +1,1732 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="https://raw.githubusercontent.com/philosophy-models/bfo/main/stoic-bfo.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="https://raw.githubusercontent.com/philosophy-models/bfo/main/stoic-bfo.owl">
+    <Prefix name="" IRI="https://raw.githubusercontent.com/philosophy-models/gufo/main/stoic-bfo.owl"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">Sources:
+(1) Baltzly, Dirk, “Stoicism“, The Stanford Encyclopedia of Philosophy (Spring 2019 Edition), Edward N. Zalta (ed.)
+(2) Bobzien, Susanne, “Ancient Logic“, The Stanford Encyclopedia of Philosophy (Winter 2016 Edition), Edward N. Zalta (ed.)
+(3) Bobizen, Suzanne. Early Stoic Determinism, Presses Universitaires de France | Revue de Métaphysique et de Morale, 2005/4 – n° 48
+(4) Bobzien, Suzanne, Stoic Logic, Cambridge Companions Online © Cambridge University Press, 2006
+(5) Long, A. A. &amp; Sedley, D. N. (1987). “The Hellenistic Philosophers”, Vol. 1 (p. 163). Cambridge: Cambridge University Press.
+(6) Rubarth, Scott, “Stoic Philosophy of Mind“, Internet Encyclopedia of Philosophy
+(7) Peter Wyss, “Stoic Ontology“</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en">author: András L. Komáromi
+This work is distributed under Creative Commons Attribution License CC BY 4.0</Literal>
+    </Annotation>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#ConcreteIndividual"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#Object"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#Quality"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#Quantity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#Relator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/nemo/gufo#VariableCollection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Air"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Animal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Argument"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Assent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Assertible"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Body"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CentralCommandingFaculty"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#CognitivePresentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Conclusion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Courage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Disposed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Earth"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Element"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FictionalEntities"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GoalOfLiving"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Good"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Happiness"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Human"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Impulse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#InanimateObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Incorporeal"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indemonstrable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Indifferent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Justice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Knowledge"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Limits"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Matter"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Memory"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Moderation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NameBearerObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nature"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Neither"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-CognitivePresentetion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Non-simpleAssertible"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotGoodNotBad"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NotPreferredIndifferent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ObjectSubstrate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OtherBody"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Passion"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Plant"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pneuma"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PreferredIndifferent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Premise"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PresentUniverse"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Presentation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prudence"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Qualified"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reason"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RelativelyDisposed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reproduction"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sayable"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SensePerception"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SimpleAssertible"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Something"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Soul"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Speach"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#StoicSyllogism"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tenor"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Themata"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#TruthValue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Universe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UniverseOfElements"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UniverseOnFire"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Utterance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Value"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vice"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Virtue"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Visdom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Water"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#hasAssociatedQualityValueType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#isCollectionMemberOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#isEventProperPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#isObjectProperPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#isProperPartOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#isSubQuantityOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#mediates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/nemo/gufo#wasCreatedIn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#canBeReduced"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#has"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#is"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#means"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mediatesAbstraction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#results"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#signifies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chrysippus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Epictetus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Marcus_Aurelius"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zeno_of_Citium"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="owl:Thing"/>
+        <Class IRI="#Something"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Assent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#isEventProperPartOf"/>
+            <Class IRI="#CognitivePresentation"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Air"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Animal"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <ObjectMinCardinality cardinality="2">
+            <ObjectProperty IRI="#mediatesAbstraction"/>
+            <Class IRI="#Premise"/>
+        </ObjectMinCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Argument"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#mediatesAbstraction"/>
+            <Class IRI="#Conclusion"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assent"/>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assertible"/>
+        <Class IRI="#Sayable"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Assertible"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#hasAssociatedQualityValueType"/>
+            <Class IRI="#TruthValue"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bad"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bad"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Vice"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body"/>
+        <Class IRI="http://purl.org/nemo/gufo#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Body"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#isCollectionMemberOf"/>
+            <Class IRI="#PresentUniverse"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CentralCommandingFaculty"/>
+        <Class IRI="#Pneuma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CentralCommandingFaculty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+            <Class IRI="#Assent"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CentralCommandingFaculty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+            <Class IRI="#Impulse"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CentralCommandingFaculty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+            <Class IRI="#Presentation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CentralCommandingFaculty"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+            <Class IRI="#Speach"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CentralCommandingFaculty"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Human"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#CognitivePresentation"/>
+        <Class IRI="#Presentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Conclusion"/>
+        <Class IRI="#Assertible"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Courage"/>
+        <Class IRI="#Virtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disposed"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Disposed"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Body"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Earth"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Element"/>
+        <Class IRI="http://purl.org/nemo/gufo#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Element"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#UniverseOfElements"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Element"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#isSubQuantityOf"/>
+            <Class IRI="#Matter"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FictionalEntities"/>
+        <Class IRI="#Neither"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fire"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fire"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#UniverseOnFire"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GoalOfLiving"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GoalOfLiving"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#is"/>
+            <Class IRI="#Happiness"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Good"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Good"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Virtue"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Happiness"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Happiness"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Human"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Human"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#has"/>
+            <Class IRI="#GoalOfLiving"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Impulse"/>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#InanimateObject"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Incorporeal"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indemonstrable"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indemonstrable"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#isProperPartOf"/>
+            <Class IRI="#StoicSyllogism"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indifferent"/>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Indifferent"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#NotGoodNotBad"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Justice"/>
+        <Class IRI="#Virtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knowledge"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knowledge"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#wasCreatedIn"/>
+            <Class IRI="#CognitivePresentation"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Knowledge"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Human"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Limits"/>
+        <Class IRI="#Neither"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Matter"/>
+        <Class IRI="http://purl.org/nemo/gufo#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Matter"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Body"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Memory"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Memory"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Memory"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Moderation"/>
+        <Class IRI="#Virtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NameBearerObject"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nature"/>
+        <Class IRI="#Pneuma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Animal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Human"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Plant"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nature"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+            <Class IRI="#Reproduction"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-CognitivePresentetion"/>
+        <Class IRI="#Presentation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Non-simpleAssertible"/>
+        <Class IRI="#Assertible"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotGoodNotBad"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotGoodNotBad"/>
+        <Class IRI="#Indifferent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NotPreferredIndifferent"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObjectSubstrate"/>
+        <Class IRI="http://purl.org/nemo/gufo#Object"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ObjectSubstrate"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#isObjectProperPartOf"/>
+            <Class IRI="http://purl.org/nemo/gufo#Object"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OtherBody"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Passion"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Passion"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Passion"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Place"/>
+        <Class IRI="#Incorporeal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Plant"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Pneuma"/>
+        <Class IRI="http://purl.org/nemo/gufo#Quantity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PreferredIndifferent"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Premise"/>
+        <Class IRI="#Assertible"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Premise"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#results"/>
+            <Class IRI="#Conclusion"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PresentUniverse"/>
+        <Class IRI="#Universe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Presentation"/>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prudence"/>
+        <Class IRI="#Virtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Qualified"/>
+        <Class IRI="http://purl.org/nemo/gufo#Quality"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reason"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelativelyDisposed"/>
+        <Class IRI="http://purl.org/nemo/gufo#Relator"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelativelyDisposed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#mediates"/>
+            <Class IRI="http://purl.org/nemo/gufo#Object"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RelativelyDisposed"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#mediates"/>
+            <Class IRI="#RelativelyDisposed"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reproduction"/>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sayable"/>
+        <Class IRI="#Incorporeal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sayable"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+            </ObjectInverseOf>
+            <Class IRI="#Sayable"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SensePerception"/>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SimpleAssertible"/>
+        <Class IRI="#Assertible"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SimpleAssertible"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#isProperPartOf"/>
+            <Class IRI="#Non-simpleAssertible"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soul"/>
+        <Class IRI="#Pneuma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soul"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Animal"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soul"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Human"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Soul"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#participatedIn"/>
+            <Class IRI="#SensePerception"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Speach"/>
+        <Class IRI="http://purl.org/nemo/gufo#Event"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#StoicSyllogism"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tenor"/>
+        <Class IRI="#Pneuma"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tenor"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#constitutes"/>
+            <Class IRI="#Body"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Themata"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Themata"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#isProperPartOf"/>
+            <Class IRI="#StoicSyllogism"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Time"/>
+        <Class IRI="#Incorporeal"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#TruthValue"/>
+        <Class IRI="#Indifferent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Universe"/>
+        <Class IRI="http://purl.org/nemo/gufo#VariableCollection"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UniverseOfElements"/>
+        <Class IRI="#Universe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UniverseOnFire"/>
+        <Class IRI="#Universe"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Utterance"/>
+        <Class IRI="#Body"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Utterance"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#signifies"/>
+            <Class IRI="#NameBearerObject"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Utterance"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#means"/>
+            <Class IRI="#Sayable"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Value"/>
+        <Class IRI="#Indifferent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vice"/>
+        <Class IRI="http://purl.org/nemo/gufo#IntrinsicMode"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vice"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Human"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Virtue"/>
+        <Class IRI="#Knowledge"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Virtue"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="http://purl.org/nemo/gufo#inheresIn"/>
+            <Class IRI="#Human"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Visdom"/>
+        <Class IRI="#Virtue"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Water"/>
+        <Class IRI="#Element"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#Animal"/>
+        <Class IRI="#Human"/>
+        <Class IRI="#InanimateObject"/>
+        <Class IRI="#NameBearerObject"/>
+        <Class IRI="#Plant"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#CognitivePresentation"/>
+        <Class IRI="#Non-CognitivePresentetion"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Conclusion"/>
+        <Class IRI="#Premise"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Indifferent"/>
+        <Class IRI="#Vice"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Indifferent"/>
+        <Class IRI="#Virtue"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Non-simpleAssertible"/>
+        <Class IRI="#SimpleAssertible"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#NotPreferredIndifferent"/>
+        <Class IRI="#PreferredIndifferent"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PresentUniverse"/>
+        <Class IRI="#UniverseOfElements"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#PresentUniverse"/>
+        <Class IRI="#UniverseOnFire"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#UniverseOfElements"/>
+        <Class IRI="#UniverseOnFire"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="#Vice"/>
+        <Class IRI="#Virtue"/>
+    </DisjointClasses>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#canBeReduced"/>
+    </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#means"/>
+    </AsymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#signifies"/>
+    </AsymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#canBeReduced"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="http://purl.org/nemo/gufo#ConcreteIndividual"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#is"/>
+        <Class IRI="http://purl.org/nemo/gufo#ConcreteIndividual"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#means"/>
+        <Class IRI="#Utterance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mediatesAbstraction"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#results"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#signifies"/>
+        <Class IRI="#Utterance"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#canBeReduced"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#has"/>
+        <Class IRI="http://purl.org/nemo/gufo#ConcreteIndividual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#is"/>
+        <Class IRI="http://purl.org/nemo/gufo#ConcreteIndividual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#means"/>
+        <Class IRI="#Sayable"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#mediatesAbstraction"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#results"/>
+        <Class IRI="http://purl.org/nemo/gufo#AbstractIndividual"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#signifies"/>
+        <Class IRI="#NameBearerObject"/>
+    </ObjectPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Air</IRI>
+        <Literal xml:lang="en">Air</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Animal</IRI>
+        <Literal xml:lang="en">Animal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Argument</IRI>
+        <Literal xml:lang="en">Arguments relates two (or more) Premises to a Conclusion as cause and effect. At least one Premise has to be a Non-simpleAssertible. E.g. Premise1: “if it is winter than it is cold”; if P than Q Premise2: “it is winter”; P Conclusion: “it is cold”; therefore Q</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Argument</IRI>
+        <Literal xml:lang="en">Argument</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Assent</IRI>
+        <Literal xml:lang="en">&quot;Assent is also a specifically human activity, that is, it assume the power of reason. The sage avoids opinions by withholding assent when conditions do not permit a clear and certain grasp of the truth of a matter... Depending on the content of the presentation and the individual&apos;s conception of what is good, the object of perception may be classified as good, evil, or indifferent. The faculty of assent in conjunction with reason will accept, reject, or withhold judgement based on the value of the object [...] Although we may entertain and experience all sorts of presentations [through the senses], we do not necessarily accept or respond to them all. Hence the Stoics held that some phantasiai receive assent and some do not. Assent occurs when the mind accepts a phantasia as true (or more accurately accepts the subsisting lekton as true).&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Assent</IRI>
+        <Literal xml:lang="en">Assent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Assertible</IRI>
+        <Literal xml:lang="en">&quot;Assertibles (axiômata) are sayables having a truth value: at any one time they are either true or false. So truth is temporal and assertibles may change their truth-value. They can never be true and false at the same time (law of non-contradiction) and they must be at least true or false (law of excluded middle).&quot; (Bobzien)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Assertible</IRI>
+        <Literal xml:lang="en">Assertible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Bad</IRI>
+        <Literal xml:lang="en">“only vice is genuinely bad” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Bad</IRI>
+        <Literal xml:lang="en">Bad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Body</IRI>
+        <Literal xml:lang="en"> “Only bodies (σώματα, sômata) have being, or exist. Slogan: to exist is to have causal powers. Plato in the Sophist: ‘Now, I say that what has some power to make something else into something, or to suffer the slightest, even once, this has real being. For I define being as nothing but power (δύναμις).’ The Stoic conception of existence is thus dynamic. Matter as such is passive, but bodies are not, since they are also infused by logos, which is active… only bodies can act or be acted upon”  (Wyss)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Body</IRI>
+        <Literal xml:lang="en">Body</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CentralCommandingFaculty</IRI>
+        <Literal xml:lang="en">“Stoics held that the higher cognitive functions and all cognitive experience take place exclusively in the hêgemonikon. While Aristotle seemed to be comfortable with attributing the experience of touch to the flesh and sight to the eyes, the Stoics tell us that the senses merely report the information to the central faculty where it is experienced and processed. […] The idea of sensation as the transmission [diadosis] of sensory information is illustrated in the final two analogies of the soul. The first states that activity of the soul is like a king who sends out messengers. When the messengers acquire information they report it back to the king. Likewise, the hêgemonikon extends its pneuma to the sense organs, and when these in turn acquire sensory information, the pneuma transmits the information back to the heart. The second analogy states that the soul is like a spider in a web. When the web is disturbed by an insect the movement is transmitted through vibrations to the spider sitting at the center. […] The most basic power of the hêgemonikon is the ability to form presentations [phantasiai]. Other psychological states and activities such as mental assent, cognition, impulse, and knowledge are all either extensions or responses to presentations.” (Rubarth) 
+
+Pneuma comes in gradations and endows the bodies which it pervades with different qualities as a result. The pneuma which sustains an inanimate object is a ‘tenor’ (hexis, lit. a holding). Pneuma in plants is, in addition, physique (phusis, lit. ‘nature’). In animals, pneuma is soul (psychê) and in rational animals pneuma is, besides, the [central] commanding faculty (hêgemonikon) – that is responsible for thinking, planning, deciding. The Stoics assign to ‘physique’ or ‘nature’ all the purely physiological life functions of a human animal (such as digestion, breathing, growth etc.) – self-movement from place to place is due to soul. (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CentralCommandingFaculty</IRI>
+        <Literal xml:lang="en">CentralCommandingFaculty</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#CognitivePresentation</IRI>
+        <Literal xml:lang="en">&quot;Although we may entertain and experience all sorts of presentations, we do not necessarily accept or respond to them all. Hence the Stoics held that some phantasiai receive assent and some do not. [...] Some presentations experienced in perceptually ideal circumstances, however, are so clear and distinct that they could only come from a real object; these were said to be kataleptikê (fit to grasp). The kataleptic presentation compels assent by its very clarity and, according to some Stoics, represents the criterion for truth. The mental act of apprehending the truth in this way was called katalepsis which means having a firm epistemic grasp.&quot;  (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#CognitivePresentation</IRI>
+        <Literal xml:lang="en">CognitivePresentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Conclusion</IRI>
+        <Literal xml:lang="en">Conclusion is an Assertible, e.g. “it is cold”.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Conclusion</IRI>
+        <Literal xml:lang="en">Conclusion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Courage</IRI>
+        <Literal xml:lang="en">Prudence, wisdom, justice, courage and moderation are virtues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Courage</IRI>
+        <Literal xml:lang="en">Courage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Disposed</IRI>
+        <Literal xml:lang="en">A dog as a further differentiated qualified thing: as running, barking, brave. (Wyss)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Disposed</IRI>
+        <Literal xml:lang="en">Disposed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Earth</IRI>
+        <Literal xml:lang="en">Earth</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Element</IRI>
+        <Literal xml:lang="en">Elements are continuous, infinitely divisible substances</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Element</IRI>
+        <Literal xml:lang="en">Element</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#FictionalEntities</IRI>
+        <Literal xml:lang="en">FictionalEntities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Fire</IRI>
+        <Literal xml:lang="en">Fire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#GoalOfLiving</IRI>
+        <Literal xml:lang="en">&quot;Aristotle’s ethics provides the form for the adumbration of the ethical teaching of the Hellenistic schools. One must first provide a specification of the goal or end (telos) of living.“ (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#GoalOfLiving</IRI>
+        <Literal xml:lang="en">GoalOfLiving</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Good</IRI>
+        <Literal xml:lang="en">&quot;The best way into the thicket of Stoic ethics is through the question of what is good, for all parties agree that possession of what is genuinely good secures a person&apos;s happiness. The Stoics claim that whatever is good must benefit its possessor under all circumstances.&quot; (Baltzy)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Happiness</IRI>
+        <Literal xml:lang="en">&quot;A bit of reflection tells us that the goal that we all have is happiness or flourishing (eudaimonia). But what is happiness?… Zeno’s answer was ‘a good flow of life’ or ‘living in agreement,’ and Cleanthes clarified that with the formulation that the end was ‘living in agreement with nature’. Chrysippus amplified this to (among other formulations) ‘living in accordance with experience of what happens by nature;’ later Stoics inadvisably, in response to Academic attacks, substituted such formulations as ‘the rational selection of the primary things according to nature.&apos;” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Happiness</IRI>
+        <Literal xml:lang="en">Happiness</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Human</IRI>
+        <Literal xml:lang="en">A human being
+A human person has a goal of living.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Human</IRI>
+        <Literal xml:lang="en">Human</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Impulse</IRI>
+        <Literal xml:lang="en">&quot;The basic function of impulse is to initiate motion. When we perceive an object or event in the physical world, a phantasia or presentation is produced in the commanding faculty which is then evaluated by the rational faculty... If the object is deemed good, an impulse is initiated as a kind of motion in the soul substratum. If the object is bad, repulsion [aphormê] is produced, and the agent withdraws from the object under consideration.&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Impulse</IRI>
+        <Literal xml:lang="en">Impulse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#InanimateObject</IRI>
+        <Literal xml:lang="en">InanimateObject</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Incorporeal</IRI>
+        <Literal xml:lang="en">Incorporeals are: “These do not exist, but subsist (ὑφεστάναι, hyphestanai); yet they are real (ὑπάρχειν, hyparchein). We can think of them as conditions ‘without which the interaction of bodies in the world would neither be analysable nor intelligible” (Wyss)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Incorporeal</IRI>
+        <Literal xml:lang="en">Incorporeal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Indemonstrable</IRI>
+        <Literal xml:lang="en">The five indemonstrables are: 1/ Modus ponens: If p, then q.  p. Therefore, q. 2/ Modus tollens: If p, then q. Not q. Therefore, not p. 3/ Not both p and q.  p. Therefore, not q. 4/ Modus tollendo ponens: Either p or q. Not p. Therefore, q. 5/ Modus ponendo tollens: Either p or q.  p. Therefore, not q.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Indemonstrable</IRI>
+        <Literal xml:lang="en">Indemonstrable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Indifferent</IRI>
+        <Literal xml:lang="en">&quot;there are situations in which it is not to my benefit to be healthy or wealthy. (We may imagine that if I had money I would spend it on heroin which would not benefit me.) Thus, things like money are simply not good, in spite of how nearly everyone speaks, and the Stoics call them ‘indifferents’ – i.e., neither good nor bad.” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Indifferent</IRI>
+        <Literal xml:lang="en">Indifferent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Justice</IRI>
+        <Literal xml:lang="en">Prudence, wisdom, justice, courage and moderation are virtues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Justice</IRI>
+        <Literal xml:lang="en">Justice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Knowledge</IRI>
+        <Literal xml:lang="en">&quot;knowledge [epistemê] was defined as a katalepsis that is secure and unchangeable by reason.&quot; (Rubarth)
+
+“Stoics identify the moral virtues with knowledge. […] Thus a specific virtue like moderation is defined as ‘the science (epistêmê) of what is to be chosen and what is to be avoided and what is neither of these’ (Arius Didymus, 61H). More broadly, virtue is ‘an expertise (technê) concerned with the whole of life’ (Arius Didymus, 61G). Like other forms of knowledge, virtues are characters of the soul’s commanding faculty which are firm and unchangeable.” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Knowledge</IRI>
+        <Literal xml:lang="en">Knowledge</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Limits</IRI>
+        <Literal xml:lang="en">Limits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Matter</IRI>
+        <Literal xml:lang="en">“One principle [of the Universe] is matter which they regard as utterly unqualified and inert. It is that which is acted upon.” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Matter</IRI>
+        <Literal xml:lang="en">Matter</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Memory</IRI>
+        <Literal xml:lang="en">&quot;The doctrine of presentation also provided the foundation for a theory of memory and concept formation. Memory was seen to be stored phantasiai.&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Memory</IRI>
+        <Literal xml:lang="en">Memory</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Moderation</IRI>
+        <Literal xml:lang="en">Prudence, wisdom, justice, courage and moderation are virtues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Moderation</IRI>
+        <Literal xml:lang="en">Moderation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Nature</IRI>
+        <Literal xml:lang="en">Pneuma comes in gradations and endows the bodies which it pervades with different qualities as a result. The pneuma which sustains an inanimate object is a ‘tenor’ (hexis, lit. a holding). Pneuma in plants is, in addition, physique (phusis, lit. ‘nature’). In animals, pneuma is soul (psychê) and in rational animals pneuma is, besides, the [central] commanding faculty (hêgemonikon) – that is responsible for thinking, planning, deciding. The Stoics assign to ‘physique’ or ‘nature’ all the purely physiological life functions of a human animal (such as digestion, breathing, growth etc.) – self-movement from place to place is due to soul. (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Nature</IRI>
+        <Literal xml:lang="en">Nature</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Neither</IRI>
+        <Literal xml:lang="en">Neither can be: fictional entities (e.g. unicorns); limits</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Neither</IRI>
+        <Literal xml:lang="en">Neither</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Non-CognitivePresentetion</IRI>
+        <Literal xml:lang="en">Experience Non-Cognitive (Non-Cataleptic) presentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Non-CognitivePresentetion</IRI>
+        <Literal xml:lang="en">Non-CognitivePresentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Non-simpleAssertible</IRI>
+        <Literal xml:lang="en">Non-simple assertibles are compound of simple assertibles linked with logical connectives, like: if.. than, and, either.. or, since, because. E.g. “if it is winter than it is cold”; “either it is day or night”; and “I am moving since I am working”.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Non-simpleAssertible</IRI>
+        <Literal xml:lang="en">Non-simpleAssertible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NotGoodNotBad</IRI>
+        <Literal xml:lang="en">Not good and not bad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NotGoodNotBad</IRI>
+        <Literal xml:lang="en">NotGoodNotBad</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#NotPreferredIndifferent</IRI>
+        <Literal xml:lang="en">Indifferents not characterized by Value.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#NotPreferredIndifferent</IRI>
+        <Literal xml:lang="en">NotPreferredIndifferent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#ObjectSubstrate</IRI>
+        <Literal xml:lang="en">“A dog as merely an object, something ‘out there’, a discrete portion of matter: a substance (οὐσία, ousia). As object, a dog is merely the potential bearer of qualities”(Wyss)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#ObjectSubstrate</IRI>
+        <Literal xml:lang="en">ObjectSubstrate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#OtherBody</IRI>
+        <Literal xml:lang="en">The reference body of relatively disposed, e.g. Jack; father</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#OtherBody</IRI>
+        <Literal xml:lang="en">OtherBody</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Passion</IRI>
+        <Literal xml:lang="en">&quot;Passions are unruly and contrary to reason&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Passion</IRI>
+        <Literal xml:lang="en">Passion</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Place</IRI>
+        <Literal xml:lang="en">Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Plant</IRI>
+        <Literal xml:lang="en">Plant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Pneuma</IRI>
+        <Literal xml:lang="en">“God is identified with an eternal reason or intelligent designing fire or a breath (pneuma) which structures matter in accordance with Its plan. The designing fire is likened to sperm or seed which contains the first principles or directions of all the things which will subsequently develop. The biological conception of God as a kind of living heat or seed from which things grow seems to be fully intended. The further identification of God with pneuma or breath may have its origins in medical theories of the Hellenistic period… More specifically, God is identical with one of the two ungenerated and indestructible first principles (archai) of the universe.” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Pneuma</IRI>
+        <Literal xml:lang="en">Pneuma</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PreferredIndifferent</IRI>
+        <Literal xml:lang="en">“Some indifferent things, like health or wealth, have value (axia) and therefore are to be preferred [indifferent], even if they are not good, because they are typically appropriate, fitting or suitable (oikeion) for us.” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <IRI>#PreferredIndifferent</IRI>
+        <Literal xml:lang="en">PreferredIndifferent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Premise</IRI>
+        <Literal xml:lang="en">Premise is an Assertible, e.g. “it is winter”; “if it is winter than it is cold”.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Premise</IRI>
+        <Literal xml:lang="en">Premise</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#PresentUniverse</IRI>
+        <Literal xml:lang="en">“Just as living things have a life-cycle that is witnessed in parents and then again in their off-spring, so too the universe has a life cycle that is repeated. This life cycle is guided by, or equivalent to, a developmental plan that is identified with God. There is a cycle of endless recurrence, beginning from a state in which all is fire, through the generation of the elements, to the creation of the world we are familiar with, and eventually back to the state of pure designing fire called ‘the conflagration’” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#PresentUniverse</IRI>
+        <Literal xml:lang="en">PresentUniverse</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Presentation</IRI>
+        <Literal xml:lang="en">&quot;The most basic power of the hêgemonikon is the ability to form presentations [phantasiai]. Other psychological states and activities such as mental assent, cognition, impulse, and knowledge are all either extensions or responses to presentations. Zeno defined a presentation as an imprinting [tupôsis] in the commanding faculty. He suggested that the soul is imprinted by the senses much in the same way as a signet ring imprints its shape in soft wax.&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Presentation</IRI>
+        <Literal xml:lang="en">Presentation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Prudence</IRI>
+        <Literal xml:lang="en">Prudence, wisdom, justice, courage and moderation are virtues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Prudence</IRI>
+        <Literal xml:lang="en">Prudence</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Qualified</IRI>
+        <Literal xml:lang="en">“A dog as an object with certain qualities: bad breath, soft fur, dotted; can be qualified commonly as ‘dog’ or ‘furry’, or peculiarly as ‘Fido’.” (Wyss)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Qualified</IRI>
+        <Literal xml:lang="en">Qualified</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Reason</IRI>
+        <Literal xml:lang="en">&quot;Only human beings and gods possess the highest level of pneumatic activity, reason [logos]. Reason was defined as a collection of conceptions and preconceptions; it is especially characterized by the use of language. In fact, the difference between how animals think and how humans think seems to be that human thinking is linguistic — not that we must vocalize thoughts (for parrots can articulate human sounds), but that human thinking seems to follow a syntactical and propositional structure in the manner of language. The Stoics considered thinking in rational animals as a form of internal speech. [...]&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reason</IRI>
+        <Literal xml:lang="en">Reason</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#RelativelyDisposed</IRI>
+        <Literal xml:lang="en">“A dog as an object in relation to other objects as owned by Jack, Rexs’ father winner at Crufts” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#RelativelyDisposed</IRI>
+        <Literal xml:lang="en">RelativelyDisposed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Reproduction</IRI>
+        <Literal xml:lang="en">Reproduction</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Sayable</IRI>
+        <Literal xml:lang="en">They define a sayable as “that which subsists in accordance with a cognitive (rational) impression.”   “The signification.. is an incorporeal thing called a lekton, or ‘sayable,’ and it, and neither of the other two, is what is true or false” (Baltzly)- the meaning. E.g: the claim regarding the color of a specific animal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Sayable</IRI>
+        <Literal xml:lang="en">Sayable</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SensePerception</IRI>
+        <Literal xml:lang="en">Sense perception: &quot;The soul (a concept broader than the modern concept of mind) was believed to be a hot, fiery breath [pneuma] that infused the physical body. As a highly sensitive substance, pneuma pervades the body establishing a mechanism able to detect sensory information and transmit the information to the central commanding portion of the soul in the chest. [...] the senses are passive insofar as they receive the tensional motion of a sense object and communicate it to the command center&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SensePerception</IRI>
+        <Literal xml:lang="en">SensePerception</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#SimpleAssertible</IRI>
+        <Literal xml:lang="en">Simple assertibles include propositions like: “it is cold”; “it is raining this morning” and “no one is running.”</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#SimpleAssertible</IRI>
+        <Literal xml:lang="en">SimpleAssertible</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Something</IRI>
+        <Literal xml:lang="en">“This is the highest ontological genus: to be something (τί, ti) is to be some particular thing. Notably, this excludes Platonic Forms, or universals: they are not-somethings (outina), and thus ontological outcasts.” (Wyss)
+
+&quot;For stoics is the highest ontological genus: to be something (τί, ti) is to be some particular thing. These somethings related to the goal of living can be categorized as virtues, vices and indifferents.&quot; (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Something</IRI>
+        <Literal xml:lang="en">Something</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Soul</IRI>
+        <Literal xml:lang="en">&quot;Pneuma comes in gradations and endows the bodies which it pervades with different qualities as a result. The pneuma which sustains an inanimate object is a ‘tenor’ (hexis, lit. a holding). Pneuma in plants is, in addition, physique (phusis, lit. ‘nature’). In animals, pneuma is soul (psychê) and in rational animals pneuma is, besides, the [central] commanding faculty (hêgemonikon) – that is responsible for thinking, planning, deciding. The Stoics assign to ‘physique’ or ‘nature’ all the purely physiological life functions of a human animal (such as digestion, breathing, growth etc.) – self-movement from place to place is due to soul.&quot; (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Soul</IRI>
+        <Literal xml:lang="en">Soul</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Speach</IRI>
+        <Literal xml:lang="en">&quot;Speech is an expression and articulation of the tensional motion produced by the construction of thought in the hêgemonikon. Interestingly, it is the fact that speech is produced in conjunction with breath that Chrysippus used as a central argument for the location of the hêgemonikon in the heart and not the brain.&quot; (Rubarth)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Speach</IRI>
+        <Literal xml:lang="en">Speach</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#StoicSyllogism</IRI>
+        <Literal xml:lang="en">Stoic syllogism “is best understood as a… natural-deduction system that consists of five kinds of axiomatic arguments (the indemonstrables) and four inference rules, called themata. An argument is a syllogism precisely if it either is an indemonstrable or can be reduced to one by means of the themata. Thus syllogisms are certain kinds of formally valid arguments. The Stoics explicitly acknowledged that there are valid arguments that are not syllogisms; but assumed that these could be somehow transformed into syllogisms.” (Bobzien)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#StoicSyllogism</IRI>
+        <Literal xml:lang="en">StoicSyllogism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Tenor</IRI>
+        <Literal xml:lang="en">Pneuma comes in gradations and endows the bodies which it pervades with different qualities as a result. The pneuma which sustains an inanimate object is a ‘tenor’ (hexis, lit. a holding). Pneuma in plants is, in addition, physique (phusis, lit. ‘nature’). In animals, pneuma is soul (psychê) and in rational animals pneuma is, besides, the [central] commanding faculty (hêgemonikon) – that is responsible for thinking, planning, deciding. The Stoics assign to ‘physique’ or ‘nature’ all the purely physiological life functions of a human animal (such as digestion, breathing, growth etc.) – self-movement from place to place is due to soul. (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Tenor</IRI>
+        <Literal xml:lang="en">Tenor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Themata</IRI>
+        <Literal xml:lang="en">&quot;Complex syllogisms could be reduced to the indemonstrables through the use of four ground rules or themata. Of these four, only two have survived. E.g. when from two assertibles a third follows, then from either of them together with the contradictory of the conclusion the contradictory of the other follows.&quot; (Bobzien)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Themata</IRI>
+        <Literal xml:lang="en">Themata</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Time</IRI>
+        <Literal xml:lang="en">Time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#TruthValue</IRI>
+        <Literal xml:lang="en">Truth value of an Assertible might change over time, so each value is valid from the start time to end time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#TruthValue</IRI>
+        <Literal xml:lang="en">TruthValue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Universe</IRI>
+        <Literal xml:lang="en">“The governing metaphor for Stoic cosmology is biological, in contrast to the fundamentally mechanical conception of the Epicureans. The entire cosmos [universe] is a living thing and God stands to the cosmos as an animal’s life force stands to the animal’s body, enlivening, moving and directing it by its presence throughout. The Stoics insistence that only bodies are capable of causing anything, however, guarantees that this cosmic life force must be conceived of as somehow corporeal.” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Universe</IRI>
+        <Literal xml:lang="en">Universe</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UniverseOfElements</IRI>
+        <Literal xml:lang="en">“Just as living things have a life-cycle that is witnessed in parents and then again in their off-spring, so too the universe has a life cycle that is repeated. This life cycle is guided by, or equivalent to, a developmental plan that is identified with God. There is a cycle of endless recurrence, beginning from a state in which all is fire, through the generation of the elements, to the creation of the world we are familiar with, and eventually back to the state of pure designing fire called ‘the conflagration’” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UniverseOfElements</IRI>
+        <Literal xml:lang="en">UniverseOfElements</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#UniverseOnFire</IRI>
+        <Literal xml:lang="en">“Just as living things have a life-cycle that is witnessed in parents and then again in their off-spring, so too the universe has a life cycle that is repeated. This life cycle is guided by, or equivalent to, a developmental plan that is identified with God. There is a cycle of endless recurrence, beginning from a state in which all is fire, through the generation of the elements, to the creation of the world we are familiar with, and eventually back to the state of pure designing fire called ‘the conflagration’” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#UniverseOnFire</IRI>
+        <Literal xml:lang="en">UniverseOnFire</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Utterance</IRI>
+        <Literal xml:lang="en">“the signifier … is the utterance” – the sound what is said in a given language. (Baltzly) E.g: the sounds when we say: “The cat is black”.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Utterance</IRI>
+        <Literal xml:lang="en">Utterance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Value</IRI>
+        <Literal xml:lang="en">Value (axia) is a property of being “appropriate, fitting or suitable (oikeion)”. (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Value</IRI>
+        <Literal xml:lang="en">Value</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Vice</IRI>
+        <Literal xml:lang="en">“only vice is genuinely bad” (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Vice</IRI>
+        <Literal xml:lang="en">Vice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Virtue</IRI>
+        <Literal xml:lang="en">&quot;The only things that are good are the characteristic excellences or virtues of human beings (or of human minds): prudence or wisdom, justice, courage and moderation, and other related qualities. “ (Baltzly)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Virtue</IRI>
+        <Literal xml:lang="en">Virtue</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#Visdom</IRI>
+        <Literal xml:lang="en">Prudence, wisdom, justice, courage and moderation are virtues</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Visdom</IRI>
+        <Literal xml:lang="en">Visdom</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>#Water</IRI>
+        <Literal xml:lang="en">Water</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl" uri="https://raw.githubusercontent.com/BFO-ontology/BFO/v2019-08-26/bfo_classes_only.owl"/>
+    <uri id="Imports Wizard Entry" name="http://purl.org/nemo/gufo#/1.0.0" uri="https://nemo-ufes.github.io/gufo/gufo.ttl#"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo" uri="epicurus-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/bfo/main/aristotle-bfo.owl" uri="aristotle-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/bfo/main/buridan-bfo.owl" uri="buridan-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="duplicate:https://raw.githubusercontent.com/philosophy-models/bfo/main/philoponus-bfo.owl" uri="philoponus-bfo-new.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="duplicate:https://raw.githubusercontent.com/philosophy-models/bfo/main/philoponus-bfo.owl" uri="philoponus-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/bfo/main/plato-bfo.owl" uri="plato-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/bfo/main/stoic-bfo.owl" uri="stoic-bfo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/gufo/main/aristotle-gufo" uri="aristotle-gufo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/gufo/main/buridan-gufo.owl" uri="buridan-gufo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/gufo/main/plato-gufo.owl" uri="plato-gufo.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1677770627039" name="https://raw.githubusercontent.com/philosophy-models/gufo/main/stoic-gufo.owl" uri="stoic-gufo.owl"/>
+    </group>
+</catalog>

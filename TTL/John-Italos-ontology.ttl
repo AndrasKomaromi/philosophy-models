@@ -1,0 +1,116 @@
+@prefix : <http://example.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://example.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:Universal rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Universal"@en.
+:UniversalInTheParticulars rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "UniversalInThe Particulars"@en.
+:UniversalAfterTheParticulars rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "UniversalAfterThe Particulars"@en.
+:Particular rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Particular"@en.
+:Perceptible rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Perceptible"@en.
+:LaterBorn rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Later-born"@en.
+:BePredicated rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Be- predicated"@en.
+:Inseparable rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Inseparable"@en.
+:AcquiredByMindby rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Acquired-by-mindby"@en.
+:Intelligible rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Intelligible"@en.
+:UniversalBeforeTheParticulars rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "UniversalBeforeTheParticulars"@en;
+    rdfs:subClassOf :Universal.
+:UniversalInTheParticulars rdfs:subClassOf :UniversalBeforeTheParticulars.
+:UniversalAfterTheParticulars rdfs:subClassOf :UniversalInTheParticulars.
+:particularHasUniversalAfterTheParticulars rdf:type owl:ObjectProperty;
+    rdfs:domain :Particular;
+    rdfs:range :UniversalAfterTheParticulars.
+:BePredicated rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :UniversalInTheParticulars
+].
+:UniversalInTheParticulars rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :BePredicated
+], [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Inseparable
+].
+:Inseparable rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :UniversalInTheParticulars
+].
+:Particular rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Perceptible
+].
+:Perceptible rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Particular
+].
+:AcquiredByMindby rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :UniversalInTheParticulars
+].
+:UniversalInTheParticulars rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :AcquiredByMindby
+].
+:Intelligible rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :UniversalBeforeTheParticulars
+].
+:UniversalBeforeTheParticulars rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Intelligible
+].
+:LaterBorn rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :UniversalInTheParticulars
+].
+:UniversalInTheParticulars rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :LaterBorn
+].

@@ -1,0 +1,183 @@
+@prefix : <http://example.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://example.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:Particular rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Particular"@en.
+:Syllogism rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Syllogism "@en.
+:DeviantSyllogism rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "DeviantSyllogism"@en.
+:Mood rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:IntrinsicMode;
+    rdfs:label "Mood"@en.
+:Proof rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Proof"@en.
+:Artificial rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Artificial"@en.
+:Premise rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Premise"@en.
+:Conclusion rdf:type owl:Class, gufo:Role, owl:NamedIndividual;
+    rdfs:label "Conclusion"@en.
+:Assertion rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Assertion"@en.
+:Figure rdf:type owl:Class, gufo:Category, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Figure"@en.
+:Substance rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Substance"@en.
+:Soul rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Soul"@en.
+:Thing rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Thing"@en.
+:Quality rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Quality"@en.
+:Action rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Action"@en.
+:Virtue rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "Virtue"@en.
+:Love rdf:type owl:Class, gufo:Phase, owl:NamedIndividual;
+    rdfs:label "Love"@en.
+:Charity rdf:type owl:Class, gufo:Phase, owl:NamedIndividual;
+    rdfs:label "Charity"@en.
+:Essential rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Essential"@en.
+:Prudence rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Prudence"@en.
+:Fortitude rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label " Fortitude"@en.
+:Justice rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Justice"@en.
+:Propriety rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Propriety"@en.
+:Pleasure rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "Pleasure"@en.
+:Good rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Good"@en.
+:DeviantSyllogism rdfs:subClassOf :Syllogism.
+:Premise rdfs:subClassOf :Assertion.
+:Conclusion rdfs:subClassOf :Assertion.
+:Soul rdfs:subClassOf :Substance.
+:Substance rdfs:subClassOf :Thing.
+:Quality rdfs:subClassOf :Thing.
+:Action rdfs:subClassOf :Thing.
+:Fortitude rdfs:subClassOf :Virtue.
+:Love rdfs:subClassOf :Pleasure.
+:Charity rdfs:subClassOf :Pleasure.
+:Justice rdfs:subClassOf :Fortitude.
+:Prudence rdfs:subClassOf :Fortitude.
+:Propriety rdfs:subClassOf :Fortitude.
+:Pleasure rdfs:subClassOf :Virtue.
+:deductuon rdf:type owl:ObjectProperty;
+    rdfs:domain :Premise;
+    rdfs:range :Conclusion;
+    rdfs:label "deductuon"@en;
+    rdf:type gufo:MaterialRelationshipType.
+:thingHasParticular rdf:type owl:ObjectProperty;
+    rdfs:domain :Thing;
+    rdfs:range :Particular;
+    rdf:type gufo:MaterialRelationshipType.
+:Mood rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Syllogism
+].
+:Syllogism rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Mood
+].
+:Proof rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Mood
+].
+:Mood rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Proof
+].
+:Artificial rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Syllogism
+].
+:Syllogism rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Artificial
+].
+:Premise rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Syllogism
+].
+:Syllogism rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger;
+  owl:onClass :Premise
+].
+:Conclusion rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:mediates ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Syllogism
+].
+:Syllogism rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Conclusion
+].
+:Figure rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Mood
+].
+:Essential rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Fortitude
+].
+:Fortitude rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Essential
+].
+:Good rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Virtue
+].
+:Virtue rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Good
+].

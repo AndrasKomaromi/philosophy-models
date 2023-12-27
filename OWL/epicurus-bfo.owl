@@ -1,0 +1,591 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#"
+     xml:base="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo">
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl"/>
+        <rdfs:comment>SOURCES
+[1] Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)
+[2] Tim O’Keefe, “Epicurus“, Internet Encyclopedia of Philosophy</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom_component_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom_component_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#component_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#causes_perturbation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#causes_perturbation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#perturbation"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#causes_perturbation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#fear"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#fear"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#component_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#component_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#contains_empty_space -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#contains_empty_space">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#universe"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#contains_empty_space"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#universe"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#empty_space"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#experiences_physical_sensation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#experiences_physical_sensation">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#experiences_physical_sensation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#physical-sensation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_goal_of_living -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_goal_of_living">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_goal_of_living"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#goal_of_living"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_perception -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_perception">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#preconception"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_perception"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#preconception"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#percetion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_state_of_mind -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_state_of_mind">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#has_state_of_mind"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#state_of_mind"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is"/>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_hapiness -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_hapiness">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#goal_of_living"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_hapiness"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#goal_of_living"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#happiness"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_lack_of_perturbation -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_lack_of_perturbation">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#happiness"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_lack_of_perturbation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#happiness"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#lack_of_perturbation"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_static_pleasure -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_static_pleasure">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#happiness"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#is_lack_of_perturbation"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#static_pleasure"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#static_pleasure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object_component_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object_component_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#component_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#universe"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object_component_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#universe"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom_component_of -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom_component_of">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#component_of"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom_component_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#use_memory -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#use_memory">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#uses"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#preconception"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#use_preconception"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#memory"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#memory"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#use_preconception -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#use_preconception">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#uses"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#mind"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#use_preconception"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#mind"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#percetion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#uses"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/BFO_0000030 -->
+
+    <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000030">
+        <obo:IAO_0000600 xml:lang="en">“Epicurus held that the elementary constituents of nature are undifferentiated matter, in the form of discrete, solid and indivisible particles (“atoms”) below the threshold of perception… All secondary properties, such as color and taste, will be explained as epiphenomena of atomic combinations… atoms can come in different shapes and sizes (though never large enough to be seen) “
+Atoms are eternal.</obo:IAO_0000600>
+    </rdf:Description>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom_component_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000600 xml:lang="en">“Epicurus held that the elementary constituents of nature are undifferentiated matter, in the form of discrete, solid and indivisible particles (“atoms”) below the threshold of perception… All secondary properties, such as color and taste, will be explained as epiphenomena of atomic combinations… atoms can come in different shapes and sizes (though never large enough to be seen) “
+Atoms are eternal.&quot;</obo:IAO_0000600>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#empty_space -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#empty_space">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000028"/>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">“empty space, that is, the complement of matter or where matter is not… Void must exist, in turn, if bodies are to be able to move, as they are seen to do. Thus motion is the counterwitness to the non-existence of void — an indirect argument is required since one cannot perceive empty space.”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#fear -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#fear">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#state_of_mind"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#joy"/>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">“Most prominent among the negative mental states is fear, above all the fear of unreal dangers, such as death. Death, Epicurus insists, is nothing to us, since while we exist, our death is not, and when our death occurs, we do not exist; but if one is frightened by the empty name of death, the fear will persist since we must all eventually die.&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#goal_of_living -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#goal_of_living">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">The unique goal in life happiness.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#happiness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#happiness">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">Epicurus “the unique goal in life happiness based on freedom from physical pain and mental anxiety” [lack of perturbation] and enjoyment of static pleasure.</rdfs:comment>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object"/>
+        <rdfs:comment xml:lang="en">A human person has a goal of living.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Human being</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#joy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#joy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#state_of_mind"/>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">“There are also positive states of mind, which Epicurus identifies by the special term khara (joy), as opposed to hêdonê (pleasure, i.e., physical pleasure).&quot;</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#kinetic_pleasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#kinetic_pleasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#pleasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#lack_of_perturbation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#lack_of_perturbation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#state_of_mind"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#perturbation"/>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">“fear is one source of perturbation (tarakhê), and is a worse curse than physical pain itself”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#macroscopic_object">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000030"/>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">“Macroscopic objects [or bodies], of course, do not move at a uniform and very great speed… In the case of compound objects that are completely at rest, the resultant of internal atomic motions is zero, relative, at least, to the earth, which may have an average motion of its own.”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#memory -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#memory">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">SOURCE: Tim O’Keefe, “Epicurus“, Internet Encyclopedia of Philosophy</rdfs:comment>
+        <rdfs:comment xml:lang="en">“…we have certain ‘preconceptions‘–concepts such as ‘body,’ person,’ ‘usefulness,’ and ‘truth’–which are formed in our (material) minds as the result of repeated sense-experiences of similar objects&quot;
+These ‘preconceptions‘ are stored ln the MEMORY</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#mind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#mind">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">&quot;the function of the human MIND mind — that part of the soul that is located in our chest — is not to seek higher things, but to maximize pleasure and minimize pain.&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#not_soul_atom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#not_soul_atom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom"/>
+        <obo:IAO_0000600 xml:lang="en">Other atom than soul atoms in the human body.</obo:IAO_0000600>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#pain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#pain">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#physical-sensation"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#pleasure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#percetion -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#percetion">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">&quot;...all sensations give us information about the world, but that sensation itself is never in error, since sensation is a purely passive, mechanical reception of images and the like by sense-organs, and the senses themselves do not make judgments &apos;that&apos; the world is this way or that. 
+Instead, error enters in when we make judgments about the world based upon the information received through the senses.&quot;</rdfs:comment>
+        <rdfs:comment xml:lang="en">SOURCE: Tim O’Keefe, “Epicurus“, Internet Encyclopedia of Philosophy</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#perturbation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#perturbation">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#state_of_mind"/>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">“fear is one source of perturbation (tarakhê), and is a worse curse than physical pain itself”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#physical-sensation -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#physical-sensation">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">&quot;…Feelings of pleasure and pain form the basic criteria for what is to be sought and avoided..”
+&quot;…all sensations give us information about the world, but that sensation itself is never in error, since sensation is a purely passive, mechanical reception of images and the like by sense-organs, and the senses themselves do not make judgments ‘that’ the world is this way or that. 
+Instead, error enters in when we make judgments about the world based upon the information received through the senses.”</rdfs:comment>
+        <rdfs:comment xml:lang="en">“Epicurus, it appears, uses the terms pleasure and pain (hêdonê, algêdôn) strictly in reference to physical pathê or sensations, that is, those that are experienced via the non-rational soul that is distributed throughout the body…
+soul atoms are particularly fine and are distributed throughout the body, and it is by means of them that we have sensations (aisthêseis) and the experience of pain and pleasure…”</rdfs:comment>
+    </owl:Class>
+    <owl:Axiom>
+        <owl:annotatedSource rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#physical-sensation"/>
+        <owl:annotatedProperty rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+        <owl:annotatedTarget xml:lang="en">&quot;…Feelings of pleasure and pain form the basic criteria for what is to be sought and avoided..”
+&quot;…all sensations give us information about the world, but that sensation itself is never in error, since sensation is a purely passive, mechanical reception of images and the like by sense-organs, and the senses themselves do not make judgments ‘that’ the world is this way or that. 
+Instead, error enters in when we make judgments about the world based upon the information received through the senses.”</owl:annotatedTarget>
+        <rdfs:comment xml:lang="en">“…all sensations give us information about the world, but that sensation itself is never in error, since sensation is a purely passive, mechanical reception of images and the like by sense-organs, and the senses themselves do not make judgments ‘that’ the world is this way or that. 
+Instead, error enters in when we make judgments about the world based upon the information received through the senses.”</rdfs:comment>
+    </owl:Axiom>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#pleasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#pleasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#physical-sensation"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#preconception -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#preconception">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <rdfs:comment xml:lang="en">SOURCE: Epicurus, by Tim O’Keefe (Georgia State University), in the Internet Encyclopedia of Philosophy.</rdfs:comment>
+        <rdfs:comment xml:lang="en">“…we have certain ‘preconceptions‘–concepts such as ‘body,’ person,’ ‘usefulness,’ and ‘truth’–which are formed in our (material) minds as the result of repeated sense-experiences of similar objects. Further ideas are formed by processes of analogy or similarity or by compounding these basic concepts. Thus, all ideas are ultimately formed on the basis of sense-experience.”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#atom"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#soul_atom_component_of"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <obo:IAO_0000600 xml:lang="en">The soul “consists of atoms: first, there is nothing that is not made up of atoms and void.., and second, an incorporeal entity could neither act on nor be moved by bodies, as the soul is seen to do (e.g., it is conscious of what happens to the body, and it initiates physical movement). Epicurus maintains that soul atoms are particularly fine and are distributed throughout the body, and it is by means of them that we have sensations (aisthêseis) and the experience of pain and pleasure, which Epicurus calls pathê (a term used by Aristotle and others to signify emotions instead). Body without soul atoms is unconscious and inert, and when the atoms of the body are disarranged so that it can no longer support conscious life, the soul atoms are scattered and no longer retain the capacity for sensation. There is also a part of the human soul that is concentrated in the chest, and is the seat of the higher intellectual functions. The distinction is important, because it is in the rational part that error of judgment enters in.”</obo:IAO_0000600>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#state_of_mind -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#state_of_mind">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#static_pleasure"/>
+        <rdfs:comment xml:lang="en">state of mind</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#static_pleasure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#static_pleasure">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#pleasure"/>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+        <rdfs:comment xml:lang="en">“happiness (eudaimonia), according to Epicurus, is not simply a neutral or privative condition but rather a form of pleasure in its own right — what Epicurus called catastematic or (following Cicero’s Latin translation) ‘static’ as opposed to ‘kinetic’ pleasure…”
+Static “(catastematic) pleasure… is (or is taken in) a state rather than a process: it is the pleasure that accompanies well-being as such. The Cyrenaics and others, such as Cicero, maintained, in turn, that this condition is not pleasurable but rather neutral — neither pleasurable nor painful.”</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#universe -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#universe">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000027"/>
+        <obo:IAO_0000115 xml:lang="en">Epicurus’“Epicurus held that the elementary constituents of nature [universe] are undifferentiated matter, in the form of discrete, solid and indivisible particles (“atoms”) below the threshold of perception, plus empty space, that is, the complement of matter or where matter is not…
+an infinite number of solid and therefore indivisible atoms of finitely many kinds, such as Epicurus’ theory provides, are enough to avoid the possibility of the universe crumbling into nothing.”
+The universe is infinite end eternal; more than that, more universes can co-exist.
+IN: Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N.</obo:IAO_0000115>
+        <rdfs:comment xml:lang="en">SOURCE:  Konstan, David, “Epicurus”, The Stanford Encyclopedia of Philosophy (Summer 2018 Edition), Edward N. Zalta (ed.)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#Epicurus -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#Epicurus">
+        <rdf:type rdf:resource="http://www.semanticweb.org/akoma/ontologies/2022/7/epicurus-bfo#human"/>
+        <rdfs:comment xml:lang="en">“Epicurus, the son of Neocles and Chaerestrata, was an Athenian from the deme of Gargettus and the lineage of the Philaïdes, as Metrodorus says in his On Noble Families. Heraclides, among others, in his epitome of Sotion, says that he was raised in Samos, since the Athenians were given parcels of land there, but came to Athens when he was eighteen, when Xenocrates was head of the Academy and Aristotle was still in Chalcis” (where he died in 322).</rdfs:comment>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

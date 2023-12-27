@@ -1,0 +1,102 @@
+@prefix : <http://ficino-gufo.com#>.
+@prefix gufo: <http://purl.org/nemo/gufo#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+<http://ficino-gufo.com> rdf:type owl:Ontology;
+    owl:imports gufo:.
+:God rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "God"@en.
+:AngelicMind rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "AngelicMind"@en.
+:RationalSoul rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label " RationalSoul"@en.
+:Matter rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Matter"@en.
+:Quality rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Quality"@en.
+:Immortal rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Immortal"@en.
+:HumanBeing_1 rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "HumanBeing"@en.
+:RarionalSoul rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "RarionalSoul"@en.
+:HumanBeing rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:FunctionalComplex;
+    rdfs:label "HumanBeing"@en.
+:Spirit rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Quality;
+    rdfs:label "Spirit"@en.
+:Love rdf:type owl:Class, gufo:Kind, owl:NamedIndividual;
+    rdfs:subClassOf gufo:Relator;
+    rdfs:label "Love"@en.
+:TrueLove rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "TrueLove"@en.
+:FalseLove rdf:type owl:Class, gufo:SubKind, owl:NamedIndividual;
+    rdfs:label "FalseLove"@en.
+:TrueLove rdfs:subClassOf :Love.
+:FalseLove rdfs:subClassOf :Love.
+:godHasAngelicMind rdf:type owl:ObjectProperty;
+    rdfs:domain :God;
+    rdfs:range :AngelicMind.
+:rationalSoulHasMatter rdf:type owl:ObjectProperty;
+    rdfs:domain :RationalSoul;
+    rdfs:range :Matter.
+:angelicMindHasRationalSoul rdf:type owl:ObjectProperty;
+    rdfs:domain :AngelicMind;
+    rdfs:range :RationalSoul.
+:loveHasLove rdf:type owl:ObjectProperty;
+    rdfs:domain :Love;
+    rdfs:range :Love.
+:RationalSoul rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Quality
+].
+:Quality rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Matter
+].
+:Immortal rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :RationalSoul
+].
+:RationalSoul rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Immortal
+].
+:RarionalSoul rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty [ owl:inverseOf gufo:inheresIn ];
+  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Spirit
+].
+:Spirit rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:inheresIn;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :RarionalSoul
+].
+:HumanBeing rdfs:subClassOf [
+  rdf:type owl:Restriction;
+  owl:onProperty gufo:mediates;
+  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger;
+  owl:onClass :Love
+].

@@ -1,0 +1,548 @@
+@prefix : <http://valla-gufo.com#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix gufo: <http://purl.org/nemo/gufo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://valla-gufo.com> .
+
+<http://valla-gufo.com> rdf:type owl:Ontology ;
+                         rdfs:comment """SOURCES:
+[1] Nauta, Lodi, “Lorenzo Valla”, The Stanford Encyclopedia of Philosophy (Fall 2021 Edition), Edward N. Zalta (ed.). 
+[2] C, Robin, “Aristotle’s Logic”, The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.)"""@en ,
+                                      """author: András L. Komáromi
+This work is distributed under Creative Commons Attribution License CC BY 4.0""" .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://purl.org/nemo/gufo#inheresIn
+gufo:inheresIn rdf:type owl:ObjectProperty .
+
+
+###  http://purl.org/nemo/gufo#mediates
+gufo:mediates rdf:type owl:ObjectProperty .
+
+
+###  http://valla-gufo.com#deduction
+:deduction rdf:type owl:ObjectProperty ,
+                    owl:AsymmetricProperty ;
+           rdfs:domain :Premise ;
+           rdfs:range :Conclusion ;
+           rdfs:label "deduction"@en .
+
+
+###  http://valla-gufo.com#thingHasParticular
+:thingHasParticular rdf:type owl:ObjectProperty ,
+                             owl:FunctionalProperty ;
+                    rdfs:domain :Thing ;
+                    rdfs:range :Particular .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.org/nemo/gufo#Category
+gufo:Category rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#FunctionalComplex
+gufo:FunctionalComplex rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#IntrinsicMode
+gufo:IntrinsicMode rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Kind
+gufo:Kind rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#MaterialRelationshipType
+gufo:MaterialRelationshipType rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Phase
+gufo:Phase rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Quality
+gufo:Quality rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Relator
+gufo:Relator rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#Role
+gufo:Role rdf:type owl:Class .
+
+
+###  http://purl.org/nemo/gufo#SubKind
+gufo:SubKind rdf:type owl:Class .
+
+
+###  http://valla-gufo.com#Action
+:Action rdf:type owl:Class ;
+        rdfs:subClassOf :Thing .
+
+
+###  http://valla-gufo.com#Artificial
+:Artificial rdf:type owl:Class ;
+            rdfs:subClassOf gufo:Quality ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                             ] ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Syllogism
+                            ] .
+
+
+###  http://valla-gufo.com#Assertion
+:Assertion rdf:type owl:Class ;
+           rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://valla-gufo.com#Charity
+:Charity rdf:type owl:Class ;
+         rdfs:subClassOf :Pleasure .
+
+
+###  http://valla-gufo.com#Conclusion
+:Conclusion rdf:type owl:Class ;
+            rdfs:subClassOf :Assertion ,
+                            [ rdf:type owl:Restriction ;
+                              owl:onProperty [ owl:inverseOf gufo:mediates
+                                             ] ;
+                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Syllogism
+                            ] .
+
+
+###  http://valla-gufo.com#DeviantSyllogism
+:DeviantSyllogism rdf:type owl:Class ;
+                  rdfs:subClassOf :Syllogism .
+
+
+###  http://valla-gufo.com#Essential
+:Essential rdf:type owl:Class ;
+           rdfs:subClassOf gufo:Quality ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                            ] ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Fortitude
+                           ] .
+
+
+###  http://valla-gufo.com#Figure
+:Figure rdf:type owl:Class ;
+        rdfs:subClassOf gufo:Relator ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                         ] ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onClass :Mood
+                        ] .
+
+
+###  http://valla-gufo.com#Fortitude
+:Fortitude rdf:type owl:Class ;
+           rdfs:subClassOf :Virtue ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:inheresIn ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Essential
+                           ] .
+
+
+###  http://valla-gufo.com#Good
+:Good rdf:type owl:Class ;
+      rdfs:subClassOf gufo:Quality ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                       ] ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Virtue
+                      ] .
+
+
+###  http://valla-gufo.com#Justice
+:Justice rdf:type owl:Class ;
+         rdfs:subClassOf :Fortitude .
+
+
+###  http://valla-gufo.com#Love
+:Love rdf:type owl:Class ;
+      rdfs:subClassOf :Pleasure .
+
+
+###  http://valla-gufo.com#Mood
+:Mood rdf:type owl:Class ;
+      rdfs:subClassOf gufo:IntrinsicMode ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty gufo:inheresIn ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Proof
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                       ] ;
+                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onClass :Syllogism
+                      ] .
+
+
+###  http://valla-gufo.com#Particular
+:Particular rdf:type owl:Class ;
+            rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://valla-gufo.com#Pleasure
+:Pleasure rdf:type owl:Class ;
+          rdfs:subClassOf :Virtue .
+
+
+###  http://valla-gufo.com#Premise
+:Premise rdf:type owl:Class ;
+         rdfs:subClassOf :Assertion ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty [ owl:inverseOf gufo:mediates
+                                          ] ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Syllogism
+                         ] .
+
+
+###  http://valla-gufo.com#Proof
+:Proof rdf:type owl:Class ;
+       rdfs:subClassOf gufo:FunctionalComplex ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty [ owl:inverseOf gufo:inheresIn
+                                        ] ;
+                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onClass :Mood
+                       ] .
+
+
+###  http://valla-gufo.com#Propriety
+:Propriety rdf:type owl:Class ;
+           rdfs:subClassOf :Fortitude .
+
+
+###  http://valla-gufo.com#Prudence
+:Prudence rdf:type owl:Class ;
+          rdfs:subClassOf :Fortitude .
+
+
+###  http://valla-gufo.com#Quality
+:Quality rdf:type owl:Class ;
+         rdfs:subClassOf :Thing .
+
+
+###  http://valla-gufo.com#Soul
+:Soul rdf:type owl:Class ;
+      rdfs:subClassOf :Substance .
+
+
+###  http://valla-gufo.com#Substance
+:Substance rdf:type owl:Class ;
+           rdfs:subClassOf :Thing .
+
+
+###  http://valla-gufo.com#Syllogism
+:Syllogism rdf:type owl:Class ;
+           rdfs:subClassOf gufo:Relator ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:inheresIn ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Artificial
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:inheresIn ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Mood
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:mediates ;
+                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Conclusion
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty gufo:mediates ;
+                             owl:minQualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                             owl:onClass :Premise
+                           ] .
+
+
+###  http://valla-gufo.com#Thing
+:Thing rdf:type owl:Class ;
+       rdfs:subClassOf gufo:FunctionalComplex .
+
+
+###  http://valla-gufo.com#Virtue
+:Virtue rdf:type owl:Class ;
+        rdfs:subClassOf gufo:FunctionalComplex .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://valla-gufo.com#Action
+:Action rdf:type owl:NamedIndividual ,
+                 gufo:SubKind .
+
+
+###  http://valla-gufo.com#Artificial
+:Artificial rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://valla-gufo.com#Assertion
+:Assertion rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://valla-gufo.com#Charity
+:Charity rdf:type owl:NamedIndividual ,
+                  gufo:Phase .
+
+
+###  http://valla-gufo.com#Conclusion
+:Conclusion rdf:type owl:NamedIndividual ,
+                     gufo:Role .
+
+
+###  http://valla-gufo.com#DeviantSyllogism
+:DeviantSyllogism rdf:type owl:NamedIndividual ,
+                           gufo:SubKind .
+
+
+###  http://valla-gufo.com#Essential
+:Essential rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://valla-gufo.com#Figure
+:Figure rdf:type owl:NamedIndividual ,
+                 gufo:Category .
+
+
+###  http://valla-gufo.com#Fortitude
+:Fortitude rdf:type owl:NamedIndividual ,
+                    gufo:SubKind .
+
+
+###  http://valla-gufo.com#Good
+:Good rdf:type owl:NamedIndividual ,
+               gufo:Kind .
+
+
+###  http://valla-gufo.com#Justice
+:Justice rdf:type owl:NamedIndividual ,
+                  gufo:SubKind .
+
+
+###  http://valla-gufo.com#Lorenzo_Valla
+:Lorenzo_Valla rdf:type owl:NamedIndividual ,
+                        :Soul .
+
+
+###  http://valla-gufo.com#Love
+:Love rdf:type owl:NamedIndividual ,
+               gufo:Phase .
+
+
+###  http://valla-gufo.com#Mood
+:Mood rdf:type owl:NamedIndividual ,
+               gufo:Kind .
+
+
+###  http://valla-gufo.com#Particular
+:Particular rdf:type owl:NamedIndividual ,
+                     gufo:Kind .
+
+
+###  http://valla-gufo.com#Pleasure
+:Pleasure rdf:type owl:NamedIndividual ,
+                   gufo:SubKind .
+
+
+###  http://valla-gufo.com#Premise
+:Premise rdf:type owl:NamedIndividual ,
+                  gufo:Role .
+
+
+###  http://valla-gufo.com#Proof
+:Proof rdf:type owl:NamedIndividual ,
+                gufo:Kind .
+
+
+###  http://valla-gufo.com#Propriety
+:Propriety rdf:type owl:NamedIndividual ,
+                    gufo:SubKind .
+
+
+###  http://valla-gufo.com#Prudence
+:Prudence rdf:type owl:NamedIndividual ,
+                   gufo:SubKind .
+
+
+###  http://valla-gufo.com#Quality
+:Quality rdf:type owl:NamedIndividual ,
+                  gufo:SubKind .
+
+
+###  http://valla-gufo.com#Soul
+:Soul rdf:type owl:NamedIndividual ,
+               gufo:SubKind .
+
+
+###  http://valla-gufo.com#Substance
+:Substance rdf:type owl:NamedIndividual ,
+                    gufo:SubKind .
+
+
+###  http://valla-gufo.com#Syllogism
+:Syllogism rdf:type owl:NamedIndividual ,
+                    gufo:Kind .
+
+
+###  http://valla-gufo.com#Thing
+:Thing rdf:type owl:NamedIndividual ,
+                gufo:Kind .
+
+
+###  http://valla-gufo.com#Virtue
+:Virtue rdf:type owl:NamedIndividual ,
+                 gufo:Kind .
+
+
+###  http://valla-gufo.com#deductuon
+:deductuon rdf:type owl:NamedIndividual ,
+                    gufo:MaterialRelationshipType .
+
+
+###  http://valla-gufo.com#thingHasParticular
+:thingHasParticular rdf:type owl:NamedIndividual ,
+                             gufo:MaterialRelationshipType .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+:Action rdfs:comment "“Hence, there are three basic categories: substance, quality, and ACTION. […]”"@en ;
+        rdfs:label "Action"@en .
+
+
+:Artificial rdfs:comment "“Without rejecting the syllogism tout court, Valla is scathing about its usefulness. He regards it as an ARTIFICIALartificial type of reasoning” (Nauta)"@en ;
+            rdfs:label "Artificial"@en .
+
+
+:Assertion rdfs:comment "ASSERTIONs  (apophanseis) are sentences with a specific structure “every such sentence must have the same structure: it must contain a subject and a predicate and must either affirm or deny the predicate of the subject.” (Smith)"@en ;
+           rdfs:label "Assertion"@en .
+
+
+:Charity rdfs:label "Charity"@en ;
+         rdfs:comment """Valla’s reductive strategy has a clear aim: to equate this essential virtue of action, fortitude, with the biblical concept of love and CHARITY. This step requires some hermeneutic manipulation, but the Stoic overtones of Cicero’s account in De officiis have prepared the way for it—ironically, perhaps, in view of Valla’s professed hostility towards Stoicism—since enduring hardship with Stoic patience is easily linked to the Pauline message that we become strong by being tested (II Cor. 12:10, quoted by Valla). The labor, sweat, and trouble we must bear, though bad in themselves, “are called good because they lead to that victory,” Valla writes, echoing St Paul (Repastinatio, 1:88–89; 2:415; DD 1:156). We do not, then, strive to attain virtue for its own sake, since it is full of toil and hardship, but rather because it leads us to our goal. This is one of Valla’s major claims against the Stoics and the Peripatetics, who—at least in Valla’s interpretation— regarded virtue as the end of life, that is, the goal which is sought for its own sake. Because virtuous behavior is difficult, requiring us to put up with harsh and bitter afflictions, no one naturally and voluntarily seeks virtue as an end in itself. What we seek is pleasure or delectation, both in this life and—far more importantly —in the life to come.
+It is therefore a moot point whether Valla successfully integrated Epicurean hedonism with Christian morality. He seems to argue that the Epicurean position is valid only for the period before the coming of Christ. In our unredeemed state, we are rightly regarded as pleasure-seeking animals, governed by self-interest and utilitarian motives. After Christ’s coming, however, we have a different picture: repudiating Epicurean pleasure, we should choose the harsh and difficult life of Christian honestas (virtue) as a step towards heavenly beatitude. Yet, the two views of human beings are not so readily combined. On the one hand, there is the positive evaluation of pleasure as the fundamental principle in human psychology—which is confirmed and underscored by the terminological equation of voluptas (pleasure), beatitudo (beatitude), fruitio (fruition), delectatio (delectation), and amor (love). On the other hand, Valla states apodictically that there are two pleasures: an earthly one, which is the mother of vice, and a heavenly one, which is the mother of virtue; that we should abstain from the former if we want to enjoy the latter; and that the natural, pre-Christian life is “empty and worthy of punishment” if not put in the wider perspective of human destiny. In other words, we are commanded to live the arduous and difficult life of Christian honestas, ruled by restraint, self-denial, and propriety (temperance), and, at the same time, to live a hedonist life, which consists of the joyful, free, and natural gratification of the senses."""@en .
+
+
+:Conclusion rdfs:label "Conclusion"@en ;
+            rdfs:comment "A possible role of an Assertion, relative to a Syllogism is CONCLUSION (sumperasma)"@en .
+
+
+:DeviantSyllogism rdfs:comment "\"While he does not question the validity of these four moods, he believes that there are many DEVIANT  SYLOGISMs that are also valid, for instance: God is in every place; Tartarus is a place; therefore, God is in Tartarus. Here the “every” or “all” sign is added to the predicate in the major proposition. He says, moreover, that an entirely singular syllogism can be valid: Homer is the greatest of poets; this man is the greatest of poets; therefore, this man is Homer. And he gives many other examples of such deviant schemes. Valla thus deliberately ignores the criteria employed by Aristotle and his commentators—that at least one premise must be universal, and at least one premise must be affirmative, and that if the conclusion is to be negative, one premise must be negative—or, at any rate, he thinks that they unnecessarily restrict the number of possible valid figures.\" (Nauta)"@en ;
+                  rdfs:label "DeviantSyllogism"@en .
+
+
+:Essential rdfs:label "Essential"@en ;
+           rdfs:comment "For Valla, fortitude is the ESSENTIAL virtue, since it shows that we do not allow ourselves to be conquered by the wrong emotions, but instead to act for the good"@en .
+
+
+:Figure rdfs:label "Figure"@en .
+
+
+:Fortitude rdfs:label " Fortitude"@en ;
+           rdfs:comment """For Valla, FORTITUDE is the essential virtue, since it shows that we do not allow ourselves to be conquered by the wrong emotions, but instead to act for the good. As a true virtue of action, it is closely connected to justice and is defined as “a certain resistance against both the harsh and the pleasant things which prudence has declared to be evils.”
+It is the power to tolerate and suffer adversity and bad luck, but also to resist the blandishments of a fortune which can be all too good, thus weakening the spirit. Fortitude is the only true virtue, because virtue resides in the will, since our actions, to which we assign moral qualifications, proceed from the will."""@en .
+
+
+:Good rdfs:comment "Virtue is GOOD."@en ;
+      rdfs:label "Good"@en .
+
+
+:Justice rdfs:label "Justice"@en ;
+         rdfs:comment "JUSTICE, prudence, and propriety are subkinds of fortitude."@en .
+
+
+:Love rdfs:label "Love"@en ;
+      rdfs:comment """Valla’s reductive strategy has a clear aim: to equate this essential virtue of action, fortitude, with the biblical concept of LOVE and charity. This step requires some hermeneutic manipulation, but the Stoic overtones of Cicero’s account in De officiis have prepared the way for it—ironically, perhaps, in view of Valla’s professed hostility towards Stoicism—since enduring hardship with Stoic patience is easily linked to the Pauline message that we become strong by being tested (II Cor. 12:10, quoted by Valla). The labor, sweat, and trouble we must bear, though bad in themselves, “are called good because they lead to that victory,” Valla writes, echoing St Paul (Repastinatio, 1:88–89; 2:415; DD 1:156). We do not, then, strive to attain virtue for its own sake, since it is full of toil and hardship, but rather because it leads us to our goal. This is one of Valla’s major claims against the Stoics and the Peripatetics, who—at least in Valla’s interpretation— regarded virtue as the end of life, that is, the goal which is sought for its own sake. Because virtuous behavior is difficult, requiring us to put up with harsh and bitter afflictions, no one naturally and voluntarily seeks virtue as an end in itself. What we seek is pleasure or delectation, both in this life and—far more importantly —in the life to come.
+It is therefore a moot point whether Valla successfully integrated Epicurean hedonism with Christian morality. He seems to argue that the Epicurean position is valid only for the period before the coming of Christ. In our unredeemed state, we are rightly regarded as pleasure-seeking animals, governed by self-interest and utilitarian motives. After Christ’s coming, however, we have a different picture: repudiating Epicurean pleasure, we should choose the harsh and difficult life of Christian honestas (virtue) as a step towards heavenly beatitude. Yet, the two views of human beings are not so readily combined. On the one hand, there is the positive evaluation of pleasure as the fundamental principle in human psychology—which is confirmed and underscored by the terminological equation of voluptas (pleasure), beatitudo (beatitude), fruitio (fruition), delectatio (delectation), and amor (love). On the other hand, Valla states apodictically that there are two pleasures: an earthly one, which is the mother of vice, and a heavenly one, which is the mother of virtue; that we should abstain from the former if we want to enjoy the latter; and that the natural, pre-Christian life is “empty and worthy of punishment” if not put in the wider perspective of human destiny. In other words, we are commanded to live the arduous and difficult life of Christian honestas, ruled by restraint, self-denial, and propriety (temperance), and, at the same time, to live a hedonist life, which consists of the joyful, free, and natural gratification of the senses."""@en .
+
+
+:Mood rdfs:label "Mood"@en ;
+      rdfs:comment "“These complaints about the artificiality of the syllogism inform Valla’s discussion of the three figures of the syllogism. Aristotle had proven the validity of the MOOD of Figure 2 and 3 by converting them to four moods of Figure 1; and this was taught, for example, by Peter of Spain (thirteenth century) in his widely read handbook on logic, the Summulae logicales, certainly consulted by Valla here. Valla regards this whole business of converting terms and transposing propositions in order to reduce a particular syllogism to one of these four moods of Figure 1 as useless and absurd.” (Nauta)"@en .
+
+
+:Particular rdfs:label "Particular"@en ;
+            rdfs:comment "A PARTICULAR thing"@en .
+
+
+:Pleasure rdfs:comment "“By equating PLEASURE with love, Valla can argue that it is love or pleasure that is our ultimate end. This entails the striking notion that God is not loved for his own sake, but for the sake of love: “For nothing is loved for its own sake or for the sake of something else as another end, but the love itself is the end” (Repastinatio, 2:417). This is a daring move. Traditionally, God was said to be loved for his own sake, not for his usefulness in gaining something else. Many thinkers agreed with Augustine that concupiscent love was to be distinguished from friendship, and, with respect to heavenly beatitude, use from fruition. We can love something as a means to an end (use), and we can love something for its own sake (fruition). But because Valla has maintained that pleasure is our highest good, God can only be loved as a means to that end."@en ;
+          rdfs:label "Pleasure"@en .
+
+
+:Premise rdfs:label "Premise"@en ;
+         rdfs:comment "A possible role of an Assertion, relative to a Syllogism is PREMISE (protasis)"@en .
+
+
+:Proof rdfs:comment "“Following Quintilian, he stresses that the nature of syllogistic reasoning is to establish PROOF.” (Nauta)"@en ;
+       rdfs:label "Proof"@en .
+
+
+:Propriety rdfs:comment "Justice, prudence, and PROPRIEY are subkinds of fortitude."@en ;
+           rdfs:label "Propriety"@en .
+
+
+:Prudence rdfs:comment "Justice, PRUDENCE, and propriety are subkinds of fortitude."@en ;
+          rdfs:label "Prudence"@en .
+
+
+:Quality rdfs:label "Quality"@en ;
+         rdfs:comment "“Hence, there are three basic categories: substance, QUALITY and action. […]”"@en .
+
+
+:Soul rdfs:label "Soul"@en ;
+      rdfs:comment """“The SOU as an incorporeal substance is treated by Valla in a separate chapter (
+Repastinatio, 1:59–73; 2:408–410; 418–419; 
+DD 1:104–29). Rejecting the Aristotelian hylomorphic account, he returns to an Augustinian picture of the soul as a wholly spiritual and immaterial substance made in the image of God, and consisting of memory, intellect, and will."""@en .
+
+
+:Substance rdfs:comment """“Hence, there are three basic categories: SUBSTANCE, quality, and action.
+At the back of Valla’s mind are the grammatical categories of noun, adjective, and verb; but in many places he points out that we cannot assume that, for instance, an adjective always refer to a quality or a verb to an action (Repastinatio, 1:134–156; 425–442; DD 1:240–80). These three categories are the only ones Valla admits; the other Aristotelian categories of accidents such as place, time, relation and quantity can all be reduced to quality or action. Here, too, grammar plays a leading role in Valla’s thought. From a grammatical point of view, qualities such as being a father, being in the classroom, or being six-feet tall all tell us something about how a particular man is qualified; and there is, consequently, no need to preserve the other Aristotelian categories. […]
+
+He thus thinks that it is ridiculous to imagine prime matter without any form or form without any matter, or to define a line as that which has no width and a point as an indivisible quantity that occupies no space. Valla’s idea is that notions such as divisibility and quantity are properly at home only in the world of ordinary things. For him, there is only the world of bodies [substances] with actual shapes and dimensions [quality]; lines and points are parts of these things, but only, as he seems to suggest, in a derivative sense, in other words, as places or spaces that are filled by the body or parts of that body. If we want to measure or sketch a (part of a) body, we can select two spots on it and measure the length between them by drawing points and lines on paper or in our mind, a process through which these points and lines become visible and divisible parts of our world (Repastinatio, 1:142–147; 2:427–431;  DD 254–64). But it would be wrong to abstract from this diagramming function and infer a world of points and lines with their own particular quantity. They are merely aids for measuring or outlining bodies. In modern parlance, Valla seems to be saying that ontological questions about these entities—do they exist? how do they exist?—amount to category mistakes, equivalent to asking the color of virtue.”"""@en ;
+           rdfs:label "Substance"@en .
+
+
+:Syllogism rdfs:comment """\"Without rejecting the SYLLOGISM tout court, Valla is scathing about its usefulness. He regards it as an artificial type of reasoning, unfit to be employed by orators since it is does not reflect the natural way of speaking and arguing. What is the use, for example, of concluding that Socrates is an animal if one has already stated that every man is an animal and that Socrates is a man? It is a simple, puerile, and pedantic affair, hardly amounting to a real ars (art). Valla’s treatment of the syllogism clearly shows his oratorical perspective. [...]
+One of the two premises contains what is to be proven (que probatur), and the other offers the proof (que probat), while the conclusion gives the result of the proof—into which the proof “goes down” (in quam probatio descendit). It is not always necessary, therefore, to have a fixed order (major, minor, conclusion). If it suits the occasion better, we can just as well begin with the minor, or even with the conclusion. The order is merely a matter of convention and custom (Repastinatio, 1:282–286; 2:531–534; DD 2:216–39).
+These complaints about the artificiality of the syllogism inform Valla’s discussion of the three figures of the syllogism. Aristotle had proven the validity of the moods of Figure 2 and 3 by converting them to four moods of Figure 1; and this was taught, for example, by Peter of Spain (thirteenth century) in his widely read handbook on logic, the Summulae logicales, certainly consulted by Valla here. Valla regards this whole business of converting terms and transposing propositions in order to reduce a particular syllogism to one of these four moods of Figure 1 as useless and absurd\" (Nauta)"""@en ;
+           rdfs:label "Syllogism "@en .
+
+
+:Thing rdfs:label "Thing"@en ;
+       rdfs:comment "“His main concern in the first book is to simplify the Aristotelian-scholastic apparatus. For Valla, the world consists of THINGs, simply called res. Things have qualities and do or undergo things (which he refers to as “things”).”"@en .
+
+
+:Virtue rdfs:label "Virtue"@en ;
+        rdfs:comment "‘Valla presents a discussion between an “Epicurean,” a “Stoic,” and a “Christian” on an age-old question: what is the highest ethical good? The result of this confrontation between pagan and Christian moral thought is a combination of Pauline fideism and Epicurean hedonism, in which the Christian concepts of charity and beatitude are identified with hedonist pleasure, and the “Stoic” concept of VIRTUE is rejected (Valla, De vero falsoque bono). Valla thus treats Epicureanism as a stepping-stone to the development of a Christian morality based on the concept of pleasure, and repudiates the traditional synthesis of Stoicism and Christianity, popular among scholastics and humanists alike. The substance of the dialogue is repeated in a long chapter in his Repastinatio (Repastinatio, 1:73–98; 2:411–418; DD 1:130–75)."@en .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
